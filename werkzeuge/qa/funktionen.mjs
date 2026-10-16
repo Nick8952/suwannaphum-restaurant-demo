@@ -59,7 +59,7 @@ async function frisch({ breite = 1440, hoehe = 900, reduziert = false } = {}) {
   const reihenfolge = [];
   await page.goto(BASE + "/", { waitUntil: "networkidle0" });
   for (let i = 0; i < 7; i++) { await page.keyboard.press("Tab"); reihenfolge.push(await page.evaluate(() => (document.activeElement.getAttribute("aria-label") || document.activeElement.textContent || "").trim().replace(/\s+/g, " ").slice(0, 44))); }
-  ok("Tastatur: Fokusreihenfolge folgt dem Aufbau (Sprunglink, Logo, Speisekarte, Restaurant, Kontakt, Telefon, Inhalt)", /^Zum Inhalt/.test(reihenfolge[0]) && /zur Start/.test(reihenfolge[1]) && reihenfolge[2] === "Speisekarte" && reihenfolge[3] === "Restaurant" && reihenfolge[4] === "Kontakt" && /^Anrufen/.test(reihenfolge[5]) && reihenfolge[6] === "Speisekarte ansehen", reihenfolge.join(" → "));
+  ok("Tastatur: Fokusreihenfolge folgt dem Aufbau (Sprunglink, Logo, Speisekarte, Restaurant, Kontakt, Telefon, Inhalt)", /^Zum Inhalt/.test(reihenfolge[0]) && /Startseite/.test(reihenfolge[1]) && reihenfolge[2] === "Speisekarte" && reihenfolge[3] === "Restaurant" && reihenfolge[4] === "Kontakt" && /^Anrufen/.test(reihenfolge[5]) && reihenfolge[6] === "Speisekarte ansehen", reihenfolge.join(" → "));
   await page.goto(BASE + "/restaurant/", { waitUntil: "networkidle0" });
   ok("Navigation: aria-current auf «Restaurant»", await page.evaluate(() => document.querySelector('header a[aria-current="page"]')?.textContent?.trim() === "Restaurant"));
   await ctx.close();

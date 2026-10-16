@@ -94,6 +94,7 @@ Figuren-Grafiken der Kartenseiten.
 
 Einleitungen, Abschnittstexte, Beschriftungen, Impressum und Datenschutzerklärung sind neu. Sie stützen sich ausschliesslich auf
 Q1 bis Q4 und machen keine Aussagen über Qualität, Auszeichnungen, Beliebtheit, Frische oder Hausgemachtes. Die Inhaltsprüfung
-(`npm run inhalt:pruefen`) sperrt solche Wörter. Die einzige sprachliche Ergänzung ohne Quelle auf der Website ist die
+(`npm run inhalt:pruefen`) sperrt «hausgemacht», «frisch» in allen Wortformen, «bio», «regional», Superlative, Auszeichnungen und
+Bewertungsbegriffe in allen Texten über das Restaurant (Sperrliste in `scripts/inhalt-pruefen.mts`). Die einzige sprachliche Ergänzung ohne Quelle auf der Website ist die
 Worterklärung «Suwannaphum bedeutet goldenes Land» (Sanskrit/Pali suvarna bhumi); sie steht auf der Seite «Restaurant und Team» und
 ist in der Übergabe zur Bestätigung markiert.

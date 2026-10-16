@@ -71,7 +71,7 @@ jobs:
           SANITY_STUDIO_PROJECT_ID: probe0000
 
   deploy:
-    needs: build
+    needs: [build, studio]
     runs-on: ubuntu-latest
     permissions:
       pages: write

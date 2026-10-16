@@ -29,8 +29,3 @@ export function bloecke(roh: RohBlock[]): Block[] {
     return { art: "titel", stufe: b.stufe ?? 2, text: b.titel, anker: b.anker };
   });
 }
-
-/** Reiner Text eines Inline-Abschnitts (für Prüfungen und Vorschauen). */
-export function inlineText(teile: Inline[]): string {
-  return teile.map((t) => (typeof t === "string" ? t : t.text)).join("");
-}

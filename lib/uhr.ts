@@ -9,14 +9,19 @@ import { useSyncExternalStore } from "react";
  * Hydrations-Unterschied und kein setState in einem Effekt.
  */
 const abonnenten = new Set<() => void>();
-let timer: ReturnType<typeof setInterval> | null = null;
+let start: ReturnType<typeof setTimeout> | null = null;
+let takt: ReturnType<typeof setInterval> | null = null;
+const melden = () => abonnenten.forEach((f) => f());
 
-function abonnieren(melden: () => void) {
-  abonnenten.add(melden);
-  if (!timer) timer = setInterval(() => abonnenten.forEach((f) => f()), 60_000);
+function abonnieren(f: () => void) {
+  abonnenten.add(f);
+  // Erster Tick genau an der nächsten Minutengrenze (sonst liefe die Anzeige bis zu 59 Sekunden nach), danach jede volle Minute.
+  if (!start && !takt) start = setTimeout(() => { start = null; melden(); takt = setInterval(melden, 60_000); }, 60_000 - (Date.now() % 60_000));
   return () => {
-    abonnenten.delete(melden);
-    if (!abonnenten.size && timer) { clearInterval(timer); timer = null; }
+    abonnenten.delete(f);
+    if (abonnenten.size) return;
+    if (start) { clearTimeout(start); start = null; }
+    if (takt) { clearInterval(takt); takt = null; }
   };
 }
 const minuteJetzt = () => Math.floor(Date.now() / 60_000);

@@ -107,6 +107,14 @@ export const zeitfenster = defineType({
     defineField({ name: "bis", title: "Bis (Restaurant)", type: "string", description: "HH:MM, zum Beispiel 21:00", validation: (r) => r.required().custom(uhrzeit) }),
     defineField({ name: "kuecheBis", title: "Küche bis (optional)", type: "string", description: "Wenn die Küche früher schliesst als das Restaurant, zum Beispiel 20:30. Leer = gleich wie das Restaurant.", validation: (r) => r.custom(uhrzeit) }),
   ],
+  // Dieselben Regeln wie im Domainmodell der Website (lib/content/modell.ts), damit kein Build an einem Fenster scheitert, das das Studio durchgelassen hat.
+  validation: (r) => r.custom((wert) => {
+    const z = wert as { von?: string; bis?: string; kuecheBis?: string } | undefined;
+    if (!z?.von || !z.bis || uhrzeit(z.von) !== true || uhrzeit(z.bis) !== true) return true; // Formatfehler melden die Felder selbst
+    if (z.von >= z.bis) return "«Von» muss vor «Bis» liegen.";
+    if (z.kuecheBis && uhrzeit(z.kuecheBis) === true && (z.kuecheBis <= z.von || z.kuecheBis > z.bis)) return "«Küche bis» muss nach «Von» und spätestens bei «Bis» liegen.";
+    return true;
+  }),
   preview: { select: { von: "von", bis: "bis", kueche: "kuecheBis" }, prepare: ({ von, bis, kueche }) => ({ title: `${von ?? "?"} bis ${bis ?? "?"} Uhr`, subtitle: kueche ? `Küche bis ${kueche}` : undefined }) },
 });
 

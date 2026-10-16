@@ -16,9 +16,11 @@ export function Kopfzeile({ einstellungen: e, texte: t }: { einstellungen: Einst
   return (
     <header className="kopfzeile">
       <div className="behaelter flex h-16 items-center gap-2 sm:gap-3 lg:h-[4.5rem]">
-        <Link href="/" className="marke mr-auto" aria-label={`${e.name}, zur Startseite`}>
-          {e.logoSchriftzug ? <Bild bild={e.logoSchriftzug} alt="" sizes="180px" prio /> : <span className="titel-3">{e.kurzname}</span>}
-          <span className="zusatz" aria-hidden="true">{t.kopf.zusatz}<br />{e.adresse.ort}</span>
+        {/* Zugänglicher Name = sichtbarer Text (Schriftzug als Bild mit Kurzname, Zusatz, Ort) plus «zur Startseite» für Screenreader */}
+        <Link href="/" className="marke mr-auto">
+          {e.logoSchriftzug ? <Bild bild={e.logoSchriftzug} alt={e.kurzname} sizes="180px" prio /> : <span className="titel-3">{e.kurzname}</span>}
+          <span className="zusatz">{t.kopf.zusatz}<br />{e.adresse.ort}</span>
+          <span className="nur-sr">, {t.kopf.startseite}</span>
         </Link>
         <nav aria-label={t.kopf.navTitel} className="hauptnav hidden lg:block">
           <ul className="flex items-center gap-1">

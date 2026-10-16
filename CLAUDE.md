@@ -29,6 +29,7 @@ studio/              eigenständiges Sanity Studio (eigenes package.json): schem
 scripts/             bilder-optimieren.mjs (+ bilder-liste.json), inhalt-pruefen.mts, export-nachbereiten.mjs, export-pruefen.mjs,
                      vorschau-server.mjs, seed.mts, sanity-bilder.mts (Bild-Spiegel, läuft vor jedem Build)
 werkzeuge/qa/        Browser-Prüfungen mit puppeteer-core: audit.mjs, funktionen.mjs, screenshots.mjs, chrome.mjs; lighthouse.mjs
+werkzeuge/zeit.test.mts  Prüfungen der Zeitlogik mit dem Node-Testläufer (Schnitt im Zeitfenster, Zeitzone, Rangfolge der Hinweise)
 assets/originale/    Originale der alten Website + HERKUNFT.md (Quellen, Rechte); speisekarte/ = die elf Kartenbilder (nur Abschrift)
 public/bilder/       erzeugte AVIF/WebP-Varianten (nie hochskaliert)
 docs/                INHALTSMATRIX, BILDER, DESIGN, ENTSCHEIDUNGEN, SANITY-VERCEL-EINRICHTUNG, INHALTE-PFLEGEN, UEBERGABE, PRUEFBERICHT
@@ -43,7 +44,8 @@ Einwilligungslogik, Modell «statisch + Rebuild bei Publish»). Design, Komponen
 | --- | --- |
 | Entwicklung (Unterpfad wie auf GitHub Pages) | `npm run dev` → <http://localhost:3000/suwannaphum-restaurant-demo/> |
 | Inhalte prüfen (Schema, Schreibweise, Karte, Zeiten, Links, Bilder) | `npm run inhalt:pruefen` · vor dem Go-Live `npm run inhalt:pruefen -- --live` |
-| Inhalte + Lint + Typen | `npm run pruefen` |
+| Zeitlogik (Schnitt im Zeitfenster, Zeitzone, Rangfolge der Hinweise) | `npm run zeit:pruefen` |
+| Inhalte + Zeitlogik + Lint + Typen | `npm run pruefen` |
 | Statischer Export für GitHub Pages | `npm run build` (schreibt `out/` mit `404.html`, `.nojekyll`; ohne Sitemap) |
 | Export prüfen (Seiten, noindex, Unterpfad, keine fremden Hosts, Karte vollständig, Budgets) | `npm run export:pruefen` |
 | Export lokal wie auf GitHub Pages ansehen | `npm run vorschau:pages` → <http://localhost:4321/suwannaphum-restaurant-demo/> (`PORT=4333` bei belegtem Port) |

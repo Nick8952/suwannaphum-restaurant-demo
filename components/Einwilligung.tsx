@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import type { Texte } from "@/lib/content/modell";
 import { OEFFNEN_EREIGNIS } from "@/lib/einwilligung";
+import { pfade } from "@/lib/content/pfade";
 import { useEinwilligung } from "@/lib/einwilligung-hook";
 
 /**
@@ -98,10 +99,18 @@ export function Einwilligung({ texte: t, datenschutzPfad, schliessen }: { texte:
   );
 }
 
-/** Link in der Fusszeile, der die Datenschutz-Einstellungen öffnet (auch für den Widerruf). */
+const keinAbo = () => () => {};
+const FUSSLINK = "inline-flex min-h-11 items-center text-left underline-offset-4 hover:text-gold-hell hover:underline";
+
+/**
+ * Link in der Fusszeile, der die Datenschutz-Einstellungen öffnet (auch für den Widerruf). Im statischen Stand und ohne JavaScript
+ * ist er ein normaler Link zum Abschnitt «Cookies» der Datenschutzerklärung; nach der Hydration wird daraus der Knopf für den Dialog.
+ */
 export function EinwilligungFussLink({ titel }: { titel: string }) {
+  const hydriert = useSyncExternalStore(keinAbo, () => true, () => false);
+  if (!hydriert) return <Link href={`${pfade.datenschutz}#cookies`} className={FUSSLINK}>{titel}</Link>;
   return (
-    <button type="button" className="inline-flex min-h-11 items-center text-left underline-offset-4 hover:text-gold-hell hover:underline" aria-haspopup="dialog" onClick={() => window.dispatchEvent(new Event(OEFFNEN_EREIGNIS))}>
+    <button type="button" className={FUSSLINK} aria-haspopup="dialog" onClick={() => window.dispatchEvent(new Event(OEFFNEN_EREIGNIS))}>
       {titel}
     </button>
   );

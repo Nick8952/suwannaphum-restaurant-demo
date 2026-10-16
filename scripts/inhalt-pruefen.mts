@@ -62,7 +62,7 @@ const VERBOTEN: [RegExp, string][] = [
   [/\b(bestes?|beliebtestes?|das beste|die beste|Nr\. ?1|führend|ausgezeichnet|prämiert|Auszeichnung|Sterne)\b/i, "Superlativ, Auszeichnung oder Bewertung"],
   [/\b(kostenlos|gratis)\b/i, "kostenlose Leistung"],
   [/\bgarantier/i, "Garantie"],
-  [/\b(hausgemacht|frisch zubereitet|täglich frisch|bio|regional)\b/i, "Qualitätsversprechen ohne Beleg"],
+  [/\b(hausgemacht\w*|frisch\w*|bio|regional\w*)\b/i, "Qualitätsversprechen ohne Beleg (hausgemacht, frisch, bio, regional)"],
   [/\b(Parkplätze|Parkplatz|Tram|Bus|S-Bahn|Bahnhof)\b/, "Anfahrtsangabe ohne Beleg"],
   [/\bE-Mail\b.*@/i, "E-Mail-Adresse des Restaurants (keine bekannt)"],
 ];

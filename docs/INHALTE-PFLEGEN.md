@@ -57,7 +57,7 @@ Ein Tag ohne Zeitfenster ist geschlossen. «Küche bis» leer lassen, wenn die K
 
 **Betriebsferien eintragen.** Hinweise → Neu → Art «Betriebsferien», Titel, Text, «Anzeigen ab» (zum Beispiel vier Wochen vorher),
 «Anzeigen bis» (letzter Ferientag), «Betroffen von» und «Betroffen bis» (die geschlossenen Tage), optional «Am ersten Tag
-geschlossen ab» (zum Beispiel `14:00`). Der Hinweis erscheint auf der Startseite, verschwindet nach «Anzeigen bis» von selbst, und
+geschlossen ab» (zum Beispiel `14:00`; liegt die Uhrzeit mitten in einem Zeitfenster, gilt dieses bis dahin). Der Hinweis erscheint auf der Startseite, verschwindet nach «Anzeigen bis» von selbst, und
 die Anzeige «Heute» zeigt an den betroffenen Tagen «geschlossen».
 
 **Sonderöffnungszeiten (zum Beispiel Feiertag).** Hinweise → Neu → Art «Sonderöffnungszeiten», betroffene Tage und unter

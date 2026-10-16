@@ -4,6 +4,12 @@ import { istErlaubtesLinkziel } from "../assets";
 
 export { WOCHENTAGE };
 
+/** Datum «JJJJ-MM-TT», als echter Kalendertag geprüft (kein 31. Februar); gilt für Abrufdaten und Hinweise gleichermassen */
+const istKalendertag = (d: string): boolean => { const t = new Date(`${d}T00:00:00Z`); return !Number.isNaN(t.getTime()) && t.toISOString().startsWith(d); };
+const datumSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Datum als JJJJ-MM-TT").refine(istKalendertag, "Kein gültiger Kalendertag");
+/** Seitentitel und Beschreibung für Suchmaschinen und Vorschauen: Grenzen, die in den Trefferlisten nicht abgeschnitten werden */
+const seoSchema = { seoTitel: z.string().max(50).optional(), seoBeschreibung: z.string().min(50).max(170).optional() };
+
 /**
  * Das eine Domainmodell der Website. Komponenten kennen nur diese Typen.
  * Beide Inhaltsquellen (lokale JSON-Dateien, später Sanity) normalisieren in dieses Modell und werden beim Build
@@ -22,7 +28,7 @@ export const herkunftSchema = z
     quelle: z.string().min(3),
     /** Adresse der Quelle. Pflicht, ausser bei eigenen Angaben des Restaurants (dann nennt `quelle`, wer wann bestätigt hat). */
     url: z.url().optional(),
-    abgerufen: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Datum als JJJJ-MM-TT"),
+    abgerufen: datumSchema,
     art: z.enum(HERKUNFT_ARTEN),
   })
   .refine((h) => h.art === "eigene-angabe" || !!h.url, { message: "Die Quelle braucht eine Adresse (nur bei eigenen Angaben des Restaurants darf sie fehlen).", path: ["url"] });
@@ -65,8 +71,6 @@ export type Block = z.infer<typeof blockSchema>;
 
 /** Uhrzeit «HH:MM» (24 Stunden) */
 const uhrzeitSchema = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, "Uhrzeit als HH:MM");
-/** Datum «JJJJ-MM-TT», als echter Kalendertag geprüft (kein 31. Februar) */
-const datumSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Datum als JJJJ-MM-TT").refine((d) => { const t = new Date(`${d}T00:00:00Z`); return !Number.isNaN(t.getTime()) && t.toISOString().startsWith(d); }, "Kein gültiger Kalendertag");
 /** Preis in Franken mit höchstens zwei Nachkommastellen (als Zahl, formatiert wird in der Oberfläche) */
 const preisSchema = z.number().nonnegative().refine((p) => Math.round(p * 100) === p * 100, "Preis mit höchstens zwei Nachkommastellen");
 
@@ -252,13 +256,11 @@ export const speisekarteSchema = z.object({
   pdf: z.object({ url: z.string().min(1), titel: z.string() }).optional(),
   herkunft: z.array(herkunftSchema).min(1),
   freigabe: freigabeSchema,
-  seoTitel: z.string().optional(),
-  seoBeschreibung: z.string().optional(),
+  ...seoSchema,
 });
 export type Speisekarte = z.infer<typeof speisekarteSchema>;
 
 // ── Seiten ─────────────────────────────────────────────────────────────────
-const seoSchema = { seoTitel: z.string().max(50).optional(), seoBeschreibung: z.string().min(50).max(170).optional() };
 
 export const startseiteSchema = z.object({
   hero: z.object({ titel: z.string().min(1), text: z.string().min(1), knopf: linkSchema, zweiterKnopf: linkSchema, bild: bildSchema }),

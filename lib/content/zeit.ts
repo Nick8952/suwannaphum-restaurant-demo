@@ -36,19 +36,33 @@ export function betroffenerHinweis(hinweise: Hinweis[], datum: string): Hinweis 
   return treffer.find((h) => h.art === "betriebsferien") ?? treffer[0];
 }
 
-/** Die an einem Datum geltenden Zeitfenster: Betriebsferien (ganz oder ab einer Uhrzeit am ersten Tag), Sonderzeiten, sonst Wochenplan. */
+/**
+ * Die an einem Datum geltenden Zeitfenster: Betriebsferien (ganz oder ab einer Uhrzeit am ersten Tag), Sonderzeiten, sonst Wochenplan.
+ * Schliesst das Restaurant am ersten Ferientag mitten in einem Zeitfenster (etwa ab 18:00 bei 16:30 bis 21:00), wird das Fenster
+ * bis dahin gekürzt; ein Küchenschluss bleibt nur stehen, wenn er davor liegt.
+ */
 export function geltendeZeiten(o: Pick<Oeffnungszeiten, "tage">, hinweise: Hinweis[], datum: string, wochentag: number): { zeiten: Zeitfenster[]; sonder?: Hinweis } {
   const sonder = betroffenerHinweis(hinweise, datum);
   const regulaer = zeitenAmTag(o, wochentag);
   if (!sonder) return { zeiten: regulaer };
   if (sonder.art === "betriebsferien") {
-    if (sonder.geschlossenAb && datum === sonder.geschlossenVon) {
-      const ab = minuten(sonder.geschlossenAb);
-      return { zeiten: regulaer.filter((z) => minuten(z.bis) <= ab).map((z) => (minuten(z.bis) <= ab ? z : z)), sonder };
-    }
+    const schluss = sonder.geschlossenAb;
+    if (schluss && datum === sonder.geschlossenVon) return { zeiten: bisGekuerzt(regulaer, schluss), sonder };
     return { zeiten: [], sonder };
   }
   return { zeiten: sonder.zeiten ?? [], sonder };
+}
+
+/** Zeitfenster eines Tages bis zu einer Uhrzeit: spätere entfallen, ein angeschnittenes endet um diese Uhrzeit. */
+export function bisGekuerzt(zeiten: Zeitfenster[], schluss: string): Zeitfenster[] {
+  const ab = minuten(schluss);
+  return zeiten.flatMap((z) => {
+    if (minuten(z.bis) <= ab) return [z];
+    if (minuten(z.von) >= ab) return [];
+    const gekuerzt: Zeitfenster = { _key: z._key, von: z.von, bis: schluss };
+    if (z.kuecheBis && minuten(z.kuecheBis) < ab) gekuerzt.kuecheBis = z.kuecheBis;
+    return [gekuerzt];
+  });
 }
 
 /** Zeitfenster eines Wochentags (leer = geschlossen) */
@@ -56,8 +70,11 @@ export function zeitenAmTag(o: Pick<Oeffnungszeiten, "tage">, wochentag: number)
   return o.tage.find((t) => t.tag === wochentag)?.zeiten ?? [];
 }
 
-/** Fasst gleiche Tage zu Zeilen zusammen («Montag und Dienstag», «Montag bis Freitag»), damit die Tabelle kurz bleibt. */
-export function zeitenZeilen(o: Pick<Oeffnungszeiten, "tage">): { tage: string; zeiten: Zeitfenster[] }[] {
+/**
+ * Fasst gleiche Tage zu Zeilen zusammen («Montag und Dienstag», «Montag bis Freitag»), damit die Tabelle kurz bleibt.
+ * `von`/`bis` sind die ISO-Wochentage der Zeile, damit die Hervorhebung des heutigen Tages nicht vom deutschen Text abhängt.
+ */
+export function zeitenZeilen(o: Pick<Oeffnungszeiten, "tage">): { von: number; bis: number; tage: string; zeiten: Zeitfenster[] }[] {
   const zeilen: { von: number; bis: number; zeiten: Zeitfenster[] }[] = [];
   const schluessel = (t: Tag) => t.zeiten.map((z) => `${z.von}-${z.bis}-${z.kuecheBis ?? ""}`).join("|");
   for (const t of o.tage) {
@@ -66,6 +83,8 @@ export function zeitenZeilen(o: Pick<Oeffnungszeiten, "tage">): { tage: string; 
     else zeilen.push({ von: t.tag, bis: t.tag, zeiten: t.zeiten });
   }
   return zeilen.map((z) => ({
+    von: z.von,
+    bis: z.bis,
     tage: z.von === z.bis ? WOCHENTAGE[z.von - 1] : z.bis === z.von + 1 ? `${WOCHENTAGE[z.von - 1]} und ${WOCHENTAGE[z.bis - 1]}` : `${WOCHENTAGE[z.von - 1]} bis ${WOCHENTAGE[z.bis - 1]}`,
     zeiten: z.zeiten,
   }));

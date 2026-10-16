@@ -27,8 +27,3 @@ export function Bild({ bild, sizes, className, prio = false, alt }: { bild: Bild
     </picture>
   );
 }
-
-/** Kleinste Variante eines Bildes, zum Beispiel für Proben in Listen. */
-export function kleinsteUrl(bild: BildTyp): string {
-  return assetUrl((bild.quellen.avif[0] ?? bild.quellen.webp[0]).url);
-}

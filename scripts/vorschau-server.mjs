@@ -12,7 +12,7 @@ const typen = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": 
 
 const host = process.env.HOST ?? "127.0.0.1"; // nur lokal erreichbar (Codex-Befund)
 
-createServer(async (req, res) => {
+const server = createServer(async (req, res) => {
   const url = new URL(req.url ?? "/", "http://x");
   let p;
   try { p = decodeURIComponent(url.pathname); } catch { res.writeHead(400); return res.end("Ungültige Adresse."); }
@@ -35,6 +35,15 @@ createServer(async (req, res) => {
     res.end(inhalt);
   } catch {
     res.writeHead(404, { "content-type": "text/html; charset=utf-8" });
-    res.end(await readFile(path.join(wurzel, "404.html")));
+    try {
+      res.end(await readFile(path.join(wurzel, "404.html")));
+    } catch {
+      res.end("<!doctype html><meta charset=\"utf-8\"><title>404</title><p>Nicht gefunden. out/404.html fehlt: zuerst «npm run build» ausführen.</p>");
+    }
   }
-}).listen(port, host, () => console.log(`Vorschau: http://localhost:${port}${basePath}/`));
+});
+server.on("error", (fehler) => {
+  console.error(`Vorschau-Server konnte nicht starten (${host}:${port}): ${fehler.message}`);
+  process.exit(1);
+});
+server.listen(port, host, () => console.log(`Vorschau: http://localhost:${port}${basePath}/`));

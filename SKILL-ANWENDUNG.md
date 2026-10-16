@@ -51,7 +51,7 @@ keine App-Oberfläche, keine aufwendigen Scroll-Effekte.
 
 | Skill | Geprüft | Anwendung |
 | --- | --- | --- |
-| `code-review-and-quality`, `doubt-driven-development` | nicht gelesen | Zwei unabhängige Codex-Prüfungen (Architektur mit 16 Befunden, Abschlussprüfung), Befunde in `docs/PRUEFBERICHT.md` |
+| `code-review-and-quality`, `doubt-driven-development` | nicht gelesen | Zwei unabhängige Codex-Prüfungen (Architektur mit 16 Befunden, Abschlussprüfung mit 13 Befunden, alle bearbeitet), Befunde und Umsetzung in `docs/PRUEFBERICHT.md` |
 | `frontend-ui-engineering` | Kopf gelesen | Semantik (`header`, `nav`, `main`, `section` mit `aria-labelledby`, `address`, `dl`), natives `<dialog>`, `aria-expanded`, `aria-current`, `aria-live` für «Heute», `lang="th"` für Thai |
 | `security-and-hardening` | Kopf gelesen | Vertrauensgrenze «Inhalte aus dem CMS»: Zulassungsliste für Linkziele (ohne Backslash, nur https mit Host), maskiertes JSON-LD, keine Geheimnisse, Vorschau-Server ohne Pfadausbruch, minimale CI-Rechte |
 | `ci-cd-and-automation` | Kopf gelesen | Ablauf: Inhalte, Lint, Typen, Import-Trockenlauf, Build, Export-Prüfung, Browser-Prüfungen, erst dann Veröffentlichung; eigener Job für das Studio; wöchentlicher Lauf |

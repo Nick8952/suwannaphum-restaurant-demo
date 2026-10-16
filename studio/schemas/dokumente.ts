@@ -81,7 +81,7 @@ export const hinweis = defineType({
     const h = dok as { art?: string; anzeigenVon?: string; anzeigenBis?: string; geschlossenVon?: string; geschlossenBis?: string; geschlossenAb?: string; zeiten?: unknown[] } | undefined;
     if (!h) return true;
     if (h.geschlossenAb && h.art !== "betriebsferien") return "«Am ersten Tag geschlossen ab» gibt es nur bei Betriebsferien.";
-    if (h.zeiten?.length && h.art !== "sonderoeffnungszeiten") return "Zeitfenster gibt es nur bei Sonderöffnungszeiten.";
+    if (h.zeiten?.length && h.art !== "sonderoeffnungszeiten") return "Zeitfenster gibt es nur bei Sonderöffnungszeiten (bei anderen Arten alle Einträge entfernen).";
     if (h.anzeigenVon && h.anzeigenBis && h.anzeigenVon > h.anzeigenBis) return "«Anzeigen bis» liegt vor «Anzeigen ab».";
     if (h.art !== "mitteilung" && (!h.geschlossenVon || !h.geschlossenBis)) return "Betriebsferien und Sonderöffnungszeiten brauchen «Geschlossen von» und «Geschlossen bis».";
     if (h.geschlossenVon && h.geschlossenBis && h.geschlossenVon > h.geschlossenBis) return "«Geschlossen bis» liegt vor «Geschlossen von».";

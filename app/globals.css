@@ -194,6 +194,7 @@ a.kachel:hover .pfeil { transform: translateX(4px); }
 .gericht .preis { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .preis small { font-weight: 400; color: var(--color-grau); font-size: 0.8125rem; margin-right: 0.3em; }
 .nacht .preis small { color: var(--color-gold-hell); }
+.laeufer .preis small, .bg-sand .preis small { color: var(--color-tinte-2); }
 .gericht .beschreibung { color: var(--color-tinte-2); font-size: 0.9375rem; line-height: 1.5; max-width: 60ch; }
 .gericht .thai { font-family: var(--font-titel); font-weight: 600; color: var(--color-tinte-2); }
 .gericht .varianten { display: grid; gap: 0.25rem; font-size: 0.9375rem; max-width: 30rem; }

@@ -45,5 +45,3 @@ export async function inhaltsquelle(): Promise<Inhaltsquelle> {
   }
   return q;
 }
-
-export const inhaltsquelleName = quelleRoh === "sanity" ? "sanity" : "lokal";
