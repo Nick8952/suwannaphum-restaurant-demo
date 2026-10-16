@@ -1,0 +1,48 @@
+{
+  "slug": "datenschutz",
+  "titel": "Datenschutzerklärung",
+  "einleitung": "Diese Erklärung beschreibt, was beim Besuch dieser Demo-Website tatsächlich geschieht. Kurz: Die Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein.",
+  "stand": "16. Oktober 2026",
+  "seoBeschreibung": "Datenschutzerklärung der Demo-Website für das Thai Restaurant Suwannaphum: Hosting auf GitHub Pages, keine Cookies, keine Analyse, externe Links, Ihre Rechte.",
+  "bloecke": [
+    {
+      "titel": "Verantwortlich",
+      "anker": "verantwortlich"
+    },
+    "Verantwortlich für die Datenbearbeitung auf dieser Demo-Website ist Nick Holzbecher, E-Mail [holzbechernick@gmail.com](mailto:holzbechernick@gmail.com). Das dargestellte Restaurant betreibt diese Demo nicht.",
+    "Grundlage ist das Schweizer Bundesgesetz über den Datenschutz ([DSG, SR 235.1](https://www.fedlex.admin.ch/eli/cc/2022/491/de)). Diese Erklärung erfüllt die Informationspflicht nach Artikel 19 DSG. Ergänzend gilt für den Zugriff auf Ihr Gerät Artikel 45c des Fernmeldegesetzes ([FMG, SR 784.10](https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de)).",
+    {
+      "titel": "Hosting: GitHub Pages",
+      "anker": "hosting"
+    },
+    "Die Demo wird als statische Website über GitHub Pages ausgeliefert, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Verbindungsdaten: IP-Adresse, Zeitpunkt des Zugriffs, aufgerufene Adresse, Browser und Betriebssystem. Diese Daten dienen der Auslieferung der Seiten und der Sicherheit des Dienstes. Einzelheiten und Aufbewahrungsdauer stehen in der [Datenschutzerklärung von GitHub](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement). Der Betreiber dieser Demo hat keinen Zugriff auf diese Verbindungsdaten.",
+    "Mit der Auslieferung über GitHub Pages werden Verbindungsdaten in die USA übermittelt. GitHub gibt an, unter dem Swiss-U.S. Data Privacy Framework zertifiziert zu sein; der Bundesrat hat die USA für Unternehmen mit dieser Zertifizierung als Staat mit angemessenem Datenschutz anerkannt.",
+    {
+      "titel": "Keine Cookies, keine Analyse, keine Dienste Dritter",
+      "anker": "cookies"
+    },
+    "Diese Website setzt keine Cookies und speichert nichts in Ihrem Browser. Sie verwendet keine Analysewerkzeuge, keine Schriftarten von fremden Servern, keine eingebetteten Karten, Videos oder Social-Media-Elemente. Alle Schriften und Bilder werden von derselben Adresse wie die Website geladen.",
+    "Deshalb zeigt die Website kein Cookie-Banner. Der Link «Datenschutz-Einstellungen» in der Fusszeile öffnet einen Hinweis darauf. Sollte die Website einmal einen einwilligungspflichtigen Dienst einbinden, erscheint vorher eine Abfrage, in der Sie zustimmen oder ablehnen können; Ihre Entscheidung würde dann lokal in Ihrem Browser gespeichert.",
+    "Die Anzeige «Heute» auf der Startseite vergleicht die Öffnungszeiten mit der Uhrzeit Ihres Geräts. Das geschieht ausschliesslich in Ihrem Browser; es werden keine Daten übertragen oder gespeichert.",
+    {
+      "titel": "Links zu Karten, Lieferdiensten und Telefon",
+      "anker": "links"
+    },
+    "Die Website verlinkt auf Google Maps (Route), Uber Eats und Just Eat (Bestellung) und bietet Telefonnummern als Links an. Solange Sie keinen dieser Links anklicken, werden keine Daten an diese Anbieter übermittelt. Nach dem Klick gelten die Datenschutzbestimmungen des jeweiligen Anbieters: [Google](https://policies.google.com/privacy), [Uber](https://www.uber.com/legal/privacy/users/), [Just Eat](https://www.just-eat.ch/datenschutzerklaerung).",
+    {
+      "titel": "Kontaktaufnahme mit dem Restaurant",
+      "anker": "kontakt"
+    },
+    "Reservationen und Bestellungen laufen telefonisch direkt beim Restaurant. Diese Website verarbeitet dabei keine Daten; was Sie dem Restaurant am Telefon mitteilen, bearbeitet das Restaurant selbst. Ein Kontaktformular gibt es nicht.",
+    {
+      "titel": "Ihre Rechte",
+      "anker": "rechte"
+    },
+    "Sie haben das Recht auf Auskunft über die Bearbeitung Ihrer Personendaten, auf Berichtigung, Löschung und Herausgabe sowie das Recht, einer Bearbeitung zu widersprechen (Artikel 25 bis 32 DSG). Da diese Demo keine Personendaten speichert, beschränkt sich dieser Anspruch praktisch auf die Verbindungsdaten bei GitHub. Für Fragen wenden Sie sich an den oben genannten Verantwortlichen. Aufsichtsbehörde ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte ([EDÖB](https://www.edoeb.admin.ch/)).",
+    {
+      "titel": "Änderungen",
+      "anker": "aenderungen"
+    },
+    "Diese Erklärung beschreibt den Stand der Demo. Wird die Website später vom Restaurant produktiv betrieben, zum Beispiel mit einem Redaktionssystem (Sanity) und einem anderen Hosting (Vercel), wird sie neu verfasst. Beides ist in dieser Demo nicht im Einsatz."
+  ]
+}

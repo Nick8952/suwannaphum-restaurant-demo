@@ -1,0 +1,1420 @@
+{
+  "logo-wortmarke": {
+    "id": "logo-wortmarke",
+    "art": "foto",
+    "original": "assets/originale/logo-wortmarke-gelb.jpg",
+    "breite": 960,
+    "hoehe": 568,
+    "alt": "Wortmarke des Thai-Restaurants Suwannaphum in schwarzer Schreibschrift auf gelbem Grund, rechts eine goldene Thai-Figur mit zum Gruss gefalteten Händen",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website (Titelblatt der Speisekarte, «0 menu11.jpg», Mai 2026)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/logo-wortmarke-480-778f7fda.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/logo-wortmarke-960-326bc9f1.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/logo-wortmarke-480-9016f7e7.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/logo-wortmarke-960-b3c02412.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        9377,
+        22771
+      ],
+      "webp": [
+        12384,
+        33010
+      ]
+    }
+  },
+  "logo-schriftzug": {
+    "id": "logo-schriftzug",
+    "art": "foto",
+    "original": "assets/originale/logo-wortmarke-gelb.jpg",
+    "breite": 1000,
+    "hoehe": 240,
+    "alt": "Suwannaphum, Schriftzug des Restaurants",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website (Titelblatt der Speisekarte, «0 menu11.jpg», Mai 2026)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Ausschnitt mit dem Schriftzug, unverzerrt",
+    "quellen": {
+      "avif": [
+        {
+          "breite": 500,
+          "url": "/bilder/logo-schriftzug-500-fbdae530.avif"
+        },
+        {
+          "breite": 1000,
+          "url": "/bilder/logo-schriftzug-1000-d98c1fc8.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 500,
+          "url": "/bilder/logo-schriftzug-500-8e9b9ddb.webp"
+        },
+        {
+          "breite": 1000,
+          "url": "/bilder/logo-schriftzug-1000-019c9544.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        5263,
+        11844
+      ],
+      "webp": [
+        7916,
+        18732
+      ]
+    }
+  },
+  "gastraum-schild": {
+    "id": "gastraum-schild",
+    "art": "foto",
+    "original": "assets/originale/gastraum-schild-statuen.jpg",
+    "breite": 2000,
+    "hoehe": 1333,
+    "alt": "Gastraum des Suwannaphum: geschnitztes Holzschild mit dem Namen in lateinischer und thailändischer Schrift über der Bar, davor zwei goldene Thai-Figuren mit Blumengirlanden, gelbe und türkisfarbene Wände, rote Laternen",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («image_0.jpg», Juni 2023)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 640,
+          "url": "/bilder/gastraum-schild-640-704353e8.avif"
+        },
+        {
+          "breite": 1024,
+          "url": "/bilder/gastraum-schild-1024-194d9aa9.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-schild-1600-9a88642a.avif"
+        },
+        {
+          "breite": 2000,
+          "url": "/bilder/gastraum-schild-2000-dfb419bf.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 640,
+          "url": "/bilder/gastraum-schild-640-252ddd10.webp"
+        },
+        {
+          "breite": 1024,
+          "url": "/bilder/gastraum-schild-1024-11869718.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-schild-1600-7dba8c8c.webp"
+        },
+        {
+          "breite": 2000,
+          "url": "/bilder/gastraum-schild-2000-3d14c18c.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        32922,
+        72356,
+        150984,
+        215035
+      ],
+      "webp": [
+        48490,
+        109058,
+        225624,
+        317446
+      ]
+    }
+  },
+  "buffet-theke": {
+    "id": "buffet-theke",
+    "art": "foto",
+    "original": "assets/originale/buffet-theke-2021.jpg",
+    "breite": 1600,
+    "hoehe": 1067,
+    "alt": "Buffettheke mit zwölf Edelstahlbehältern: Currys, Wok-Gemüse, Jasminreis, gebratener Reis, Nudeln und Frühlingsrollen",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Startseite der bisherigen Website («20210204_111509.jpg», Foto vom 4. Februar 2021)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/buffet-theke-480-f2939c9f.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/buffet-theke-960-3c17598f.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/buffet-theke-1600-ebdfe469.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/buffet-theke-480-4b74bd71.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/buffet-theke-960-fc808ef7.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/buffet-theke-1600-e2c15dca.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        22631,
+        79875,
+        192124
+      ],
+      "webp": [
+        36048,
+        132208,
+        322460
+      ]
+    }
+  },
+  "buffet-take-away": {
+    "id": "buffet-take-away",
+    "art": "foto",
+    "original": "assets/originale/buffet-take-away.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Buffet mit Currys, Reis und Nudeln, davor gestapelte Take-away-Boxen auf roten Tabletts",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/buffet-take-away-480-2df83f41.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/buffet-take-away-960-22b2a575.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/buffet-take-away-1600-f2312a2a.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/buffet-take-away-480-4636a1ca.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/buffet-take-away-960-e702f907.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/buffet-take-away-1600-34a7066a.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17842,
+        53580,
+        127531
+      ],
+      "webp": [
+        26236,
+        83294,
+        204982
+      ]
+    }
+  },
+  "gastraum-wand-buddha": {
+    "id": "gastraum-wand-buddha",
+    "art": "foto",
+    "original": "assets/originale/gastraum-wand-buddha.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Gelbe Wand mit einem goldgerahmten Buddha-Bild, zwei Wandleuchten und geschnitzten Holztafeln über roten Sitzbänken",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite («20220221_141156»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-wand-buddha-480-83a10e26.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-wand-buddha-960-7f73881f.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-wand-buddha-1600-765e1c29.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-wand-buddha-480-10df5d98.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-wand-buddha-960-bf54cf4b.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-wand-buddha-1600-0e3efc66.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        14447,
+        41848,
+        98548
+      ],
+      "webp": [
+        21148,
+        59690,
+        130232
+      ]
+    }
+  },
+  "gastraum-tische": {
+    "id": "gastraum-tische",
+    "art": "foto",
+    "original": "assets/originale/gastraum-tische-wandbild.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Gastraum mit gedeckten Tischen, roten Läufern, Blumen, einem thailändischen Wandbild und Laternen unter der Spiegeldecke",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-tische-480-c1ca74f0.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-tische-960-d7e64499.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-tische-1600-e2736646.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-tische-480-520b0179.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-tische-960-61b775ee.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-tische-1600-a484193e.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        16964,
+        50760,
+        118657
+      ],
+      "webp": [
+        24406,
+        74288,
+        168872
+      ]
+    }
+  },
+  "gastraum-spiegeldecke": {
+    "id": "gastraum-spiegeldecke",
+    "art": "foto",
+    "original": "assets/originale/gastraum-spiegeldecke-bar.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Blick zur Bar mit Orchideen und farbigen Laternen, die sich in der Spiegeldecke spiegeln",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-spiegeldecke-480-1c684f8b.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-spiegeldecke-960-debf0d1d.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-spiegeldecke-1600-47acd21b.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-spiegeldecke-480-21bdd772.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-spiegeldecke-960-160dbdf6.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-spiegeldecke-1600-dc0528bf.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17483,
+        51567,
+        120058
+      ],
+      "webp": [
+        22326,
+        73124,
+        169680
+      ]
+    }
+  },
+  "gastraum-wandbild": {
+    "id": "gastraum-wandbild",
+    "art": "foto",
+    "original": "assets/originale/gastraum-wandbild-thailand.jpg",
+    "breite": 1600,
+    "hoehe": 1067,
+    "alt": "Wandbild eines thailändischen Tempels mit Figuren, flankiert von geschnitzten Holzornamenten und zwei bestickten Thailand-Bannern",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-wandbild-480-402d09f3.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-wandbild-960-e90c63b8.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-wandbild-1600-9c46ad21.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-wandbild-480-426a2ac9.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-wandbild-960-3b261375.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-wandbild-1600-f1f7955d.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17221,
+        65048,
+        177894
+      ],
+      "webp": [
+        26046,
+        102094,
+        272238
+      ]
+    }
+  },
+  "bar-glaeser": {
+    "id": "bar-glaeser",
+    "art": "foto",
+    "original": "assets/originale/bar-glaeser-orchideen.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Bar mit Glasregal, Orchideen, Thai-Figuren und einer hellblauen Laterne, Barhocker an der Theke",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/bar-glaeser-480-39ff6aba.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/bar-glaeser-960-77d5ad70.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/bar-glaeser-1600-ddcf88ac.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/bar-glaeser-480-59ea2a72.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/bar-glaeser-960-a1e094c9.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/bar-glaeser-1600-b3691e21.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17738,
+        51574,
+        114452
+      ],
+      "webp": [
+        24736,
+        74104,
+        159856
+      ]
+    }
+  },
+  "eingang-holzfigur": {
+    "id": "eingang-holzfigur",
+    "art": "foto",
+    "original": "assets/originale/eingang-holzfigur.jpg",
+    "breite": 1200,
+    "hoehe": 1600,
+    "alt": "Geschnitzte Holzfigur in grünem Gewand mit zum Gruss gefalteten Händen am Eingang, dahinter der Gastraum",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/eingang-holzfigur-480-a8c4b908.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/eingang-holzfigur-960-2dedd77a.avif"
+        },
+        {
+          "breite": 1200,
+          "url": "/bilder/eingang-holzfigur-1200-0bd7153b.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/eingang-holzfigur-480-3d139b09.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/eingang-holzfigur-960-40a710b4.webp"
+        },
+        {
+          "breite": 1200,
+          "url": "/bilder/eingang-holzfigur-1200-5717bc44.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        30412,
+        98344,
+        138535
+      ],
+      "webp": [
+        51276,
+        150624,
+        207556
+      ]
+    }
+  },
+  "kniende-figuren": {
+    "id": "kniende-figuren",
+    "art": "foto",
+    "original": "assets/originale/kniende-figuren.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Zwei kniende Thai-Figuren mit gefalteten Händen in einer Nische vor gelber Wand",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/kniende-figuren-480-fe668fe6.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/kniende-figuren-960-eedd2353.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/kniende-figuren-1600-b5028d39.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/kniende-figuren-480-490a6d38.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/kniende-figuren-960-0239377d.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/kniende-figuren-1600-5ef4e69d.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        7563,
+        29052,
+        64803
+      ],
+      "webp": [
+        9052,
+        32326,
+        73262
+      ]
+    }
+  },
+  "gastraum-kasse": {
+    "id": "gastraum-kasse",
+    "art": "foto",
+    "original": "assets/originale/gastraum-tische-kasse.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Gastraum mit Tischen und farbigen Tischläufern, Blick zur Theke mit Kasse und Orchideen",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-kasse-480-1cbfa69f.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-kasse-960-8a3c109a.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-kasse-1600-23f9448a.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gastraum-kasse-480-861ee1f9.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gastraum-kasse-960-4e4ca6d6.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gastraum-kasse-1600-c2031353.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17970,
+        51855,
+        116016
+      ],
+      "webp": [
+        25860,
+        74936,
+        162606
+      ]
+    }
+  },
+  "bar-schild": {
+    "id": "bar-schild",
+    "art": "foto",
+    "original": "assets/originale/bar-schild-laternen.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Holzschild «Suwannaphum» über der Bar, rote Laternen, Orchideen und eine schwarz-goldene Lackschale auf grünem Tuch",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Galerie der bisherigen Startseite",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/bar-schild-480-287f7526.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/bar-schild-960-d626c7e4.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/bar-schild-1600-f41c19ea.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/bar-schild-480-d21126f9.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/bar-schild-960-383a9f46.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/bar-schild-1600-a3bcd0f7.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        18326,
+        52112,
+        110696
+      ],
+      "webp": [
+        27216,
+        73614,
+        146488
+      ]
+    }
+  },
+  "team-saythong": {
+    "id": "team-saythong",
+    "art": "foto",
+    "original": "assets/originale/team-saythong.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Saythong Schmied im roten Kleid hinter einer Schale mit Früchten, links und rechts goldene Thai-Figuren mit Blumengirlanden",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Seite «Unsere Mitarbeiter» der bisherigen Website",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe und Einverständnis der abgebildeten Person"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/team-saythong-480-aead0e0c.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/team-saythong-960-27b24b75.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/team-saythong-1600-30186e91.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/team-saythong-480-7b0f624f.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/team-saythong-960-3e1b084d.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/team-saythong-1600-e04075b9.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        27574,
+        90943,
+        226815
+      ],
+      "webp": [
+        40852,
+        137428,
+        339010
+      ]
+    }
+  },
+  "team-drei": {
+    "id": "team-drei",
+    "art": "foto",
+    "original": "assets/originale/team-drei.jpg",
+    "breite": 1045,
+    "hoehe": 1901,
+    "alt": "Das Team: Somjit, Supansa und Saythong (von links nach rechts) im Gastraum vor einer türkisfarbenen Wand mit rotem Bild und Papierschirmen",
+    "legende": "Somjit, Supansa, Saythong (v. l. n. r.)",
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Seite «Unsere Mitarbeiter» der bisherigen Website («IMG-20231111-WA0004»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe und Einverständnis der abgebildeten Personen"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/team-drei-480-403670ba.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/team-drei-960-c8e3c67a.avif"
+        },
+        {
+          "breite": 1045,
+          "url": "/bilder/team-drei-1045-4a99f121.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/team-drei-480-31c91dee.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/team-drei-960-b0e681d7.webp"
+        },
+        {
+          "breite": 1045,
+          "url": "/bilder/team-drei-1045-1700b760.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        40422,
+        118907,
+        139712
+      ],
+      "webp": [
+        57344,
+        164378,
+        195134
+      ]
+    }
+  },
+  "gericht-gaeng-kiew-wan-gai": {
+    "id": "gericht-gaeng-kiew-wan-gai",
+    "art": "foto",
+    "original": "assets/originale/gericht-gaeng-kiew-wan-gai.jpg",
+    "breite": 1477,
+    "hoehe": 1108,
+    "alt": "Gaeng Kiew Wan Gai: grüner Curry mit Poulet, Thai-Basilikum, grünen und roten Chilischoten in einer blau-weissen Schale",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Gaeng-Kiew-Wan-Gai.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-480-102a9755.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-960-35bde30c.avif"
+        },
+        {
+          "breite": 1477,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-1477-28395c37.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-480-358c7e1a.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-960-1c830c4a.webp"
+        },
+        {
+          "breite": 1477,
+          "url": "/bilder/gericht-gaeng-kiew-wan-gai-1477-74687796.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        18415,
+        71861,
+        164150
+      ],
+      "webp": [
+        42560,
+        146568,
+        278708
+      ]
+    }
+  },
+  "gericht-som-tam-thai": {
+    "id": "gericht-som-tam-thai",
+    "art": "foto",
+    "original": "assets/originale/gericht-som-tam-thai.jpg",
+    "breite": 1396,
+    "hoehe": 1047,
+    "alt": "Som Tam Thai: Papayasalat mit Erdnüssen, Cherry-Tomaten und geschnitzten Karotten auf Salatblatt",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Som-Tam-Thai.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-som-tam-thai-480-8b79b48c.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-som-tam-thai-960-838da5d1.avif"
+        },
+        {
+          "breite": 1396,
+          "url": "/bilder/gericht-som-tam-thai-1396-38ddedab.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-som-tam-thai-480-af3d01f2.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-som-tam-thai-960-90a59d23.webp"
+        },
+        {
+          "breite": 1396,
+          "url": "/bilder/gericht-som-tam-thai-1396-9eeb6326.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        18905,
+        53597,
+        98983
+      ],
+      "webp": [
+        31188,
+        81378,
+        134290
+      ]
+    }
+  },
+  "gericht-fritierte-crevetten": {
+    "id": "gericht-fritierte-crevetten",
+    "art": "foto",
+    "original": "assets/originale/gericht-fritierte-crevetten.jpg",
+    "breite": 1093,
+    "hoehe": 820,
+    "alt": "Frittierte Crevetten im Teig mit süss-saurer Sauce, Gurke, Karotte und Salat",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Fritierte-Crevetten.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-fritierte-crevetten-480-55d16eb3.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-fritierte-crevetten-960-c9a50fe6.avif"
+        },
+        {
+          "breite": 1093,
+          "url": "/bilder/gericht-fritierte-crevetten-1093-b26f234a.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-fritierte-crevetten-480-559dedb4.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-fritierte-crevetten-960-97bc5f8a.webp"
+        },
+        {
+          "breite": 1093,
+          "url": "/bilder/gericht-fritierte-crevetten-1093-8567016d.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        16983,
+        58472,
+        76949
+      ],
+      "webp": [
+        29006,
+        90688,
+        115288
+      ]
+    }
+  },
+  "gericht-phad-thai-gai": {
+    "id": "gericht-phad-thai-gai",
+    "art": "foto",
+    "original": "assets/originale/gericht-phad-thai-gai.jpg",
+    "breite": 1452,
+    "hoehe": 1089,
+    "alt": "Phad Thai Gai: gebratene Reisnudeln mit Tofu, Sojasprossen, Limette, Erdnüssen und Chili auf einem fischförmigen grünen Teller",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Phad-Thai-Gai.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-phad-thai-gai-480-f9babd04.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-phad-thai-gai-960-01c0452c.avif"
+        },
+        {
+          "breite": 1452,
+          "url": "/bilder/gericht-phad-thai-gai-1452-c2af32be.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-phad-thai-gai-480-cd705c85.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-phad-thai-gai-960-ba072b45.webp"
+        },
+        {
+          "breite": 1452,
+          "url": "/bilder/gericht-phad-thai-gai-1452-0539b683.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        21091,
+        62339,
+        115895
+      ],
+      "webp": [
+        38770,
+        107076,
+        185118
+      ]
+    }
+  },
+  "gericht-gemuesekuechlein": {
+    "id": "gericht-gemuesekuechlein",
+    "art": "foto",
+    "original": "assets/originale/gericht-gemuesekuechlein.jpg",
+    "breite": 1099,
+    "hoehe": 824,
+    "alt": "Frittierte Gemüseküchlein mit Dip-Sauce, Gurke, Karotte und Salat",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Pak-Tschub-Baeng-Thod-2.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-gemuesekuechlein-480-d97d1e57.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-gemuesekuechlein-960-f8e27eaa.avif"
+        },
+        {
+          "breite": 1099,
+          "url": "/bilder/gericht-gemuesekuechlein-1099-2f8ec96f.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-gemuesekuechlein-480-45a1b3d7.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-gemuesekuechlein-960-d8142a51.webp"
+        },
+        {
+          "breite": 1099,
+          "url": "/bilder/gericht-gemuesekuechlein-1099-0a4e5ff3.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        17018,
+        54510,
+        70534
+      ],
+      "webp": [
+        28428,
+        83634,
+        105186
+      ]
+    }
+  },
+  "gericht-tom-kha-gai": {
+    "id": "gericht-tom-kha-gai",
+    "art": "foto",
+    "original": "assets/originale/gericht-tom-kha-gai.jpg",
+    "breite": 1600,
+    "hoehe": 1200,
+    "alt": "Tom Kha Gai: Kokosnussmilch-Suppe mit Poulet, Cherry-Tomaten, Zitronengras, Galgant und Limettenblättern in einer blau-weissen Schale",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («Tom-Kha-Gai-2.jpg»)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": null,
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-tom-kha-gai-480-0f810aae.avif"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-tom-kha-gai-960-93060a65.avif"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gericht-tom-kha-gai-1600-b6e947fe.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-tom-kha-gai-480-dc7d9484.webp"
+        },
+        {
+          "breite": 960,
+          "url": "/bilder/gericht-tom-kha-gai-960-d3f8c6f7.webp"
+        },
+        {
+          "breite": 1600,
+          "url": "/bilder/gericht-tom-kha-gai-1600-3e4252eb.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        15117,
+        54465,
+        130702
+      ],
+      "webp": [
+        28672,
+        94666,
+        194422
+      ]
+    }
+  },
+  "gericht-khao-soi": {
+    "id": "gericht-khao-soi",
+    "art": "foto",
+    "original": "assets/originale/aushang-special-menu-2026.jpg",
+    "breite": 480,
+    "hoehe": 480,
+    "alt": "Khao Soi: Curry-Nudelsuppe mit Poulet, knusprigen Nudeln, Koriander und geschnitzter Karotte in einer blau-weissen Schale",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Aushang «Special Menu» auf der Startseite der bisherigen Website",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Ausschnitt aus dem Aushang (nur das Gericht)",
+    "quellen": {
+      "avif": [
+        {
+          "breite": 360,
+          "url": "/bilder/gericht-khao-soi-360-dc477574.avif"
+        },
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-khao-soi-480-8c920573.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 360,
+          "url": "/bilder/gericht-khao-soi-360-b172182d.webp"
+        },
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-khao-soi-480-58655333.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        18861,
+        30154
+      ],
+      "webp": [
+        30186,
+        46800
+      ]
+    }
+  },
+  "gericht-pla-rad-prik": {
+    "id": "gericht-pla-rad-prik",
+    "art": "foto",
+    "original": "assets/originale/aushang-special-menu-2026.jpg",
+    "breite": 890,
+    "hoehe": 345,
+    "alt": "Pla Rad Prik: gebratener Tilapia mit Chilipaste, roten Chilistreifen und Kräutern auf einer fischförmigen Platte",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Aushang «Special Menu» auf der Startseite der bisherigen Website",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Ausschnitt aus dem Aushang (nur das Gericht)",
+    "quellen": {
+      "avif": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-pla-rad-prik-480-227be581.avif"
+        },
+        {
+          "breite": 890,
+          "url": "/bilder/gericht-pla-rad-prik-890-0197cca7.avif"
+        }
+      ],
+      "webp": [
+        {
+          "breite": 480,
+          "url": "/bilder/gericht-pla-rad-prik-480-f5dfa333.webp"
+        },
+        {
+          "breite": 890,
+          "url": "/bilder/gericht-pla-rad-prik-890-cce58e77.webp"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [
+        13644,
+        36450
+      ],
+      "webp": [
+        20176,
+        53738
+      ]
+    }
+  },
+  "og-suwannaphum": {
+    "id": "og-suwannaphum",
+    "art": "foto",
+    "original": "assets/originale/gastraum-schild-statuen.jpg",
+    "breite": 1200,
+    "hoehe": 630,
+    "alt": "Gastraum des Suwannaphum: geschnitztes Holzschild mit dem Namen in lateinischer und thailändischer Schrift über der Bar, davor zwei goldene Thai-Figuren mit Blumengirlanden, gelbe und türkisfarbene Wände, rote Laternen",
+    "legende": null,
+    "symbolbild": false,
+    "nachweis": {
+      "urheber": "Thai Restaurant Suwannaphum",
+      "quelle": "Medienbibliothek der bisherigen Website («image_0.jpg», Juni 2023)",
+      "lizenz": "Eigenes Bild des Restaurants, Nutzung vorbehaltlich Freigabe"
+    },
+    "abgerufen": "2026-10-16",
+    "bearbeitung": "Ausschnitt 1200 × 630 für geteilte Links",
+    "quellen": {
+      "avif": [],
+      "webp": [
+        {
+          "breite": 1200,
+          "url": "/bilder/og-suwannaphum-1200-0d2175ea.jpg"
+        }
+      ]
+    },
+    "bytes": {
+      "avif": [],
+      "webp": [
+        161303
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# Abhängigkeiten
+/node_modules
+/studio/node_modules
+/studio/dist
+/studio/.sanity
+
+# Next.js
+/.next/
+/out/
+
+# Umgebungsvariablen (nie committen); die Beispieldatei bleibt versioniert
+.env*
+!.env.example
+
+# Vercel / TypeScript
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Gespiegelte Bilder aus Sanity (entstehen bei jedem Build mit CONTENT_SOURCE=sanity)
+/public/bilder/cms/
+/data/cms-bilder.json
+
+# Lokale Prüfausgaben (Audit-Berichte, Screenshots)
+/pruefung
+
+# System
+.DS_Store
+npm-debug.log*
+
+# Nicht verwendete Originale (Rechte unklar, nur lokal; dokumentiert in assets/originale/HERKUNFT.md)
+/assets/originale/bibliothek-nicht-verwendet/

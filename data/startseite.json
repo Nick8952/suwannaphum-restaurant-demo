@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "titel": "Thai Restaurant Suwannaphum",
+    "text": "Thai-Küche an der Zürcherstrasse in Schlieren: mittags Buffet, abends à la carte, Take-away auf Anfrage.",
+    "knopf": {
+      "text": "Speisekarte ansehen",
+      "ziel": "/speisekarte/"
+    },
+    "zweiterKnopf": {
+      "text": "Telefonisch reservieren",
+      "ziel": "tel:+41445558299"
+    },
+    "bild": "gastraum-schild"
+  },
+  "heute": {
+    "titel": "Heute",
+    "geschlossen": "Heute geschlossen",
+    "kueche": "Küche bis"
+  },
+  "buffet": {
+    "titel": "Mittagsbuffet von Montag bis Freitag"
+  },
+  "speisekarte": {
+    "titel": "Die Karte",
+    "text": "Vorspeisen, Salate, Suppen, Currys und Wok-Gerichte, Reis und Nudeln, vegetarische Gerichte und Thai Specials. Den Schärfegrad wählen Sie selbst.",
+    "knopf": {
+      "text": "Speisekarte ansehen",
+      "ziel": "/speisekarte/"
+    },
+    "kacheln": [
+      {
+        "_key": "vorspeisen",
+        "titel": "Vorspeisen",
+        "text": "Gemüseküchlein, Frühlingsrollen, Satay und Salate als Einstieg.",
+        "kategorie": "vorspeisen",
+        "bild": "gericht-gemuesekuechlein"
+      },
+      {
+        "_key": "suppen",
+        "titel": "Suppen",
+        "text": "Tom Kha Gai, Tom Yam und die Thai-Nudelsuppe Giau Thiau Nam.",
+        "kategorie": "suppen",
+        "bild": "gericht-tom-kha-gai"
+      },
+      {
+        "_key": "hauptgerichte",
+        "titel": "Hauptgerichte",
+        "text": "Fünf Currys mit Fleisch, Fisch oder Gemüse nach Wahl und Gerichte aus dem Wok.",
+        "kategorie": "hauptgerichte",
+        "bild": "gericht-gaeng-kiew-wan-gai"
+      }
+    ]
+  },
+  "specials": {
+    "titel": "Special Menu am Freitagabend und am Samstag",
+    "text": "Khao Soi, die Curry-Nudeln aus Chiang Mai, und Pla Rad Prik, gebratener Tilapia mit Chillipaste.",
+    "kategorie": "special-menu",
+    "knopf": {
+      "text": "Zum Special Menu",
+      "ziel": "/speisekarte/#special-menu"
+    }
+  },
+  "restaurant": {
+    "titel": "Das Restaurant",
+    "text": "Gelbe Wände, goldene Figuren mit zum Gruss gefalteten Händen, Laternen unter der Spiegeldecke. Saythong Schmied eröffnete das Suwannaphum 2011 in Zürich-Altstetten und führt es heute in Schlieren.",
+    "knopf": {
+      "text": "Restaurant und Team",
+      "ziel": "/restaurant/"
+    },
+    "bilder": [
+      "gastraum-tische",
+      "bar-schild",
+      "kniende-figuren"
+    ]
+  },
+  "takeaway": {
+    "titel": "Take-away und Lieferung",
+    "text": "Gerichte zum Mitnehmen gibt es auf Anfrage: anrufen, bestellen, im Restaurant abholen. Nach Hause liefern Uber Eats und Just Eat.",
+    "bild": "buffet-take-away"
+  },
+  "kontakt": {
+    "titel": "Reservation und Anfahrt",
+    "text": "Tische reservieren Sie telefonisch. Das Restaurant liegt an der Zürcherstrasse 31 in Schlieren."
+  },
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Startseite des Restaurants",
+        "url": "https://www.suwannaphum.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      },
+      {
+        "quelle": "Seite «Unsere Mitarbeiter» des Restaurants",
+        "url": "https://www.suwannaphum.ch/unsere-mitarbeiter",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  "seoBeschreibung": "Thai Restaurant Suwannaphum, Zürcherstrasse 31, Schlieren: Mittagsbuffet Montag bis Freitag, Speisekarte mit Preisen, Öffnungszeiten, telefonische Reservation, Take-away."
+}

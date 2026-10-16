@@ -1,0 +1,25 @@
+{
+  "titel": "Kontakt, Reservation und Anfahrt",
+  "einleitung": "Ein Anruf genügt: für Reservationen, Take-away und Fragen zur Karte.",
+  "reservationTitel": "Reservation",
+  "takeawayTitel": "Take-away",
+  "lieferdiensteTitel": "Lieferung nach Hause",
+  "lieferdiensteText": "Das Restaurant ist bei diesen Lieferdiensten gelistet. Bestellung, Lieferung und Zahlung laufen über den jeweiligen Dienst.",
+  "zahlungTitel": "Zahlungsmethoden",
+  "anfahrtTitel": "Anfahrt",
+  "anfahrtText": "Das Restaurant liegt an der Zürcherstrasse 31 in Schlieren. Die Route öffnet sich in Google Maps in einem neuen Fenster.",
+  "oeffnungszeitenTitel": "Öffnungszeiten und Küchenzeiten",
+  "seoTitel": "Kontakt, Reservation und Anfahrt",
+  "seoBeschreibung": "Thai Restaurant Suwannaphum, Zürcherstrasse 31, 8952 Schlieren. Telefon 044 555 82 99 für Reservation und Take-away, Öffnungszeiten, Küchenzeiten, Lieferdienste.",
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Startseite des Restaurants (Reservation und Bestellung telefonisch, Take-away auf Anfrage, Lieferdienste, Zahlungsmethoden, Adresse)",
+        "url": "https://www.suwannaphum.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  }
+}

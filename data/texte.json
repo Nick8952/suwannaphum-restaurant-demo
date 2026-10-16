@@ -1,0 +1,127 @@
+{
+  "demoHinweis": "Entwurf (Verkaufs-Demo), nicht die offizielle Website des Restaurants.",
+  "navigation": [
+    {
+      "text": "Speisekarte",
+      "ziel": "/speisekarte/"
+    },
+    {
+      "text": "Restaurant",
+      "ziel": "/restaurant/"
+    },
+    {
+      "text": "Kontakt",
+      "ziel": "/kontakt/"
+    }
+  ],
+  "aufrufe": {
+    "speisekarte": {
+      "text": "Speisekarte ansehen",
+      "ziel": "/speisekarte/"
+    },
+    "reservieren": {
+      "text": "Telefonisch reservieren"
+    },
+    "takeaway": {
+      "text": "Für Take-away anrufen"
+    }
+  },
+  "kopf": {
+    "zusatz": "Thai Restaurant",
+    "navTitel": "Hauptnavigation",
+    "startseite": "Startseite",
+    "telefonLabel": "Anrufen",
+    "menueKnopf": "Menü",
+    "menueTitel": "Menü",
+    "schliessen": "Schliessen"
+  },
+  "mobilLeiste": {
+    "titel": "Schnellzugriff",
+    "speisekarte": "Speisekarte",
+    "anrufen": "Anrufen"
+  },
+  "footer": {
+    "leitsatz": "Thai-Küche an der Zürcherstrasse in Schlieren.",
+    "kontaktTitel": "Kontakt",
+    "zeitenTitel": "Öffnungszeiten",
+    "seitenTitel": "Seiten",
+    "rechtlichesTitel": "Rechtliches",
+    "rechtliches": [
+      {
+        "text": "Impressum",
+        "ziel": "/impressum/"
+      },
+      {
+        "text": "Datenschutzerklärung",
+        "ziel": "/datenschutz/"
+      }
+    ],
+    "route": "Route anzeigen",
+    "bildnachweis": {
+      "text": "Bildnachweis",
+      "ziel": "/impressum/#bildnachweis"
+    },
+    "copyright": "Thai Restaurant Suwannaphum",
+    "demoHinweis": "Diese Seite ist ein Entwurf (Verkaufs-Demo) und nicht die offizielle Website des Restaurants. Angaben ohne Gewähr; massgebend sind die Auskünfte des Restaurants."
+  },
+  "ui": {
+    "zumInhalt": "Zum Inhalt springen",
+    "symbolbild": "Symbolbild, keine Aufnahme aus dem Restaurant",
+    "telefon": "Telefon",
+    "adresse": "Adresse",
+    "route": "Route anzeigen",
+    "preisWaehrung": "CHF",
+    "preisAb": "ab",
+    "schaerfeLabel": "Schärfe",
+    "nummerLabel": "Nr.",
+    "kategorienTitel": "Kategorien",
+    "geschlossen": "geschlossen",
+    "kuecheBis": "Küche bis",
+    "heuteLabel": "Heute",
+    "uhr": "Uhr",
+    "bestellenBei": "Bestellen bei",
+    "nichtGefundenTitel": "Diese Seite gibt es nicht",
+    "nichtGefundenText": "Die Adresse ist falsch geschrieben oder die Seite wurde verschoben. Die Speisekarte und die Kontaktangaben finden Sie über die Startseite.",
+    "nichtGefundenLink": {
+      "text": "Zur Startseite",
+      "ziel": "/"
+    },
+    "fehler404": "Fehler 404",
+    "quellenTitel": "Quellen",
+    "uebersetzungHinweis": "Arbeitsübersetzung, vom Restaurant noch zu bestätigen",
+    "wann": "Wann",
+    "hinweiseTitel": "Aktuelle Hinweise",
+    "allergeneLabel": "Allergene"
+  },
+  "einwilligung": {
+    "fussLink": "Datenschutz-Einstellungen",
+    "ruhendTitel": "Nichts einzustellen",
+    "ruhendText": "Diese Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein. Karten und Lieferdienste öffnen sich erst, wenn Sie auf den jeweiligen Link klicken. Deshalb gibt es keine Einwilligung zu verwalten.",
+    "bannerTitel": "Datenschutz-Einstellungen",
+    "bannerText": "Diese Website möchte optionale Dienste einbinden. Sie entscheiden, welche. Ohne Ihre Zustimmung werden sie nicht geladen.",
+    "alleAkzeptieren": "Alle akzeptieren",
+    "nurNotwendige": "Nur notwendige",
+    "einstellungen": "Einstellungen",
+    "auswahlSpeichern": "Auswahl speichern",
+    "widerrufen": "Einwilligung widerrufen",
+    "notwendigTitel": "Notwendig",
+    "notwendigText": "Speichert nur Ihre Entscheidung zu diesen Einstellungen.",
+    "datenschutzerklaerung": "Datenschutzerklärung",
+    "kategorien": []
+  },
+  "seo": {
+    "titelZusatz": "Thai Restaurant Suwannaphum, Schlieren",
+    "beschreibung": "Thai Restaurant Suwannaphum an der Zürcherstrasse 31 in Schlieren: Speisekarte, Mittagsbuffet, Öffnungszeiten, telefonische Reservation und Take-away."
+  },
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Startseite des Restaurants (Lage, Angebot)",
+        "url": "https://www.suwannaphum.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  }
+}

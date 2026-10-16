@@ -1,0 +1,70 @@
+{
+  "titel": "Restaurant und Team",
+  "einleitung": "Ein kleines Thai-Restaurant an der Zürcherstrasse: gelbe und türkisfarbene Wände, geschnitzte Figuren, Laternen und eine Küche, die von der Chefin selbst geführt wird.",
+  "bild": "gastraum-wand-buddha",
+  "geschichte": {
+    "titel": "Von Altstetten nach Schlieren",
+    "absaetze": [
+      "Saythong (Jenny) Schmied eröffnete am 9. August 2011 das Thai Restaurant Suwannaphum in Zürich-Altstetten. Seither kocht sie mit viel Liebe und Freude für ihre Gäste, die ihre freundliche und zuvorkommende Art sehr schätzen. Sie ist Köchin, Serviertochter und Geschäftsführerin in einer Person.",
+      "Im Mai 2016 musste sie ihr Suwannaphum wegen der Umnutzung des Gebäudes schliessen. Die Suche nach einem neuen Lokal begann, und schliesslich wurde sie in Schlieren fündig: an der Zürcherstrasse 31."
+    ]
+  },
+  "name": {
+    "titel": "Der Name",
+    "text": "Suwannaphum bedeutet «goldenes Land». Der Name steht in beiden Schriften auf dem geschnitzten Holzschild über der Bar."
+  },
+  "team": {
+    "titel": "Das Team",
+    "mitglieder": [
+      {
+        "_key": "saythong",
+        "name": "Saythong Schmied",
+        "rolle": "Geschäftsführerin und Chefköchin",
+        "text": "Köchin, Serviertochter und Geschäftsführerin in einer Person.",
+        "bild": "team-saythong"
+      }
+    ],
+    "gruppenbild": "team-drei"
+  },
+  "einblicke": {
+    "titel": "Einblicke",
+    "text": "Aufnahmen aus dem Restaurant an der Zürcherstrasse.",
+    "bilder": [
+      "gastraum-tische",
+      "bar-schild",
+      "gastraum-spiegeldecke",
+      "gastraum-wandbild",
+      "bar-glaeser",
+      "eingang-holzfigur",
+      "kniende-figuren",
+      "gastraum-kasse"
+    ]
+  },
+  "aufruf": {
+    "titel": "Tisch reservieren",
+    "text": "Für Reservationen und Take-away rufen Sie an.",
+    "knopf": {
+      "text": "Telefonisch reservieren",
+      "ziel": "tel:+41445558299"
+    }
+  },
+  "belege": {
+    "herkunft": [
+      {
+        "quelle": "Seite «Unsere Mitarbeiter» des Restaurants (Geschichte, Team, Namen)",
+        "url": "https://www.suwannaphum.ch/unsere-mitarbeiter",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      },
+      {
+        "quelle": "Startseite des Restaurants (Fotos des Gastraums, Holzschild mit dem Namen in Thai-Schrift)",
+        "url": "https://www.suwannaphum.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "eigene-website"
+      }
+    ],
+    "freigabe": "demo"
+  },
+  "seoTitel": "Restaurant und Team",
+  "seoBeschreibung": "Das Thai Restaurant Suwannaphum in Schlieren: Geschichte seit 2011, Chefköchin Saythong Schmied, das Team und Einblicke in den Gastraum an der Zürcherstrasse."
+}

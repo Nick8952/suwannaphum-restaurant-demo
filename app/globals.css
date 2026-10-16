@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+/*
+ * Gestaltung «Tischläufer» (siehe docs/DESIGN.md).
+ * Farben aus dem Restaurant: das Gelb der Wortmarke und der Wände, das Petrol der zweiten Wandfarbe, Chilirot nur für Schärfe.
+ * Helle, leicht gelb getönte Flächen; dunkle Bereiche in Petrol-Nacht. Ein Lauf aus Gold zieht sich wie ein Tischläufer
+ * durch die Seite: unter dem Einstieg (mit den heutigen Zeiten), als Register der Speisekarte, als mobile Leiste.
+ * Schrift: Prompt (Titel, Bedienelemente) und Sarabun (Lauftext, Preise), beide mit Thai-Glyphen.
+ * Formen: Bilder und Flächen 12 px, Bedienelemente 6 px. Helles Theme ist fix.
+ */
+@theme {
+  --color-elfenbein: #fff9e6;
+  --color-papier: #fffdf6;
+  --color-weiss: #ffffff;
+  --color-sand: #f6e9c3;
+  --color-gold: #f5c62b;
+  --color-gold-hell: #fce6a0;
+  --color-gold-tief: #7a5800;
+  --color-petrol: #0f766e;
+  --color-petrol-tief: #0b5b55;
+  --color-petrol-nacht: #0a2f2d;
+  --color-petrol-hell: #d7eeea;
+  --color-chili: #b3301d;
+  --color-tinte: #1e211f;
+  --color-tinte-2: #474c48;
+  --color-grau: #646963;
+  --color-linie: #e8dfc0;
+  --color-linie-stark: #cdbf92;
+  --color-fehler: #a3261b;
+
+  --font-titel: var(--schrift-titel), "Prompt Thai", "Helvetica Neue", Arial, sans-serif;
+  --font-text: var(--schrift-text), "Sarabun Thai", "Helvetica Neue", Arial, sans-serif;
+
+  --radius-knopf: 6px;
+  --radius-flaeche: 12px;
+  --spacing-rand: clamp(1rem, 4.5vw, 3.5rem);
+  --ease-ruhig: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Thai-Glyphen derselben Familien (fontsource, SIL OFL). unicode-range: werden nur geladen, wenn Thai-Schrift vorkommt. */
+@font-face { font-family: "Prompt Thai"; font-style: normal; font-weight: 600; font-display: swap; src: url("../node_modules/@fontsource/prompt/files/prompt-thai-600-normal.woff2") format("woff2"); unicode-range: U+0E00-0E7F; }
+@font-face { font-family: "Prompt Thai"; font-style: normal; font-weight: 700; font-display: swap; src: url("../node_modules/@fontsource/prompt/files/prompt-thai-700-normal.woff2") format("woff2"); unicode-range: U+0E00-0E7F; }
+@font-face { font-family: "Sarabun Thai"; font-style: normal; font-weight: 400; font-display: swap; src: url("../node_modules/@fontsource/sarabun/files/sarabun-thai-400-normal.woff2") format("woff2"); unicode-range: U+0E00-0E7F; }
+@font-face { font-family: "Sarabun Thai"; font-style: normal; font-weight: 600; font-display: swap; src: url("../node_modules/@fontsource/sarabun/files/sarabun-thai-600-normal.woff2") format("woff2"); unicode-range: U+0E00-0E7F; }
+
+@layer base {
+/* Ebenen (einzige z-index-Werte der Website): Register der Karte 20, Kopfzeile 30, mobile Leiste 35, Einwilligungsbanner 40, Sprunglink 50. Dialoge liegen im Top-Layer. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+body {
+  background: var(--color-elfenbein);
+  color: var(--color-tinte);
+  font-family: var(--font-text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Platz für die mobile Leiste, damit sie keinen Inhalt verdeckt */
+@media (max-width: 63.99rem) {
+  body { padding-bottom: calc(4.25rem + env(safe-area-inset-bottom)); }
+}
+::selection { background: var(--color-gold); color: var(--color-tinte); }
+:focus-visible {
+  outline: 3px solid var(--color-petrol-tief);
+  outline-offset: 3px;
+  border-radius: var(--radius-knopf);
+}
+[lang="th"] { font-family: var(--font-titel); }
+}
+
+@layer components {
+/* ── Raster ─────────────────────────────────────────────────────────── */
+.behaelter { width: 100%; max-width: 78rem; margin-inline: auto; padding-inline: var(--spacing-rand); }
+.abschnitt { padding-block: clamp(3rem, 7vw, 5.5rem); }
+.abschnitt-knapp { padding-block: clamp(2rem, 5vw, 3.5rem); }
+
+/* ── Schrift ────────────────────────────────────────────────────────── */
+.titel-1, .titel-2, .titel-3, .titel-4 { font-family: var(--font-titel); font-weight: 600; text-wrap: balance; }
+.titel-1, .titel-2 { hyphens: auto; overflow-wrap: break-word; }
+.titel-1 { font-size: clamp(2.25rem, 1.4rem + 4vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-weight: 700; }
+.titel-2 { font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em; }
+.titel-3 { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); line-height: 1.2; letter-spacing: -0.01em; }
+.titel-4 { font-size: 1.0625rem; line-height: 1.3; }
+.vorspann { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3rem); line-height: 1.5; color: var(--color-tinte-2); max-width: 48ch; text-wrap: pretty; }
+.lauftext { max-width: 62ch; text-wrap: pretty; }
+.klein { font-size: 0.9375rem; line-height: 1.45; }
+.etikett { font-family: var(--font-titel); font-size: 0.875rem; line-height: 1.3; font-weight: 600; color: var(--color-gold-tief); }
+.zahl { font-variant-numeric: tabular-nums; }
+
+.textlink {
+  color: var(--color-petrol-tief);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 160ms var(--ease-ruhig), text-decoration-color 160ms var(--ease-ruhig);
+}
+.textlink:hover { color: var(--color-petrol-nacht); text-decoration-thickness: 2px; }
+.nur-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ── Knöpfe ─────────────────────────────────────────────────────────── */
+.knopf {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 3rem; padding: 0.7rem 1.35rem;
+  font-family: var(--font-titel); font-size: 1rem; font-weight: 600; line-height: 1.2; white-space: nowrap;
+  border-radius: var(--radius-knopf); border: 1.5px solid transparent; cursor: pointer;
+  transition: background-color 180ms var(--ease-ruhig), border-color 180ms var(--ease-ruhig), color 180ms var(--ease-ruhig), transform 120ms var(--ease-ruhig);
+}
+.knopf:active { transform: translateY(1px); }
+.knopf-primaer { background: var(--color-petrol-tief); color: var(--color-weiss); }
+.knopf-primaer:hover { background: var(--color-petrol-nacht); }
+.knopf-sekundaer { background: transparent; color: var(--color-tinte); border-color: var(--color-tinte); }
+.knopf-sekundaer:hover { background: var(--color-tinte); color: var(--color-elfenbein); }
+.knopf-gold { background: var(--color-gold); color: var(--color-tinte); }
+.knopf-gold:hover { background: var(--color-gold-hell); }
+.knopf-hell { background: var(--color-elfenbein); color: var(--color-petrol-nacht); }
+.knopf-hell:hover { background: var(--color-weiss); }
+.knopf-klein { min-height: 2.75rem; padding: 0.55rem 1rem; font-size: 0.9375rem; }
+
+/* ── Läufer: der goldene Tischläufer ────────────────────────────────── */
+.laeufer { background: var(--color-gold); color: var(--color-tinte); }
+.laeufer-schmal { height: 10px; background: var(--color-gold); border-top: 1px solid var(--color-linie-stark); border-bottom: 1px solid var(--color-linie-stark); }
+.nacht { background: var(--color-petrol-nacht); color: var(--color-elfenbein); }
+.nacht .etikett { color: var(--color-gold); }
+.nacht .textlink { color: var(--color-gold-hell); }
+.nacht .textlink:hover { color: var(--color-weiss); }
+.nacht :focus-visible { outline-color: var(--color-gold); }
+.nacht ::selection { background: var(--color-gold); color: var(--color-tinte); }
+
+/* ── Einstieg ───────────────────────────────────────────────────────── */
+.held { display: grid; grid-template-columns: minmax(0, 1fr); }
+.held .held-bild { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
+.held .held-bild img { width: 100%; height: 100%; object-fit: cover; }
+.held .held-text { padding: 2rem var(--spacing-rand) 2.25rem; display: grid; gap: 1.25rem; align-content: center; }
+@media (min-width: 64rem) {
+  .held { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); min-height: min(calc(100dvh - 8.5rem), 46rem); }
+  .held .held-bild { aspect-ratio: auto; height: 100%; min-height: 26rem; }
+  .held .held-text { padding: 3rem var(--spacing-rand) 3rem; }
+}
+
+/* ── Bilder ─────────────────────────────────────────────────────────── */
+.bild-flaeche { overflow: hidden; border-radius: var(--radius-flaeche); background: var(--color-sand); }
+.bild-flaeche img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bild-flaeche.hoch { aspect-ratio: 3 / 4; }
+.bild-flaeche.quer { aspect-ratio: 4 / 3; }
+.bild-flaeche.breit { aspect-ratio: 3 / 2; }
+.legende { font-size: 0.875rem; color: var(--color-grau); margin-top: 0.5rem; }
+
+/* ── Kacheln (Startseite: Speisekarte, Einblicke) ───────────────────── */
+.kachel { display: grid; gap: 0.75rem; color: inherit; border-radius: var(--radius-flaeche); }
+.kachel .bild-flaeche img { transition: transform 600ms var(--ease-ruhig); }
+a.kachel:hover .bild-flaeche img { transform: scale(1.04); }
+a.kachel:hover .titel-3 { color: var(--color-petrol-tief); }
+.kachel .pfeil { transition: transform 220ms var(--ease-ruhig); }
+a.kachel:hover .pfeil { transform: translateX(4px); }
+
+/* ── Speisekarte ────────────────────────────────────────────────────── */
+.register { display: flex; gap: 0.5rem; overflow-x: auto; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-block: 0.5rem; }
+.register::-webkit-scrollbar { display: none; }
+.register a {
+  flex: none; scroll-snap-align: start; display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.4rem 0.9rem;
+  font-family: var(--font-titel); font-size: 0.9375rem; font-weight: 600; white-space: nowrap; color: var(--color-tinte);
+  background: var(--color-papier); border: 1.5px solid var(--color-linie-stark); border-radius: var(--radius-knopf);
+  transition: background-color 160ms var(--ease-ruhig), border-color 160ms var(--ease-ruhig);
+}
+.register a:hover { border-color: var(--color-tinte); }
+.register a[aria-current="true"] { background: var(--color-tinte); color: var(--color-elfenbein); border-color: var(--color-tinte); }
+.register-leiste { position: sticky; top: 4rem; z-index: 20; background: var(--color-gold); border-bottom: 1px solid var(--color-linie-stark); }
+@media (min-width: 64rem) {
+  .register-leiste { position: static; background: transparent; border: 0; }
+  .register { flex-direction: column; overflow: visible; padding: 0; gap: 0.15rem; position: sticky; top: 6rem; }
+  .register a { background: transparent; border: 0; border-left: 3px solid transparent; border-radius: 0; padding: 0.45rem 0.9rem; min-height: 2.75rem; color: var(--color-tinte-2); }
+  .register a:hover { color: var(--color-tinte); border-left-color: var(--color-linie-stark); }
+  .register a[aria-current="true"] { background: transparent; color: var(--color-tinte); border-left-color: var(--color-gold); }
+}
+.kategorie { scroll-margin-top: 8rem; }
+.kategorie + .kategorie { margin-top: 3.5rem; }
+.gerichte { display: grid; gap: 0; border-top: 1px solid var(--color-linie-stark); }
+.gericht { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.5rem 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-linie); scroll-margin-top: 8rem; }
+.gericht.mit-bild { grid-template-columns: 4.5rem minmax(0, 1fr); }
+@media (min-width: 40rem) { .gericht.mit-bild { grid-template-columns: 5.5rem minmax(0, 1fr); } }
+.gericht .gericht-bild { grid-row: span 3; overflow: hidden; border-radius: var(--radius-flaeche); aspect-ratio: 1; align-self: start; }
+.gericht .gericht-bild img { width: 100%; height: 100%; object-fit: cover; }
+.gericht .kopf { display: flex; align-items: baseline; gap: 0.6rem; }
+.gericht .nummer { font-family: var(--font-titel); font-weight: 600; color: var(--color-gold-tief); min-width: 1.75rem; }
+.gericht .name { font-family: var(--font-titel); font-weight: 600; font-size: 1.0625rem; line-height: 1.3; min-width: 0; hyphens: auto; overflow-wrap: anywhere; }
+.gericht .punkte { flex: 1; min-width: 1rem; border-bottom: 2px dotted var(--color-linie-stark); transform: translateY(-0.35em); }
+.gericht .preis { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.preis small { font-weight: 400; color: var(--color-grau); font-size: 0.8125rem; margin-right: 0.3em; }
+.nacht .preis small { color: var(--color-gold-hell); }
+.gericht .beschreibung { color: var(--color-tinte-2); font-size: 0.9375rem; line-height: 1.5; max-width: 60ch; }
+.gericht .thai { font-family: var(--font-titel); font-weight: 600; color: var(--color-tinte-2); }
+.gericht .varianten { display: grid; gap: 0.25rem; font-size: 0.9375rem; max-width: 30rem; }
+.gericht .varianten li { display: flex; align-items: baseline; gap: 0.6rem; }
+.gericht .varianten .punkte { border-bottom-style: dotted; }
+.chilis { display: inline-flex; gap: 1px; color: var(--color-chili); vertical-align: -2px; }
+.preistabelle { margin: 1rem 0 0.5rem; padding: 1rem 1.1rem; background: var(--color-sand); border-radius: var(--radius-flaeche); }
+.preistabelle ul { display: grid; gap: 0.3rem; columns: 1; }
+@media (min-width: 40rem) { .preistabelle ul { grid-template-columns: 1fr 1fr; column-gap: 2rem; } }
+.preistabelle li { display: flex; align-items: baseline; gap: 0.6rem; }
+.fussnote { font-size: 0.9375rem; color: var(--color-tinte-2); max-width: 60ch; }
+
+/* ── Öffnungszeiten ─────────────────────────────────────────────────── */
+.zeiten { display: grid; gap: 0.35rem; }
+.zeiten li { display: grid; grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr); gap: 0.75rem; padding: 0.45rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
+.zeiten li.heute { font-weight: 700; }
+.zeiten .kueche { display: block; font-size: 0.875rem; font-weight: 400; opacity: 0.85; }
+
+/* ── Heute-Leiste ───────────────────────────────────────────────────── */
+.heute { display: grid; gap: 0.5rem 1.5rem; align-items: center; padding-block: 0.9rem; }
+@media (min-width: 48rem) { .heute { grid-template-columns: auto minmax(0, 1fr) auto; } }
+.heute .stand { font-family: var(--font-titel); font-weight: 700; }
+.heute .punkt { display: inline-block; width: 0.6rem; height: 0.6rem; border-radius: 999px; background: var(--color-petrol-tief); margin-right: 0.45rem; vertical-align: 0.05em; }
+.heute .punkt.zu { background: var(--color-chili); }
+
+/* ── Hinweise (befristet) ───────────────────────────────────────────── */
+.hinweis { border-left: 4px solid var(--color-chili); background: var(--color-papier); padding: 0.9rem 1.1rem; border-radius: 0 var(--radius-flaeche) var(--radius-flaeche) 0; }
+.hinweis[hidden] { display: none; }
+
+/* ── Kopfzeile und Menü ─────────────────────────────────────────────── */
+.kopfzeile { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--color-elfenbein) 94%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-linie-stark); }
+.marke { display: inline-flex; align-items: center; gap: 0.7rem; min-height: 2.75rem; color: inherit; }
+.marke img { height: 2.1rem; width: auto; }
+.marke .zusatz { display: none; font-family: var(--font-titel); font-size: 0.8125rem; line-height: 1.15; font-weight: 600; color: var(--color-tinte-2); }
+@media (min-width: 40rem) { .marke img { height: 2.5rem; } .marke .zusatz { display: block; } }
+.hauptnav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.85rem; font-family: var(--font-titel); font-weight: 600; font-size: 0.9375rem; border-radius: var(--radius-knopf); color: var(--color-tinte-2); transition: color 160ms var(--ease-ruhig), background-color 160ms var(--ease-ruhig); }
+.hauptnav a:hover { color: var(--color-tinte); background: var(--color-sand); }
+.hauptnav a[aria-current="page"] { color: var(--color-tinte); box-shadow: inset 0 -3px 0 var(--color-gold); border-radius: 0; }
+
+dialog { color: var(--color-tinte); }
+dialog::backdrop { background: color-mix(in srgb, var(--color-petrol-nacht) 55%, transparent); }
+.menue { width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: var(--color-elfenbein); overflow-y: auto; overscroll-behavior: contain; }
+.menue nav a { display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; padding: 0.5rem 0; font-family: var(--font-titel); font-size: 1.5rem; font-weight: 600; border-bottom: 1px solid var(--color-linie-stark); color: var(--color-tinte); }
+.menue nav a[aria-current="page"] { color: var(--color-petrol-tief); }
+@media (prefers-reduced-motion: no-preference) {
+  .menue[open] { animation: menue-auf 320ms var(--ease-ruhig); }
+  dialog[open]::backdrop { animation: abdunkeln 280ms ease-out; }
+}
+@keyframes menue-auf { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+@keyframes abdunkeln { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── Mobile Leiste ──────────────────────────────────────────────────── */
+.mobil-leiste { position: fixed; inset-inline: 0; bottom: 0; z-index: 35; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0.5rem var(--spacing-rand) calc(0.5rem + env(safe-area-inset-bottom)); background: var(--color-gold); border-top: 1px solid var(--color-linie-stark); }
+@media (min-width: 64rem) { .mobil-leiste { display: none; } }
+.mobil-leiste .knopf { min-height: 3rem; }
+
+/* ── Fliesstext der Rechtsseiten ────────────────────────────────────── */
+.fliesstext > * + * { margin-top: 1rem; }
+.fliesstext h2 { margin-top: 3rem; scroll-margin-top: 6rem; }
+.fliesstext h3 { margin-top: 2rem; }
+.fliesstext ul { padding-left: 1.2rem; list-style: square; display: grid; gap: 0.5rem; }
+.fliesstext ul li::marker { color: var(--color-gold-tief); }
+.fliesstext p, .fliesstext ul { max-width: 66ch; }
+
+/* ── Bewegung: ein Einstiegsmoment, sonst Ruhe ──────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .einstieg > * { animation: einstieg 700ms var(--ease-ruhig) both; }
+  .einstieg > *:nth-child(2) { animation-delay: 80ms; }
+  .einstieg > *:nth-child(3) { animation-delay: 160ms; }
+  .einstieg > *:nth-child(4) { animation-delay: 240ms; }
+}
+@keyframes einstieg { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Druck: nur Inhalt, Speisekarte vollständig */
+@media print {
+  header, footer, .mobil-leiste, .register-leiste, dialog { display: none !important; }
+  body { background: var(--color-weiss); padding-bottom: 0; }
+  .gericht { break-inside: avoid; }
+}
+}

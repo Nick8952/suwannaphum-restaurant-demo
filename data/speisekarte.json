@@ -1,0 +1,1005 @@
+{
+  "titel": "Speisekarte",
+  "einleitung": "Alle Gerichte und Preise wie auf der aktuellen Karte des Restaurants. Den Schärfegrad wählen Sie bei jedem Gericht selbst.",
+  "schaerfe": {
+    "titel": "Schärfe",
+    "text": "Der Schärfegrad der Gerichte kann frei gewählt werden. Teilen Sie uns Ihren Wunsch einfach mit.",
+    "stufen": [
+      {
+        "grad": 1,
+        "text": "leicht scharf"
+      },
+      {
+        "grad": 2,
+        "text": "scharf"
+      },
+      {
+        "grad": 3,
+        "text": "sehr scharf"
+      }
+    ]
+  },
+  "deklaration": {
+    "titel": "Deklaration Fleisch, Fisch, Eier",
+    "einleitung": "Herkunft der verwendeten Produkte gemäss Angabe des Restaurants.",
+    "eintraege": [
+      {
+        "_key": "rind",
+        "produkt": "Rindfleisch",
+        "land": "Schweiz, Deutschland"
+      },
+      {
+        "_key": "schwein",
+        "produkt": "Schweinefleisch",
+        "land": "Schweiz"
+      },
+      {
+        "_key": "poulet",
+        "produkt": "Pouletfleisch",
+        "land": "Schweiz"
+      },
+      {
+        "_key": "ente",
+        "produkt": "Ente",
+        "land": "Ungarn"
+      },
+      {
+        "_key": "tilapia-ganz",
+        "produkt": "Fisch Tilapia ganz (aus Aquakultur)",
+        "land": "Vietnam"
+      },
+      {
+        "_key": "tilapia-filet",
+        "produkt": "Fisch Tilapia Filet (aus ASC-zertifizierter Zucht)",
+        "land": "Nusantara, Indonesien"
+      },
+      {
+        "_key": "pangasius",
+        "produkt": "Fisch Pangasius Filet (aus ASC-zertifizierter Zucht)",
+        "land": "Vietnam"
+      },
+      {
+        "_key": "crevetten",
+        "produkt": "Crevetten (aus ASC-zertifizierter Zucht)",
+        "land": "Vietnam"
+      },
+      {
+        "_key": "eier",
+        "produkt": "Eier",
+        "land": "Schweiz / Deutschland, Freiland"
+      }
+    ]
+  },
+  "allergenTitel": "Allergene und Ernährung",
+  "allergenHinweis": "Die Karte des Restaurants enthält keine Allergen- oder Ernährungskennzeichnungen. Bei Allergien und Unverträglichkeiten fragen Sie bitte im Restaurant oder telefonisch nach.",
+  "herkunft": [
+    {
+      "quelle": "Speisekarte des Restaurants (11 Kartenseiten als Bilder, Stand Juli 2026)",
+      "url": "https://www.suwannaphum.ch/speisekarte",
+      "abgerufen": "2026-10-16",
+      "art": "speisekarte"
+    }
+  ],
+  "freigabe": "demo",
+  "seoTitel": "Speisekarte",
+  "seoBeschreibung": "Vorspeisen, Salate, Suppen, Currys, Reis- und Nudelgerichte, vegetarische Gerichte und Thai Specials mit Preisen. Schärfegrad frei wählbar.",
+  "kategorien": [
+    {
+      "slug": "special-menu",
+      "titel": "Special Menu",
+      "untertitel": "Freitagabend und Samstag",
+      "einleitung": "Neu im Suwannaphum: Freitag von 16.30 bis 21.30 Uhr und Samstag von 11.00 bis 21.30 Uhr.",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 10,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "khao-soi",
+          "name": "Khao Soi",
+          "beschreibung": "Curry-Nudeln aus Chiang Mai",
+          "schaerfe": 0,
+          "preis": 25,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-khao-soi"
+        },
+        {
+          "_key": "pla-rad-prik",
+          "name": "Pla Rad Prik",
+          "beschreibung": "Gebratener roter Tilapia mit Chillipaste",
+          "schaerfe": 0,
+          "preis": 27.5,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-pla-rad-prik"
+        }
+      ]
+    },
+    {
+      "slug": "vorspeisen",
+      "titel": "Vorspeisen",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 20,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "v1",
+          "nummer": "1",
+          "name": "Frittierte Gemüseküchlein",
+          "beschreibung": "Karotten, Mais, Zucchini, Weissmehl",
+          "portion": "4 Stück",
+          "schaerfe": 0,
+          "preis": 8,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-gemuesekuechlein"
+        },
+        {
+          "_key": "v2",
+          "nummer": "2",
+          "name": "Frühlingsrollen",
+          "beschreibung": "Weisskabis, Sojasprossen, Karotten, Glasnudeln",
+          "portion": "4 Stück",
+          "schaerfe": 0,
+          "preis": 8,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v3",
+          "nummer": "3",
+          "name": "Frittierte Wantans",
+          "beschreibung": "Teigtaschen mit Crevettenfüllung",
+          "portion": "5 Stück",
+          "schaerfe": 0,
+          "preis": 8,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v4",
+          "nummer": "4",
+          "name": "Frittierte Crevetten",
+          "beschreibung": "Crevetten im Teig",
+          "portion": "5 Stück",
+          "schaerfe": 0,
+          "preis": 10,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-fritierte-crevetten"
+        },
+        {
+          "_key": "v5",
+          "nummer": "5",
+          "name": "Satay-Spiessli",
+          "beschreibung": "Frittierte Pouletspiesse mit Erdnuss-Sauce",
+          "portion": "4 Stück",
+          "schaerfe": 0,
+          "preis": 10,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v6",
+          "nummer": "6",
+          "name": "Som Tam Thai",
+          "beschreibung": "Grüne Papaya, Thai-Langbohnen, Cherry-Tomaten, Lemon, Fischsauce, Erdnüsse, Chilli",
+          "schaerfe": 3,
+          "preis": 13.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v7",
+          "nummer": "7",
+          "name": "Laab Gai",
+          "beschreibung": "Gehacktes Pouletfleisch, Zwiebeln, Koriander, Frühlingszwiebeln, Limettensaft, Chilli",
+          "schaerfe": 2,
+          "preis": 12.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v8",
+          "nummer": "8",
+          "name": "Laab Nuer",
+          "beschreibung": "Gehacktes Rindfleisch, Zwiebeln, Koriander, Frühlingszwiebeln, Limettensaft, Chilli",
+          "schaerfe": 2,
+          "preis": 13.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "v9",
+          "nummer": "9",
+          "name": "Yam Nuer",
+          "beschreibung": "Rosa gebratenes und in Streifen geschnittenes Rindfleisch, Cherry-Tomaten, Zwiebeln, Koriander, Gurke, Lemon, Chilli",
+          "schaerfe": 2,
+          "preis": 13.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "salate",
+      "titel": "Salate",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 30,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "s1",
+          "nummer": "1",
+          "name": "Som Tam Thai",
+          "beschreibung": "Grüne Papaya, Thai-Langbohnen, Cherry-Tomaten, Lemon, Fischsauce, Erdnüsse, Chilli",
+          "schaerfe": 3,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-som-tam-thai"
+        },
+        {
+          "_key": "s2",
+          "nummer": "2",
+          "name": "Laab Nuer",
+          "beschreibung": "Gehacktes Rindfleisch, Zwiebeln, Koriander, Frühlingszwiebeln, Limettensaft, Chilli",
+          "schaerfe": 2,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "s3",
+          "nummer": "3",
+          "name": "Laab Gai",
+          "beschreibung": "Gehacktes Pouletfleisch, Zwiebeln, Koriander, Frühlingszwiebeln, Limettensaft, Chilli",
+          "schaerfe": 2,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "s4",
+          "nummer": "4",
+          "name": "Yam Nuer",
+          "beschreibung": "Rosa gebratenes und in Streifen geschnittenes Rindfleisch, Cherry-Tomaten, Zwiebeln, Koriander, Gurke, Lemon, Chilli",
+          "schaerfe": 2,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "s5",
+          "nummer": "5",
+          "name": "Yam Wun Sen Gai",
+          "beschreibung": "Glasnudelsalat mit Poulet, Cherry-Tomaten, Thai-Sellerie, Koriander, Limettensaft, Fischsauce, Chilli",
+          "schaerfe": 3,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "s6",
+          "nummer": "6",
+          "name": "Yam Wun Sen Gung",
+          "beschreibung": "Glasnudelsalat mit Crevetten, Cherry-Tomaten, Thai-Sellerie, Koriander, Limettensaft, Fischsauce, Chilli",
+          "schaerfe": 3,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "suppen",
+      "titel": "Suppen",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 40,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "su1",
+          "nummer": "1",
+          "name": "Tom Kha Gai",
+          "beschreibung": "Kokosnussmilch-Suppe mit Pilzen, Zitronenblättern, Zwiebeln, Zitronengras, Koriander, Cherry-Tomaten",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-tom-kha-gai"
+        },
+        {
+          "_key": "su2",
+          "nummer": "2",
+          "name": "Tom Yam Gung",
+          "beschreibung": "Pikante Bouillon mit Crevetten, Zwiebeln, Pilzen, Koriander, Chilli, Zitronengras, Zitronenblättern, Cherry-Tomaten",
+          "schaerfe": 3,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "su3",
+          "nummer": "3",
+          "name": "Tom Yam Nuer",
+          "beschreibung": "Pikante Bouillon mit Rindfleisch, Zwiebeln, Pilzen, Chilli, Zitronengras, Koriander, Cherry-Tomaten",
+          "schaerfe": 3,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "su4",
+          "nummer": "4",
+          "name": "Giau Thiau Nam",
+          "beschreibung": "Thai-Nudelsuppe: Bouillon mit Nudeln, Gemüse, Koriander, Sojasprossen, Thai-Sellerie, getrocknetem Knoblauch, zum selber Abschmecken mit Zucker, Essig und Chilli",
+          "schaerfe": 0,
+          "preis": 20.5,
+          "varianten": [
+            {
+              "_key": "poulet",
+              "name": "mit Poulet",
+              "preis": 23
+            },
+            {
+              "_key": "rind",
+              "name": "mit Rindfleisch",
+              "preis": 23.5
+            },
+            {
+              "_key": "crevetten",
+              "name": "mit Crevetten",
+              "preis": 23.5
+            }
+          ],
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "hauptgerichte",
+      "titel": "Hauptgerichte",
+      "untertitel": "Currys und Wok-Gerichte",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 50,
+      "fussnote": "Zu den Gerichten servieren wir Ihnen als Beilage Jasminreis. Andere Beilagen auf Wunsch möglich.",
+      "zusaetze": [
+        {
+          "_key": "reis",
+          "name": "gebratener Reis",
+          "preis": 3
+        },
+        {
+          "_key": "reisnudeln",
+          "name": "gebratene Reisnudeln",
+          "preis": 4
+        }
+      ],
+      "preistabellen": [
+        {
+          "_key": "currys",
+          "titel": "Preise der Currys 1 bis 5",
+          "text": "Mit Fleisch, Fisch oder Gemüse Ihrer Wahl.",
+          "varianten": [
+            {
+              "_key": "poulet",
+              "name": "mit Poulet",
+              "preis": 22.5
+            },
+            {
+              "_key": "schwein",
+              "name": "mit Schweinefleisch",
+              "preis": 22.5
+            },
+            {
+              "_key": "rind",
+              "name": "mit Rindfleisch",
+              "preis": 23.5
+            },
+            {
+              "_key": "crevetten",
+              "name": "mit Crevetten",
+              "preis": 23.5
+            },
+            {
+              "_key": "ente",
+              "name": "mit Ente",
+              "preis": 24.5
+            },
+            {
+              "_key": "pangasius",
+              "name": "mit Fisch (Pangasius)",
+              "preis": 22.5
+            },
+            {
+              "_key": "tilapia",
+              "name": "mit Fisch (Tilapia)",
+              "preis": 23.5
+            },
+            {
+              "_key": "gemuese",
+              "name": "mit Gemüse",
+              "preis": 18.5
+            },
+            {
+              "_key": "gemuese-tofu",
+              "name": "mit Gemüse und Tofu",
+              "preis": 19.5
+            }
+          ]
+        }
+      ],
+      "gerichte": [
+        {
+          "_key": "h1",
+          "nummer": "1",
+          "name": "Gaeng Kari",
+          "beschreibung": "Gelber Curry mit Fleisch oder Gemüse Ihrer Wahl, Erdnuss-Sauce, Zwiebeln, Kartoffeln, Kokosnussmilch",
+          "schaerfe": 0,
+          "preistabelle": "currys",
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h2",
+          "nummer": "2",
+          "name": "Gaeng Phed",
+          "beschreibung": "Roter Curry mit Fleisch oder Gemüse Ihrer Wahl, Thai-Basilikum, Kokosnussmilch, Chilli",
+          "schaerfe": 2,
+          "preistabelle": "currys",
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h3",
+          "nummer": "3",
+          "name": "Gaeng Kiew Wan",
+          "beschreibung": "Grüner Curry mit Fleisch oder Gemüse Ihrer Wahl, Thai-Langbohnen, Thai-Basilikum, Thai-Auberginen, Kokosnussmilch, Chilli",
+          "schaerfe": 3,
+          "preistabelle": "currys",
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-gaeng-kiew-wan-gai"
+        },
+        {
+          "_key": "h4",
+          "nummer": "4",
+          "name": "Gaeng Massaman",
+          "beschreibung": "Massaman-Curry mit Fleisch oder Gemüse Ihrer Wahl, Erdnuss-Sauce, Zwiebeln, Kartoffeln, Kokosnussmilch",
+          "schaerfe": 0,
+          "preistabelle": "currys",
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h5",
+          "nummer": "5",
+          "name": "Panaeng",
+          "beschreibung": "Panaeng-Curry mit gebratenem Fleisch oder Gemüse Ihrer Wahl, Zwiebeln, kleinen Thai-Auberginen, Karotten, angereichert mit Kokosnussmilch",
+          "schaerfe": 1,
+          "preistabelle": "currys",
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h6",
+          "nummer": "6",
+          "name": "Phad Kha Phao Gai",
+          "beschreibung": "Gebratenes Pouletfleisch mit Peperoncini, Zwiebeln, Thai-Langbohnen, Thai-Basilikum, Thai-Chilli, Austernsauce",
+          "schaerfe": 3,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h7",
+          "nummer": "7",
+          "name": "Phad Kha Phao Nuer",
+          "beschreibung": "Gebratenes Rindfleisch mit Peperoncini, Zwiebeln, Thai-Langbohnen, Thai-Basilikum, Thai-Chilli, Austernsauce",
+          "schaerfe": 3,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h8",
+          "nummer": "8",
+          "name": "Phad Kha Phao Muh",
+          "beschreibung": "Gebratenes Schweinefleisch mit Peperoncini, Zwiebeln, Thai-Langbohnen, Thai-Basilikum, Thai-Chilli, Austernsauce",
+          "schaerfe": 3,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h9",
+          "nummer": "9",
+          "name": "Phad Kha Phao Thalee",
+          "beschreibung": "Gemischte Meeresfrüchte, gebraten mit Peperoncini, Zwiebeln, Thai-Langbohnen, Thai-Basilikum, Thai-Chilli, Austernsauce",
+          "schaerfe": 3,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h10",
+          "nummer": "10",
+          "name": "Phad Nuer Sei Noh Mai",
+          "beschreibung": "Gebratenes Rindfleisch mit Bambus, roter Currypaste, Thai-Basilikum, Kokosnussmilch",
+          "schaerfe": 2,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h11",
+          "nummer": "11",
+          "name": "Phad Gai Sei Noh Mai",
+          "beschreibung": "Gebratenes Pouletfleisch mit Bambus, roter Currypaste, Thai-Basilikum, Kokosnussmilch",
+          "schaerfe": 2,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h12",
+          "nummer": "12",
+          "name": "Phad Muh Sei Noh Mai",
+          "beschreibung": "Gebratenes Schweinefleisch mit Bambus, roter Currypaste, Thai-Basilikum, Kokosnussmilch",
+          "schaerfe": 2,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h13",
+          "nummer": "13",
+          "name": "Gai Phad Phrik",
+          "beschreibung": "Gebratenes Pouletfleisch mit Peperoni, Gemüse nach Wahl, Erdnüsse",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h14",
+          "nummer": "14",
+          "name": "Phad Praew Wan Gai",
+          "beschreibung": "Gebratenes Pouletfleisch süss-sauer mit Zwiebeln, Ananas, Cherry-Tomaten, Gurke",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h15",
+          "nummer": "15",
+          "name": "Phad Praew Wan Plah",
+          "beschreibung": "Gebratener Fisch (Tilapia oder Pangasius) süss-sauer mit Zwiebeln, Ananas, Cherry-Tomaten, Gurke",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h16",
+          "nummer": "16",
+          "name": "Gai Phad Khing",
+          "beschreibung": "Gebratenes Pouletfleisch mit Ingwer, Pilzen, Gemüse, Frühlingszwiebeln, Thai-Sellerie",
+          "schaerfe": 1,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h17",
+          "nummer": "17",
+          "name": "Muh Phad Khing",
+          "beschreibung": "Gebratenes Schweinefleisch mit Ingwer, Pilzen, Gemüse, Frühlingszwiebeln, Thai-Sellerie",
+          "schaerfe": 1,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h18",
+          "nummer": "18",
+          "name": "Gung Phad Khing",
+          "beschreibung": "Gebratene Crevetten mit Ingwer, Pilzen, Gemüse, Frühlingszwiebeln, Thai-Sellerie",
+          "schaerfe": 1,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h19",
+          "nummer": "19",
+          "name": "Nuer Phad Khing",
+          "beschreibung": "Gebratenes Rindfleisch mit Ingwer, Pilzen, Gemüse, Frühlingszwiebeln, Thai-Sellerie",
+          "schaerfe": 1,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h20",
+          "nummer": "20",
+          "name": "Gaeng Som Pak Boong",
+          "beschreibung": "Roter Curry mit gebratenem Wasserspinat und Tofu, Tamarinden-Sauce, Thai-Basilikum, Kokosnussmilch",
+          "schaerfe": 1,
+          "preis": 20.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "h21",
+          "nummer": "21",
+          "name": "Phad Pak Boong",
+          "beschreibung": "Gebratener Wasserspinat mit Chilli, Austernsauce",
+          "schaerfe": 1,
+          "preis": 20.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "reisgerichte",
+      "titel": "Reisgerichte",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 60,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "r22",
+          "nummer": "22",
+          "name": "Kao Phad Gai",
+          "beschreibung": "Gebratener Reis mit Pouletfleisch, Gemüse, Eiern, Sojasauce, Frühlingszwiebeln",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "r23",
+          "nummer": "23",
+          "name": "Kao Phad Gung",
+          "beschreibung": "Gebratener Reis mit Crevetten, Gemüse, Eiern, Sojasauce, Frühlingszwiebeln",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "r24",
+          "nummer": "24",
+          "name": "Kao Phad Muh",
+          "beschreibung": "Gebratener Reis mit Schweinefleisch, Gemüse, Eiern, Sojasauce, Frühlingszwiebeln",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "r25",
+          "nummer": "25",
+          "name": "Kao Phad Nuer",
+          "beschreibung": "Gebratener Reis mit Rindfleisch, Gemüse, Eiern, Sojasauce, Frühlingszwiebeln",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "nudelgerichte",
+      "titel": "Nudelgerichte",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 70,
+      "preistabellen": [],
+      "zusaetze": [],
+      "fussnote": "Die Tamarindensauce enthält Tamarinden, Zucker, Fischsauce, Tomatenpaste, Knoblauch, Sojabohnenöl, Essig und Chilli.",
+      "gerichte": [
+        {
+          "_key": "n26",
+          "nummer": "26",
+          "name": "Phad Thai Gai",
+          "beschreibung": "Gebratene Reisnudeln mit Pouletfleisch, mit oder ohne Tofu, Eiern, Tamarindensauce, Gemüse, Sojasprossen, Erdnüssen",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": [],
+          "bild": "gericht-phad-thai-gai"
+        },
+        {
+          "_key": "n27",
+          "nummer": "27",
+          "name": "Phad Thai Gung",
+          "beschreibung": "Gebratene Reisnudeln mit Crevetten, mit oder ohne Tofu, Eiern, Tamarindensauce, Gemüse, Sojasprossen, Erdnüssen",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "n28",
+          "nummer": "28",
+          "name": "Phad Thai Muh",
+          "beschreibung": "Gebratene Reisnudeln mit Schweinefleisch, mit oder ohne Tofu, Eiern, Tamarindensauce, Gemüse, Erdnüssen, Sojasprossen",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "n29",
+          "nummer": "29",
+          "name": "Phad Thai Nuer",
+          "beschreibung": "Gebratene Reisnudeln mit Rindfleisch, mit oder ohne Tofu, Eiern, Tamarindensauce, Gemüse, Sojasprossen, Erdnüssen, Sojasauce",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "vegetarische-gerichte",
+      "titel": "Vegetarische Gerichte",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 80,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "vg30",
+          "nummer": "30",
+          "name": "Phad Pak Ruammit",
+          "beschreibung": "Gebratenes Gemüse nach Wahl, mit oder ohne Tofu",
+          "schaerfe": 0,
+          "preis": 18.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "vg31",
+          "nummer": "31",
+          "name": "Phad Pak Boong",
+          "beschreibung": "Gebratener Wasserspinat mit Chilli, Pilzsauce",
+          "schaerfe": 1,
+          "preis": 18,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "vg32",
+          "nummer": "32",
+          "name": "Phad Pak Khing",
+          "beschreibung": "Gebratenes Gemüse nach Wahl mit Ingwer, Pilzen, Zwiebeln, Thai-Sellerie, Frühlingszwiebeln, mit oder ohne Tofu",
+          "schaerfe": 1,
+          "preis": 18.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "vg33",
+          "nummer": "33",
+          "name": "Kao Phad Pak",
+          "beschreibung": "Gebratener Reis mit Gemüse, mit oder ohne Tofu, Sojasauce, vegetarischer Tamarindensauce, Eiern, Frühlingszwiebeln",
+          "schaerfe": 0,
+          "preis": 18.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "vg34",
+          "nummer": "34",
+          "name": "Phad Thai Pak",
+          "beschreibung": "Gebratene Nudeln mit Gemüse, mit oder ohne Tofu, Eiern, vegetarischer Tamarindensauce, Sojasprossen, Sojasauce, Erdnüssen",
+          "schaerfe": 0,
+          "preis": 18.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "thai-specials",
+      "titel": "Thai Specials",
+      "titelThai": "เมนูอาหารพิเศษ",
+      "untertitel": "Gerichte, wie sie in Thailand auf den Tisch kommen",
+      "einleitung": "Diese Karte liegt im Restaurant in thailändischer Schrift auf. Umschrift und Erklärung sind eine Arbeitsübersetzung, die das Restaurant vor der Veröffentlichung bestätigt.",
+      "uebersetzungVorlaeufig": true,
+      "reihenfolge": 90,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "t1",
+          "nummer": "1",
+          "name": "Som Tam Pu Pla Ra",
+          "nameThai": "ส้มตำปู, ปลาร้า",
+          "beschreibung": "Papayasalat mit Krabbe und fermentierter Fischsauce",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t2",
+          "nummer": "2",
+          "name": "Som Tam Thad Pu Ma",
+          "nameThai": "ส้มตำถาดปูม้า",
+          "beschreibung": "Papayasalat-Platte mit Blaukrabbe",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t3",
+          "nummer": "3",
+          "name": "Kaphrao Thale",
+          "nameThai": "กระเพราทะเล",
+          "beschreibung": "Meeresfrüchte, gebraten mit Thai-Basilikum",
+          "schaerfe": 0,
+          "preis": 23.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t4",
+          "nummer": "4",
+          "name": "Rad Na",
+          "nameThai": "ราดหน้า ทะเลรวม หมู ไก่",
+          "beschreibung": "Breite Reisnudeln mit Sauce, mit Meeresfrüchten, Schweinefleisch oder Poulet",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t5",
+          "nummer": "5",
+          "name": "Phad See Ew",
+          "nameThai": "ผัดซีอิ๊ว ทะเลรวม หมู ไก่",
+          "beschreibung": "Gebratene breite Reisnudeln mit Sojasauce, mit Meeresfrüchten, Schweinefleisch oder Poulet",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t6",
+          "nummer": "6",
+          "name": "Pla Muek Kratiem Prik Thai",
+          "nameThai": "ปลาหมึก กระเทียมพริกไทย",
+          "beschreibung": "Tintenfisch mit Knoblauch und Pfeffer",
+          "schaerfe": 0,
+          "preis": 25.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t7",
+          "nummer": "7",
+          "name": "Thale Luak Jim",
+          "nameThai": "ทะเลลวกจิ้ม",
+          "beschreibung": "Blanchierte Meeresfrüchte mit Dip",
+          "schaerfe": 0,
+          "preis": 25,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t8",
+          "nummer": "8",
+          "name": "Sai Ua",
+          "nameThai": "ไส้อั่ว",
+          "beschreibung": "Nordthailändische Bratwurst",
+          "schaerfe": 0,
+          "preis": 20.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t9",
+          "nummer": "9",
+          "name": "Sai Krok Isan",
+          "nameThai": "ไส้กรอกอีสาน",
+          "beschreibung": "Fermentierte Wurst aus dem Nordosten Thailands",
+          "schaerfe": 0,
+          "preis": 25,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t10",
+          "nummer": "10",
+          "name": "Phad Wun Sen",
+          "nameThai": "ผัดวุ้นเส้น ทะเล หมู ไก่",
+          "beschreibung": "Gebratene Glasnudeln mit Meeresfrüchten, Schweinefleisch oder Poulet",
+          "schaerfe": 0,
+          "preis": 22.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t11",
+          "nummer": "11",
+          "name": "Pla Neung",
+          "nameThai": "ปลานึ่ง",
+          "beschreibung": "Gedämpfter ganzer Fisch",
+          "hinweis": "Telefonische Vorbestellung 3 bis 4 Stunden im Voraus",
+          "schaerfe": 0,
+          "preis": 25.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t12",
+          "nummer": "12",
+          "name": "Pla Thod",
+          "nameThai": "ปลาทอด",
+          "beschreibung": "Frittierter ganzer Fisch",
+          "hinweis": "Telefonische Vorbestellung 3 bis 4 Stunden im Voraus",
+          "schaerfe": 0,
+          "preis": 25.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "t13",
+          "nummer": "13",
+          "name": "Yam Ruam Mit Thale",
+          "nameThai": "ยำรวมมิตรทะเล",
+          "beschreibung": "Pikanter Salat mit gemischten Meeresfrüchten",
+          "schaerfe": 0,
+          "preis": 25.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    },
+    {
+      "slug": "getraenke",
+      "titel": "Thai-Tee",
+      "titelThai": "เครื่องดื่ม",
+      "untertitel": "Die Karte des Restaurants zeigt diese beiden Spezialitäten",
+      "uebersetzungVorlaeufig": false,
+      "reihenfolge": 100,
+      "preistabellen": [],
+      "zusaetze": [],
+      "gerichte": [
+        {
+          "_key": "g1",
+          "name": "Thai Iced Tea",
+          "nameThai": "ชาเย็น",
+          "beschreibung": "Thailändischer Eistee mit Milch",
+          "schaerfe": 0,
+          "preis": 7.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        },
+        {
+          "_key": "g2",
+          "name": "Thai Green Tea",
+          "nameThai": "ชาเขียวเย็น",
+          "beschreibung": "Thailändischer grüner Eistee mit Milch",
+          "schaerfe": 0,
+          "preis": 7.5,
+          "kennzeichnungen": [],
+          "allergene": []
+        }
+      ]
+    }
+  ]
+}

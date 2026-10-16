@@ -1,0 +1,17 @@
+{
+  "titel": "Mittagsbuffet",
+  "untertitel": "Thai-Buffet à discrétion",
+  "text": "Von Montag bis Freitag steht über Mittag das Buffet bereit: Currys, Wok-Gerichte, Reis und Nudeln, frisch nachgefüllt. Ein alkoholfreies Getränk ist inbegriffen.",
+  "tage": [1, 2, 3, 4, 5],
+  "von": "11:00",
+  "bis": "14:00",
+  "abPreis": true,
+  "angebote": [
+    { "_key": "standard", "titel": "pro Person", "preis": 20.5, "inklusive": "inklusive eines alkoholfreien Getränks" }
+  ],
+  "bild": "buffet-theke",
+  "herkunft": [
+    { "quelle": "Startseite des Restaurants: «Montag bis Freitag von 11.00 Uhr bis 14.00 Uhr Buffet à discrétion ab Fr. 20.50 pro Person (inkl. ein alkoholfreies Getränk)»", "url": "https://www.suwannaphum.ch/", "abgerufen": "2026-10-16", "art": "eigene-website" }
+  ],
+  "freigabe": "demo"
+}

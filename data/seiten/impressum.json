@@ -1,0 +1,25 @@
+{
+  "slug": "impressum",
+  "titel": "Impressum",
+  "einleitung": "Diese Website ist ein Entwurf (Verkaufs-Demo) für das Thai Restaurant Suwannaphum. Sie ist nicht die offizielle Website des Restaurants.",
+  "stand": "16. Oktober 2026",
+  "seoBeschreibung": "Impressum der Demo-Website für das Thai Restaurant Suwannaphum in Schlieren: Betreiber der Demo, dargestelltes Restaurant, Haftung, Urheberrecht und Bildnachweis.",
+  "bloecke": [
+    { "titel": "Betreiber dieser Demo-Website", "anker": "betreiber" },
+    "**Nick Holzbecher**",
+    "E-Mail: [holzbechernick@gmail.com](mailto:holzbechernick@gmail.com)",
+    "Für Inhalt und Betrieb dieser Demo ist ausschliesslich der oben genannte Betreiber verantwortlich. Die Demo wird auf GitHub Pages (GitHub, Inc., USA) veröffentlicht. Die Postanschrift des Betreibers wird auf Anfrage mitgeteilt und vor einer produktiven Nutzung ergänzt.",
+    { "titel": "Dargestelltes Restaurant", "anker": "restaurant" },
+    "**Thai Restaurant Suwannaphum**",
+    "Zürcherstrasse 31, 8952 Schlieren, Schweiz",
+    "Telefon: [044 555 82 99](tel:+41445558299)",
+    "Geschäftsführerin und Chefköchin laut Website des Restaurants: Saythong Schmied. Rechtsform und Unternehmens-Identifikationsnummer (UID) sind nicht bekannt und werden vor einer produktiven Nutzung ergänzt. Das Restaurant hat diese Demo weder in Auftrag gegeben noch freigegeben; es ist nicht Betreiber dieser Seite.",
+    { "titel": "Zweck und Haftung", "anker": "haftung" },
+    "Die Demo zeigt, wie eine neue Website für das Restaurant aussehen könnte. Speisekarte, Preise, Öffnungszeiten und weitere Angaben wurden am 16. Oktober 2026 von der bisherigen Website suwannaphum.ch übernommen. Sie können sich seither geändert haben; massgebend sind die Auskünfte des Restaurants. Für Vollständigkeit, Richtigkeit und Aktualität wird keine Gewähr übernommen.",
+    "Links auf fremde Websites (Google Maps, Uber Eats, Just Eat) führen zu Angeboten Dritter. Für deren Inhalte sind die jeweiligen Anbieter verantwortlich.",
+    { "titel": "Urheberrecht", "anker": "urheberrecht" },
+    "Texte, Speisekarte, Fotos und Logo stammen von der bisherigen Website des Restaurants; die Rechte daran liegen beim Thai Restaurant Suwannaphum beziehungsweise bei den jeweiligen Urheberinnen und Urhebern. Sie werden in dieser Demo ausschliesslich zur Vorführung verwendet. Gestaltung und Programmcode der Demo: Nick Holzbecher.",
+    { "titel": "Bildnachweis", "anker": "bildnachweis" },
+    "Alle Fotos zeigen das Restaurant, sein Team und seine Gerichte. Sie wurden von der bisherigen Website des Restaurants übernommen und sind unverändert bis auf Grösse und Bildausschnitt."
+  ]
+}

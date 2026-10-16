@@ -1,0 +1,99 @@
+{
+  "name": "Thai Restaurant Suwannaphum",
+  "kurzname": "Suwannaphum",
+  "nameThai": "สุวรรณภูมิ",
+  "claim": "Thai-Küche in Schlieren",
+  "adresse": {
+    "strasse": "Zürcherstrasse 31",
+    "plz": "8952",
+    "ort": "Schlieren",
+    "land": "Schweiz"
+  },
+  "telefon": "+41 44 555 82 99",
+  "routenlink": "https://www.google.com/maps/search/?api=1&query=Thai+Restaurant+Suwannaphum%2C+Z%C3%BCrcherstrasse+31%2C+8952+Schlieren",
+  "reservation": {
+    "text": "Tische reservieren Sie telefonisch. Ein Anruf genügt, eine Online-Reservation gibt es nicht."
+  },
+  "takeaway": {
+    "text": "Gerichte zum Mitnehmen auf Anfrage: Rufen Sie an und holen Sie Ihr Essen im Restaurant ab."
+  },
+  "lieferdienste": [
+    {
+      "_key": "ubereats",
+      "name": "Uber Eats",
+      "url": "https://www.ubereats.com/ch-de/store/suwannaphum/zccpQBorT0CcQnVGiCvMAA",
+      "herkunft": [
+        {
+          "quelle": "Startseite des Restaurants (nennt Uber Eats als Lieferdienst)",
+          "url": "https://www.suwannaphum.ch/",
+          "abgerufen": "2026-10-16",
+          "art": "eigene-website"
+        },
+        {
+          "quelle": "Restaurantprofil bei Uber Eats (Zürcherstrasse 31, 8952 Schlieren, +41 44 555 82 99; Nachweis über Suchmaschinen-Snippet, Direktabruf durch Bot-Schutz blockiert)",
+          "url": "https://www.ubereats.com/ch-de/store/suwannaphum/zccpQBorT0CcQnVGiCvMAA",
+          "abgerufen": "2026-10-16",
+          "art": "plattformprofil"
+        }
+      ],
+      "freigabe": "demo"
+    },
+    {
+      "_key": "justeat",
+      "name": "Just Eat",
+      "url": "https://www.just-eat.ch/speisekarte/suwannaphum",
+      "herkunft": [
+        {
+          "quelle": "Startseite des Restaurants (nennt Just Eat als Lieferdienst)",
+          "url": "https://www.suwannaphum.ch/",
+          "abgerufen": "2026-10-16",
+          "art": "eigene-website"
+        },
+        {
+          "quelle": "Restaurantprofil bei Just Eat (Zürcherstrasse 31, 8952 Schlieren; im Browser geprüft)",
+          "url": "https://www.just-eat.ch/speisekarte/suwannaphum",
+          "abgerufen": "2026-10-16",
+          "art": "plattformprofil"
+        }
+      ],
+      "freigabe": "demo"
+    }
+  ],
+  "zahlungsmethoden": [
+    {
+      "_key": "bar",
+      "name": "Barzahlung"
+    },
+    {
+      "_key": "karte",
+      "name": "Kartenzahlung"
+    },
+    {
+      "_key": "twint",
+      "name": "TWINT"
+    },
+    {
+      "_key": "lunchcheck",
+      "name": "Lunch-Check"
+    }
+  ],
+  "zahlungsmethodenHinweis": "Lunch-Check ist auf der bisherigen Website nur als Logo abgebildet und noch zu bestätigen.",
+  "logo": "logo-wortmarke",
+  "seoBild": "og-suwannaphum",
+  "herkunft": [
+    {
+      "quelle": "Startseite des Restaurants (Adresse, Telefon, Reservation, Take-away, Zahlungsmethoden)",
+      "url": "https://www.suwannaphum.ch/",
+      "abgerufen": "2026-10-16",
+      "art": "eigene-website"
+    },
+    {
+      "quelle": "Holzschild im Restaurant mit dem Namen in Thai-Schrift (Foto der Website)",
+      "url": "https://www.suwannaphum.ch/",
+      "abgerufen": "2026-10-16",
+      "art": "eigene-website"
+    }
+  ],
+  "freigabe": "demo",
+  "logoSchriftzug": "logo-schriftzug"
+}

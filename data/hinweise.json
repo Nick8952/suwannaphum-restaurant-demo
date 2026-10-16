@@ -1,0 +1,22 @@
+[
+  {
+    "_key": "betriebsferien-2026",
+    "art": "betriebsferien",
+    "titel": "Betriebsferien",
+    "text": "Unser Restaurant bleibt von Donnerstag, 30. April 2026, ab 14.00 Uhr bis Samstag, 16. Mai 2026 geschlossen. Ab Montag, 18. Mai 2026 sind wir wieder für Sie da.",
+    "anzeigenVon": "2026-04-01",
+    "anzeigenBis": "2026-05-16",
+    "geschlossenVon": "2026-04-30",
+    "geschlossenBis": "2026-05-16",
+    "herkunft": [
+      {
+        "quelle": "Grafik «Betriebsferien-Vorlage-Querformat 2026» in der Medienbibliothek der bisherigen Website (nicht mehr eingebunden; abgelaufen, dient als Beispiel und erscheint nicht)",
+        "url": "https://www.suwannaphum.ch/",
+        "abgerufen": "2026-10-16",
+        "art": "aushang"
+      }
+    ],
+    "freigabe": "demo",
+    "geschlossenAb": "14:00"
+  }
+]
