@@ -1,6 +1,7 @@
 # Prüfbericht
 
-Stand: 16. Oktober 2026. Alle Zahlen sind gemessen, nichts ist geschätzt. Was nicht geprüft werden konnte, steht in Abschnitt 7.
+Stand: 16. und 17. Oktober 2026. Alle Zahlen sind gemessen, nichts ist geschätzt. Was nicht geprüft werden konnte, steht in Abschnitt 7;
+die Veröffentlichung auf Vercel in Abschnitt 9.
 
 **Umgebung:** macOS (Darwin 27), Node 26.8.2, npm 11.19.1, Google Chrome 155 (lokal installiert), puppeteer-core 25,
 Lighthouse 13.5.0 über `npx lighthouse@latest`. Lokale Läufe gegen `npm run vorschau:pages` (liefert `out/` wie GitHub Pages
@@ -189,3 +190,50 @@ Barrierefreiheit steht jetzt auf allen Seiten auf 100; einzig verbleibender Abzu
 Der mobile LCP der Speisekarte lag in diesem Lauf bei 3,1 s, im Lauf vor den Korrekturen bei 2,2 s; die Seite ist unverändert
 gross (umfangreichstes HTML der Website), die Differenz liegt in der Schwankung der simulierten Mobilverbindung zwischen zwei
 Läufen. Für eine echte Domain bleibt das Vorladen des Einstiegsbilds die naheliegende Verbesserung (Abschnitt 3).
+
+## 9. Vercel (17. Oktober 2026)
+
+**Einrichtung.** Projekt `suwannaphum-restaurant-demo` im Vercel-Konto `nick8952`, angelegt mit dem Vercel-CLI 64.5.0: Anmeldung per
+Gerätecode (`npx vercel login`, Bestätigung durch Nick im Browser), dann `npx vercel deploy --prod`. Die Verbindung zum
+GitHub-Repository entstand dabei automatisch; seither baut jeder Push auf `main` auch auf Vercel (`npm ci`, `npm run build:vercel`,
+Node 24, Build 32 s laut Protokoll). Produktionsadresse <https://suwannaphum-restaurant-demo.vercel.app>: öffentlich ohne Anmeldung,
+Brotli-Kompression, Canonical und Open Graph auf der Vercel-Adresse, keine Unterpfad-Verweise, `noindex`, Entwurfshinweis,
+unbekannte Adressen mit der gestalteten Fehlerseite (404), `/kontakt` leitet mit 308 auf `/kontakt/`. Keine Umgebungsvariablen.
+
+**Befunde des ersten Deployments** (Stand von Commit `44374bb`): Vercel liefert nicht `out/` aus, sondern die Build-Ausgabe von Next.
+Deshalb war `/sitemap.xml` mit allen sechs Seiten erreichbar, obwohl `scripts/export-nachbereiten.mjs` die Datei in `out/`
+gelöscht hatte; `/404.html` war nicht direkt erreichbar; `/kontakt` antwortete nach der Weiterleitung bei wiederholter Anfrage mit
+304. DOM-Audit 28 von 28, Funktionsprüfungen 58 von 61 (die drei genannten Punkte).
+
+**Behebung** (Commits `e66009d`, `6411fda`): Sitemap entsteht vor `next build` in `public/` und nur mit `INDEXIERUNG=1`
+(`scripts/sitemap-schreiben.mts`), `app/sitemap.ts` entfernt; Go-Live-Probe mit Testdomain erzeugt weiterhin Sitemap und
+`robots.txt`-Eintrag. `lib/deploy-ziel.ts` erkennt die Vercel-Umgebung (`VERCEL=1`) und nimmt die Produktionsadresse aus
+`VERCEL_PROJECT_PRODUCTION_URL`. Die Funktionsprüfungen akzeptieren das Hosting-Verhalten (gestaltete Fehlerseite statt `/404.html`,
+304 nach Weiterleitung), der Vorschau-Server leitet Ordner ohne Schluss-Schrägstrich wie die Hostings um (301). Datenschutzerklärung
+und Impressum nennen Vercel als zweites Hosting (Vercel Inc., Verbindungsdaten, Swiss-U.S. Data Privacy Framework laut Anbieter).
+Der CI-Lauf für `e66009d` war rot, weil die lokale Prüfung «/kontakt» vor der Server-Anpassung scheiterte; der Lauf für `6411fda`
+(<https://github.com/Nick8952/suwannaphum-restaurant-demo/actions/runs/39045184008>) ist grün.
+
+| Prüfung nach den Korrekturen | Vercel | GitHub Pages |
+| --- | --- | --- |
+| `/sitemap.xml` | 404 | 404 |
+| Rechtstexte nennen beide Hostings, Stand 17. Oktober 2026 | ja | ja |
+| DOM-Audit (7 Seiten × 4 Breiten) | **28 von 28 ohne Befund** | 28 von 28 (Abschnitt 8) |
+| Funktionsprüfungen | **61 von 61 bestanden** | **61/61 bestanden** |
+
+**Lighthouse auf Vercel** (2026-10-17 15:13 UTC, erstes Deployment; Inhalte seither nur in den Rechtstexten geändert):
+
+| Seite | Modus | Leistung | Barrierefreiheit | Best Practices | SEO | LCP | CLS | TBT | nicht bestanden |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| / | Desktop | 100 | 100 | 100 | 69 | 0,5 s | 0 | 0 ms | is-crawlable |
+| / | Mobil | 97 | 100 | 100 | 69 | 2,6 s | 0 | 30 ms | is-crawlable |
+| /speisekarte/ | Desktop | 100 | 100 | 100 | 69 | 0,5 s | 0 | 0 ms | is-crawlable |
+| /speisekarte/ | Mobil | 97 | 100 | 100 | 69 | 2,6 s | 0 | 20 ms | is-crawlable |
+| /restaurant/ | Desktop | 100 | 100 | 100 | 69 | 0,5 s | 0 | 0 ms | is-crawlable |
+| /restaurant/ | Mobil | 99 | 100 | 100 | 69 | 2,3 s | 0 | 20 ms | is-crawlable |
+| /kontakt/ | Desktop | 100 | 100 | 100 | 69 | 0,5 s | 0 | 0 ms | is-crawlable |
+| /kontakt/ | Mobil | 99 | 100 | 100 | 69 | 2,1 s | 0 | 30 ms | is-crawlable |
+
+SEO 69 statt 66: Lighthouse wertete die damals noch vorhandene Sitemap positiv; der verbleibende Abzug ist weiterhin das
+beabsichtigte `noindex`. Nicht geprüft auf Vercel: Preview-Deployments (durch Vercel-Anmeldung geschützt, für die Demo ohne Belang)
+und das Verhalten mit Sanity (kein Projekt).
