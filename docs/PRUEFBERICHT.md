@@ -99,7 +99,7 @@ Die Mobilwerte lokal (LCP 6,3 bis 6,5 s) kommen vom unkomprimierten Vorschau-Ser
 der LCP bei 2,0 bis 2,6 s. Die Startseite liegt mobil damit knapp über der 2,5-Sekunden-Schwelle; naheliegende Verbesserung wäre ein
 `<link rel="preload">` für das Einstiegsbild (Budget in `export-pruefen` ist dafür schon vorgesehen).
 
-**Live, nach den Korrekturen:** siehe Abschnitt 8 (wird nach dem Deployment dieser Runde ergänzt).
+**Live, nach den Korrekturen:** Abschnitt 8.
 
 ## 4. Go-Live-Leitplanken (lib/deploy-ziel.ts, lib/content/freigabe.ts)
 
@@ -161,6 +161,31 @@ Abschlussbefunde und Umsetzung:
 Bekannte Einschränkungen: Hinweise, die nach dem letzten Build erfasst werden, erscheinen erst mit dem nächsten Build (CI wöchentlich,
 mit Sanity per Deploy-Hook); der Menüknopf braucht JavaScript (Entscheidung 20).
 
-## 8. Live-Kontrolle nach den Korrekturen
+## 8. Live-Kontrolle nach den Korrekturen (Commit `200db66`)
 
-Wird nach dem Deployment dieser Runde ergänzt (DOM-Audit, Funktionsprüfungen, Lighthouse gegen die Live-Adresse).
+CI-Lauf <https://github.com/Nick8952/suwannaphum-restaurant-demo/actions/runs/38936829098>: Jobs `build`, `studio` und `deploy`
+grün. GitHub Pages lieferte den neuen Stand unmittelbar nach dem Deployment (geprüft am Footer-Link `/datenschutz/#cookies`, am
+Logo-Link ohne `aria-label` und am neuen Buffettext); Start und Speisekarte antworten mit 200, eine unbekannte Adresse mit 404.
+
+| Prüfung gegen die Live-Adresse | Ergebnis |
+| --- | --- |
+| DOM-Audit (7 Seiten × 4 Breiten) | **28 von 28 ohne Befund** |
+| Funktionsprüfungen | **61 von 61 bestanden** |
+
+**Lighthouse live, nach den Korrekturen** (2026-10-16 17:08 UTC, GitHub Pages mit Kompression):
+
+| Seite | Modus | Leistung | Barrierefreiheit | Best Practices | SEO | LCP | CLS | TBT | nicht bestanden |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| / | Desktop | 100 | 100 | 100 | 66 | 0,6 s | 0 | 0 ms | is-crawlable |
+| / | Mobil | 97 | 100 | 100 | 66 | 2,6 s | 0 | 20 ms | is-crawlable |
+| /speisekarte/ | Desktop | 100 | 100 | 100 | 66 | 0,6 s | 0 | 0 ms | is-crawlable |
+| /speisekarte/ | Mobil | 93 | 100 | 100 | 66 | 3,1 s | 0 | 10 ms | is-crawlable |
+| /restaurant/ | Desktop | 100 | 100 | 100 | 66 | 0,4 s | 0 | 0 ms | is-crawlable |
+| /restaurant/ | Mobil | 99 | 100 | 100 | 66 | 2,2 s | 0 | 10 ms | is-crawlable |
+| /kontakt/ | Desktop | 100 | 100 | 100 | 66 | 0,6 s | 0 | 0 ms | is-crawlable |
+| /kontakt/ | Mobil | 99 | 100 | 100 | 66 | 2,0 s | 0 | 30 ms | is-crawlable |
+
+Barrierefreiheit steht jetzt auf allen Seiten auf 100; einzig verbleibender Abzug ist das beabsichtigte `noindex` (SEO 66).
+Der mobile LCP der Speisekarte lag in diesem Lauf bei 3,1 s, im Lauf vor den Korrekturen bei 2,2 s; die Seite ist unverändert
+gross (umfangreichstes HTML der Website), die Differenz liegt in der Schwankung der simulierten Mobilverbindung zwischen zwei
+Läufen. Für eine echte Domain bleibt das Vorladen des Einstiegsbilds die naheliegende Verbesserung (Abschnitt 3).
