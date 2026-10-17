@@ -1,5 +1,5 @@
 // Lokaler Testserver, der den statischen Export so ausliefert wie GitHub Pages:
-// unter dem Repository-Unterpfad, mit index.html bei Ordnern und 404.html bei Fehlern.
+// unter dem Repository-Unterpfad, mit index.html bei Ordnern, Umleitung auf den Schluss-Schrägstrich und 404.html bei Fehlern.
 // Aufruf: npm run vorschau:pages  → http://localhost:4321/suwannaphum-restaurant-demo/
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
@@ -25,7 +25,11 @@ const server = createServer(async (req, res) => {
   let datei = path.resolve(wurzel, "." + p);
   if (datei !== wurzel && !datei.startsWith(wurzel + path.sep)) { res.writeHead(403); return res.end("Verboten."); }
   try {
-    if ((await stat(datei)).isDirectory()) datei = path.join(datei, "index.html");
+    if ((await stat(datei)).isDirectory()) {
+      // Wie GitHub Pages (301) und Vercel (308): Ordner ohne Schluss-Schrägstrich werden auf die Adresse mit Schrägstrich umgeleitet.
+      if (!url.pathname.endsWith("/")) { res.writeHead(301, { location: url.pathname + "/" + url.search }); return res.end(); }
+      datei = path.join(datei, "index.html");
+    }
   } catch {
     if (!path.extname(datei)) datei = datei + ".html";
   }
