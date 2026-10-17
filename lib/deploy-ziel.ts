@@ -10,7 +10,9 @@ export type DeployZiel = "pages" | "vercel";
 export const REPO_NAME = "suwannaphum-restaurant-demo";
 const GITHUB_KONTO = "nick8952";
 
-const roh = (process.env.DEPLOY_TARGET ?? "").trim();
+// Auf Vercel selbst (Build-Umgebung setzt VERCEL=1) gilt ohne ausdrückliche Angabe «vercel»: So funktioniert auch ein Import mit
+// Standard-Build-Befehl, nicht nur der aus vercel.json. Ein gesetztes DEPLOY_TARGET hat immer Vorrang.
+const roh = (process.env.DEPLOY_TARGET ?? (process.env.VERCEL ? "vercel" : "")).trim();
 if (roh && roh !== "pages" && roh !== "vercel") {
   throw new Error(`DEPLOY_TARGET=«${roh}» ist unbekannt. Erlaubt: leer/«pages» (GitHub Pages) oder «vercel».`);
 }
@@ -40,11 +42,15 @@ if (siteUrlEnv) {
   if (basePath) throw new Error(`SITE_URL lässt sich nicht mit dem Unterpfad «${basePath}» kombinieren. Für eine eigene Domain DEPLOY_TARGET=vercel setzen (oder BASE_PATH="" für einen Export an der Domain-Wurzel).`);
   siteUrlHost = u.hostname.toLowerCase();
 }
+// Auf Vercel liefert die Build-Umgebung die Produktionsadresse des Projekts (VERCEL_PROJECT_PRODUCTION_URL, ohne Protokoll).
+// Damit stimmen Canonical und Open Graph auch, wenn der Projektname nicht dem Repository-Namen entspricht.
+const vercelHost = (process.env.VERCEL_PROJECT_PRODUCTION_URL ?? "").trim().toLowerCase();
+const vercelUrl = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(vercelHost) ? `https://${vercelHost}` : `https://${REPO_NAME}.vercel.app`;
 export const siteUrl: string =
   siteUrlEnv && siteUrlEnv.length > 0
     ? siteUrlEnv
     : deployZiel === "vercel"
-      ? `https://${REPO_NAME}.vercel.app`
+      ? vercelUrl
       : `https://${GITHUB_KONTO}.github.io${basePath}`;
 
 /**

@@ -154,7 +154,7 @@ async function frisch({ breite = 1440, hoehe = 900, reduziert = false } = {}) {
   await page.goto(BASE + "/impressum/", { waitUntil: "networkidle0" });
   ok("Impressum: trennt Betreiber der Demo und dargestelltes Restaurant, Bildnachweis mit allen Bildern", await page.evaluate(() => { const t = document.querySelector("main").textContent; return t.includes("Betreiber dieser Demo-Website") && t.includes("Dargestelltes Restaurant") && !!document.getElementById("bildnachweis") && [...document.querySelectorAll("main li")].filter((li) => /Nutzung vorbehaltlich Freigabe/.test(li.textContent)).length >= 20; }));
   await page.goto(BASE + "/datenschutz/", { waitUntil: "networkidle0" });
-  ok("Datenschutz: beschreibt GitHub Pages, keine Cookies, externe Links; Sanity und Vercel nur als nicht im Einsatz", await page.evaluate(() => { const t = document.querySelector("main").textContent; return t.includes("GitHub Pages") && t.includes("keine Cookies") && t.includes("Uber Eats") && /Sanity[^.]*nicht im Einsatz|Beides ist in dieser Demo nicht im Einsatz/.test(t); }));
+  ok("Datenschutz: beschreibt GitHub Pages und Vercel als Hosting, keine Cookies, externe Links; Sanity nur als nicht im Einsatz", await page.evaluate(() => { const t = document.querySelector("main").textContent; return t.includes("GitHub Pages") && t.includes("Vercel Inc.") && t.includes("keine Cookies") && t.includes("Uber Eats") && /Sanity[^.]*nicht im Einsatz/.test(t); }));
   await ctx.close();
 }
 
@@ -174,12 +174,14 @@ async function frisch({ breite = 1440, hoehe = 900, reduziert = false } = {}) {
   ok(`Adressen: ${alleSeiten().length} Seiten per Direktaufruf und nach Neuladen erreichbar, Canonical zeigt auf die Demo`, alleOk, details.join(" | "));
   ok("Adressen: keine fehlgeschlagene Anfrage (Bilder, Schriften, Skripte unter dem Unterpfad)", fehlgeschlagen.length === 0, fehlgeschlagen.slice(0, 4).join(", "));
   const ohneSchraegstrich = await page.goto(BASE + "/kontakt", { waitUntil: "networkidle0" });
-  ok("Adressen: «/kontakt» ohne Schrägstrich am Ende funktioniert", ohneSchraegstrich.status() === 200 && (await page.evaluate(() => !!document.querySelector("main h1"))));
+  // 304: Chrome fragt nach der Weiterleitung bedingt an und bekommt «nicht verändert» (Vercel); die Seite ist dann aus dem Cache.
+  ok("Adressen: «/kontakt» ohne Schrägstrich am Ende funktioniert", [200, 304].includes(ohneSchraegstrich.status()) && page.url().endsWith("/kontakt/") && (await page.evaluate(() => !!document.querySelector("main h1"))), `${ohneSchraegstrich.status()} ${ohneSchraegstrich.url()} → ${page.url()}`);
   const r = await page.goto(BASE + "/gibt-es-nicht/", { waitUntil: "networkidle0" });
   ok("Fehlerseite: unbekannte Adresse liefert 404 mit gestalteter Seite, Kopfzeile und noindex", r.status() === 404 && (await page.evaluate(() => document.querySelector("main h1")?.textContent.trim() === "Diese Seite gibt es nicht" && !!document.querySelector("header") && document.querySelector("meta[name=robots]")?.content.includes("noindex"))));
   ok("Fehlerseite: Links führen unter den Unterpfad", await page.evaluate((u) => [...document.querySelectorAll("main a.knopf")].every((a) => a.getAttribute("href").startsWith(u + "/")), UNTERPFAD));
   const direkt = await page.goto(BASE + "/404.html", { waitUntil: "networkidle0" });
-  ok("Fehlerseite: 404.html direkt aufrufbar", direkt.status() === 200 && (await page.evaluate(() => !!document.querySelector("main h1"))));
+  // GitHub Pages liefert die Datei selbst (200); Vercel kennt sie nicht und antwortet mit der gestalteten Fehlerseite (404).
+  ok("Fehlerseite: /404.html direkt aufrufbar (GitHub Pages) oder als gestaltete Fehlerseite beantwortet (Vercel)", [200, 404].includes(direkt.status()) && (await page.evaluate(() => document.querySelector("main h1")?.textContent.trim() === "Diese Seite gibt es nicht")));
   await ctx.close();
 }
 

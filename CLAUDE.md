@@ -7,14 +7,16 @@ Verkaufs-Demo für das **Thai Restaurant Suwannaphum** (Zürcherstrasse 31, 8952
 ## Architektur in einem Absatz
 
 Next.js 16 (App Router, TypeScript, Tailwind CSS v4), **immer statischer Export** (`output: "export"`). Heute liegt er unter dem
-Repository-Unterpfad `/suwannaphum-restaurant-demo` auf GitHub Pages; die Inhalte kommen aus `data/*.json`. Später: Sanity als CMS
-und Vercel als Hosting. Beides ist vorbereitet (Studio-Schemas, Sanity-Adapter, Import-Skript), aber **nicht eingerichtet**: keine
-Projekte, keine Tokens. Auch mit Sanity bleibt die Website statisch: Veröffentlichen löst über einen Webhook einen Build aus. Keine
-Serverfunktionen, keine API-Routen, kein eingebettetes Studio, keine Anfragen an Dritte im Browser.
+Repository-Unterpfad `/suwannaphum-restaurant-demo` auf GitHub Pages **und** ohne Unterpfad auf Vercel
+(<https://suwannaphum-restaurant-demo.vercel.app>, Projekt im Konto nick8952, Build bei jedem Push auf `main`, keine
+Umgebungsvariablen); die Inhalte kommen aus `data/*.json`. Später: Sanity als CMS auf demselben Vercel-Projekt. Sanity ist
+vorbereitet (Studio-Schemas, Sanity-Adapter, Import-Skript), aber **nicht eingerichtet**: kein Projekt, keine Tokens. Auch mit
+Sanity bleibt die Website statisch: Veröffentlichen löst über einen Webhook einen Build aus. Keine Serverfunktionen, keine
+API-Routen, kein eingebettetes Studio, keine Anfragen an Dritte im Browser.
 
 ```text
 app/                 layout.tsx (Kopf, Fuss, mobile Leiste, Einwilligung ruhend, Schriften via next/font/local, JSON-LD nur bei Freigabe),
-                     page.tsx (Start), speisekarte/, restaurant/, kontakt/, impressum/, datenschutz/, not-found.tsx, robots.ts, sitemap.ts,
+                     page.tsx (Start), speisekarte/, restaurant/, kontakt/, impressum/, datenschutz/, not-found.tsx, robots.ts,
                      icon.svg, globals.css (Tokens, Klassen, Thai-@font-face mit unicode-range)
 components/          Kopfzeile + Menue (Dialog) + NavLink + MobilLeiste, Fusszeile, Heute (Client, Uhr), Hinweise (Client, Datum),
                      Zeitenliste (Client, heutiger Tag), Register (Client, aktive Kategorie), Kategorie, GerichtZeile, Chilis, Preis,
@@ -121,7 +123,7 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
   Kundendomain) erlaubt Indexierung, erzeugt die Sitemap und das JSON-LD (Typ `Restaurant`, Öffnungszeiten nur mit Freigabe «live»).
 - Leitplanken in `lib/deploy-ziel.ts` nicht lockern: `INDEXIERUNG=1` verlangt eine ausdrückliche `SITE_URL` und bricht für
   Vorschau-Adressen ab; für jede echte Domain bricht der Build ab, solange eine Freigabe fehlt (`lib/content/freigabe.ts`).
-- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand der Demo (Betreiber Nick, GitHub Pages, keine Cookies).
+- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand der Demo (Betreiber Nick, Hosting GitHub Pages und Vercel, keine Cookies).
   Bei jeder technischen Änderung beide Texte anpassen.
 
 ### Gestaltung «Tischläufer»
@@ -140,13 +142,22 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
 - `basePath`/`assetUrl()` überall; nie absolute Pfade ohne Präfix. `trailingSlash: true`. Sprungmarken-Links laufen über `SmartLink`.
 - `scripts/export-pruefen.mjs` muss grün sein. `.github/workflows/pages.yml` veröffentlicht bei Push auf `main`; Pages-Quelle ist «GitHub Actions».
 
-### Sanity und Vercel (nur vorbereitet)
+### Vercel (eingerichtet am 17.10.2026)
+
+- Vercel liefert **nicht `out/`** aus, sondern die Build-Ausgabe von Next. Alles, was auf beiden Zielen gleich sein muss, entsteht
+  vor `next build` in `public/` (Sitemap: `scripts/sitemap-schreiben.mts`, nur mit `INDEXIERUNG=1`). `out/404.html` und `.nojekyll`
+  braucht nur GitHub Pages. Unbekannte Adressen beantwortet Vercel mit der gestalteten Fehlerseite, `/kontakt` leitet mit 308 um.
+- Build-Umgebung setzt `VERCEL=1`: `lib/deploy-ziel.ts` nimmt dann «vercel» als Ziel, Canonical aus `VERCEL_PROJECT_PRODUCTION_URL`.
+  `vercel.json` setzt `npm run build:vercel` und `npm ci`. Prüfen: `BASE=https://suwannaphum-restaurant-demo.vercel.app npm run qa`.
+- Veröffentlichen heisst pushen auf `main`; das CLI (`npx vercel deploy --prod`) braucht ein angemeldetes Konto (`npx vercel login`).
+
+### Sanity (nur vorbereitet)
 
 - Schemas in `studio/schemas/`, Adapter `lib/content/sanity.ts` (Singletons per `_id`), Import `scripts/seed.mts`. Feldnamen in
   Sanity = Feldnamen im Domainmodell.
 - `CONTENT_SOURCE=sanity` schaltet die Quelle um; ohne `SANITY_PROJECT_ID`/`SANITY_DATASET` bricht der Build ab.
 - Bilder aus Sanity werden vor dem Build gespiegelt (`scripts/sanity-bilder.mts` → `public/bilder/cms/`, `data/cms-bilder.json`).
-- Einrichtung: `docs/SANITY-VERCEL-EINRICHTUNG.md`. **Nie** ohne ausdrücklichen Auftrag Sanity- oder Vercel-Projekte oder Tokens anlegen.
+- Einrichtung: `docs/SANITY-VERCEL-EINRICHTUNG.md`. **Nie** ohne ausdrücklichen Auftrag Sanity-Projekte, weitere Vercel-Projekte oder Tokens anlegen.
 
 ## Arbeitsweise
 

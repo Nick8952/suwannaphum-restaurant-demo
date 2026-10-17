@@ -14,10 +14,10 @@ import path from "node:path";
 
 const WURZEL = path.resolve(import.meta.dirname, "..", "out");
 const DATA = path.resolve(import.meta.dirname, "..", "data");
-const vercel = process.env.DEPLOY_TARGET === "vercel";
+const vercel = process.env.DEPLOY_TARGET === "vercel" || (!process.env.DEPLOY_TARGET && !!process.env.VERCEL);
 const basePath = vercel ? "" : (process.env.BASE_PATH ?? "/suwannaphum-restaurant-demo").replace(/\/$/, "");
 const indexierung = process.env.INDEXIERUNG === "1";
-const siteUrl = (process.env.SITE_URL || (vercel ? "https://suwannaphum-restaurant-demo.vercel.app" : `https://nick8952.github.io${basePath}`)).replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || (vercel ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || "suwannaphum-restaurant-demo.vercel.app"}` : `https://nick8952.github.io${basePath}`)).replace(/\/$/, "");
 // Budgets (unkomprimiert, in Bytes). Bewusst knapp über dem Ist-Stand: Wer sie reisst, soll es merken.
 const BUDGET = { vorgeladenesBild: 150_000, jsJeSeite: 720_000, bildMax: 260_000 };
 const fehler = [];

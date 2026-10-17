@@ -8,7 +8,7 @@
     "build": "npm run build:pages",
     "build:pages": "npm run build:kern",
     "build:vercel": "cross-env DEPLOY_TARGET=vercel npm run build:kern",
-    "build:kern": "npm run sanity:bilder && next build && node scripts/export-nachbereiten.mjs",
+    "build:kern": "npm run sanity:bilder && tsx scripts/sitemap-schreiben.mts && next build && node scripts/export-nachbereiten.mjs",
     "sanity:bilder": "tsx scripts/sanity-bilder.mts",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",

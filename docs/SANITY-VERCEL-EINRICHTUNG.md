@@ -94,10 +94,22 @@ Der Befehl spiegelt zuerst die Bilder (`✓ … Bilder aus Sanity gespiegelt`) u
 das Dokument und das Feld (zum Beispiel «Sanity: Kategorien der Speisekarte – 3.gerichte.4.preis: Ein Gericht braucht einen
 Preis …»). Im Studio korrigieren, veröffentlichen, erneut bauen. Anschliessend für die Demo wieder `npm run build` ausführen.
 
-## 5. Vercel-Projekt anlegen
+## 5. Vercel-Projekt (besteht seit dem 17. Oktober 2026)
 
-1. Auf <https://vercel.com/new> das Repository `Nick8952/suwannaphum-restaurant-demo` importieren. Framework: Next.js (wird
-   erkannt). Den Build-Befehl gibt `vercel.json` vor (`npm run build:vercel`); nichts überschreiben.
+Das Projekt `suwannaphum-restaurant-demo` liegt im Vercel-Konto `nick8952`, ist mit dem GitHub-Repository verbunden und baut bei
+jedem Push auf `main` mit `npm run build:vercel` (aus `vercel.json`, Install `npm ci`). Produktionsadresse:
+<https://suwannaphum-restaurant-demo.vercel.app>. Sie zeigt die Demo mit lokalen Inhalten, noindex und Entwurfshinweis; es sind
+**keine Umgebungsvariablen** gesetzt. Angelegt wurde es mit dem Vercel-CLI (`npx vercel login`, `npx vercel deploy --prod`); die
+Git-Verbindung entstand dabei automatisch, weil die Vercel-GitHub-App für das Konto installiert ist.
+
+Vercel liefert **nicht den Ordner `out/`** aus, sondern die Build-Ausgabe von Next. Deshalb entsteht alles, was auf beiden Zielen
+gleich sein muss, vor `next build` in `public/` (Sitemap: `scripts/sitemap-schreiben.mts`, nur mit `INDEXIERUNG=1`); `out/404.html`
+und `.nojekyll` braucht nur GitHub Pages. Unbekannte Adressen beantwortet Vercel von selbst mit der gestalteten Fehlerseite,
+`/kontakt` ohne Schrägstrich leitet mit 308 auf `/kontakt/` weiter.
+
+Für den Umstieg auf Sanity:
+
+1. Das Repository ist bereits verbunden; nichts neu importieren.
 2. Unter **Settings → Environment Variables** für *Production* (und *Preview*) eintragen:
 
    | Variable | Wert |
@@ -110,10 +122,11 @@ Preis …»). Im Studio korrigieren, veröffentlichen, erneut bauen. Anschliesse
 
    `DEPLOY_TARGET` setzt der Build-Befehl selbst. **Kein Token eintragen**, solange das Dataset öffentlich ist. Eine leere
    `SITE_URL` ist erlaubt; ein falscher Wert bricht den Build mit einer klaren Meldung ab.
-3. **Deploy** auslösen und die Vercel-Adresse prüfen: Startseite, `/speisekarte/` direkt aufrufen, neu laden, eine falsche Adresse (404).
+3. Unter **Deployments** den letzten Stand neu bauen (**Redeploy**) und die Vercel-Adresse prüfen: Startseite, `/speisekarte/` direkt
+   aufrufen, neu laden, eine falsche Adresse (404). Lokal dasselbe mit `BASE=https://suwannaphum-restaurant-demo.vercel.app npm run qa`.
 
 Bekannte Falle aus früheren Demos: `vercel deploy --temporary` (anonymer Testmodus) liefert bei statischen Exporten 404; immer
-über das Dashboard importieren.
+mit angemeldetem Konto oder über die Git-Verbindung veröffentlichen.
 
 ## 6. Veröffentlichen löst einen Build aus
 

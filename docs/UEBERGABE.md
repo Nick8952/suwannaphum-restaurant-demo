@@ -6,8 +6,11 @@ Produktivbetrieb. Solange die Punkte offen sind, bleibt die Website ein Entwurf 
 ## Stand der Demo
 
 - Repository: <https://github.com/Nick8952/suwannaphum-restaurant-demo> (öffentlich)
-- Live: <https://nick8952.github.io/suwannaphum-restaurant-demo/> (noindex, als Entwurf gekennzeichnet)
-- Inhalte: lokal in `data/`. Sanity und Vercel sind vorbereitet, aber nicht eingerichtet (`docs/SANITY-VERCEL-EINRICHTUNG.md`).
+- **Link für den Kunden:** <https://suwannaphum-restaurant-demo.vercel.app> (Vercel, baut bei jedem Push auf `main`; noindex, als
+  Entwurf gekennzeichnet)
+- Zweite Veröffentlichung desselben Stands: <https://nick8952.github.io/suwannaphum-restaurant-demo/> (GitHub Pages, noindex)
+- Inhalte: lokal in `data/`. Vercel ist eingerichtet (Projekt im Konto nick8952, keine Umgebungsvariablen); Sanity ist vorbereitet,
+  aber nicht eingerichtet (`docs/SANITY-VERCEL-EINRICHTUNG.md`).
 
 ## Für Nick, vor dem Versand der Demo
 
