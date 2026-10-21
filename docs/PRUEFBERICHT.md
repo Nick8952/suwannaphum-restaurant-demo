@@ -1,7 +1,7 @@
 # Prüfbericht
 
-Stand: 16. und 17. Oktober 2026. Alle Zahlen sind gemessen, nichts ist geschätzt. Was nicht geprüft werden konnte, steht in Abschnitt 7;
-die Veröffentlichung auf Vercel in Abschnitt 9.
+Stand: 16., 17. und 21. Oktober 2026. Alle Zahlen sind gemessen, nichts ist geschätzt. Was nicht geprüft werden konnte, steht in
+Abschnitt 7; die Veröffentlichung auf Vercel in Abschnitt 9, der Go-live auf der Kundendomain in Abschnitt 10.
 
 **Umgebung:** macOS (Darwin 27), Node 26.8.2, npm 11.19.1, Google Chrome 155 (lokal installiert), puppeteer-core 25,
 Lighthouse 13.5.0 über `npx lighthouse@latest`. Lokale Läufe gegen `npm run vorschau:pages` (liefert `out/` wie GitHub Pages
@@ -237,3 +237,44 @@ Der CI-Lauf für `e66009d` war rot, weil die lokale Prüfung «/kontakt» vor de
 SEO 69 statt 66: Lighthouse wertete die damals noch vorhandene Sitemap positiv; der verbleibende Abzug ist weiterhin das
 beabsichtigte `noindex`. Nicht geprüft auf Vercel: Preview-Deployments (durch Vercel-Anmeldung geschützt, für die Demo ohne Belang)
 und das Verhalten mit Sanity (kein Projekt).
+
+## 10. Go-live auf www.suwannaphum.ch (21. Oktober 2026)
+
+**Ausgangslage.** Nick hatte die Domain beim Registrar auf das Vercel-Projekt umgestellt; die Domain lieferte damit den Demo-Stand aus
+(`noindex`, Entwurfshinweis, Canonical auf vercel.app, Rechtstexte der Demo). Nick bestätigte: Das Restaurant hat Öffnungszeiten,
+Küchenschluss, Buffet, Speisekarte, Thai-Specials-Übersetzung, Lunch-Check und alle Fotos einschliesslich Teamfoto freigegeben;
+Firma, Rechtsform und UID stammen aus dem Handelsregister-Auszug (Thairestaurant Suwannaphum, Saythong Schmied, Einzelunternehmen,
+CHE-498.447.349).
+
+**Änderungen** (Commits `eced2f4`, `393ef91`): alle Freigaben auf «live», Übersetzungs-Kennzeichnung der Thai Specials aus,
+Lunch-Check-Hinweis entfernt, Bildnachweis «mit Freigabe des Restaurants», Impressum und Datenschutzerklärung mit dem Restaurant als
+Betreiberin (Hosting Vercel, technische Betreuung Nick, Sanity nicht im Einsatz). Vercel-Produktionsvariablen `SITE_URL` und
+`INDEXIERUNG=1` gesetzt. GitHub-Pages-Veröffentlichung entfernt und die Pages-Site gelöscht (github.io antwortet 404); der Workflow
+`pruefungen.yml` prüft nur noch. Tests und Audit kennen jetzt den Live-Modus (`INDEXIERUNG=1`: index erwartet, Fehlerseite bleibt noindex).
+
+**Prüfkette lokal:** `npm run inhalt:pruefen -- --live` meldet «alle Freigaben erteilt»; `npm run pruefen` grün; Go-live-Build
+`INDEXIERUNG=1 SITE_URL=https://www.suwannaphum.ch npm run build:vercel` mit `export:pruefen` grün (index/follow, Canonical auf die
+Domain, JSON-LD, Sitemap mit 6 Seiten, robots.txt nennt die Sitemap, kein Entwurfshinweis, kein «Demo» im Impressum); Vorschau-Build mit
+Funktionsprüfungen 61 von 61 und Audit 28 von 28; Seed-Trockenlauf 21 Dokumente; CI-Läufe
+<https://github.com/Nick8952/suwannaphum-restaurant-demo/actions/runs/39626236870> und
+<https://github.com/Nick8952/suwannaphum-restaurant-demo/actions/runs/39627674745> grün.
+
+**Vercel.** Die Pushes vom 21.10. lösten keine Builds aus (Git-Verbindung zeigte «connected», Deployment-Liste blieb bei den Builds
+vom 17.10.). Behelf: `npx vercel git disconnect` und `git connect`, Produktion mit `npx vercel deploy --prod --yes` ausgelöst
+(Deployments `qqi8xd27l` für `eced2f4`, `kbtnwj51o` für `393ef91`). Beim nächsten Push prüfen, ob der automatische Build wieder läuft.
+Während der Prüfung erschien auf `www` nach rund 200 curl-Anfragen in sieben Minuten der «Vercel Security Checkpoint» (403, auch
+für headless Chrome); er verschwand nach wenigen Minuten. Audits laufen deshalb gegen den vercel.app-Alias (derselbe Build).
+
+| Prüfung auf der Live-Domain | Ergebnis |
+| --- | --- |
+| Startseite | 200, `index, follow`, Canonical und Open Graph `https://www.suwannaphum.ch/`, JSON-LD Typ Restaurant, kein Entwurfshinweis |
+| `/impressum/` | Betreiberin das Restaurant, Firma laut Handelsregister, UID, kein «Demo» |
+| `/sitemap.xml`, `/robots.txt` | 200 mit 6 Seiten; robots.txt erlaubt alles und nennt die Sitemap |
+| `suwannaphum.ch` | 308 auf `https://www.suwannaphum.ch/` |
+| unbekannte Adresse | 404 mit gestalteter Seite |
+| DOM-Audit (Alias, Live-Modus) | **28 Prüfungen (7 Seiten × 4 Breiten), 0 mit Befund** |
+| Lighthouse `/` Desktop | Leistung 100, Barrierefreiheit 100, Best Practices 100, **SEO 100**, LCP 0,5 s |
+| Lighthouse `/` Mobil | Leistung 97, Barrierefreiheit 100, Best Practices 100, **SEO 100**, LCP 2,6 s, TBT 40 ms |
+
+**Offen nach dem Go-live:** E-Mail-Adresse des Restaurants im Impressum, Google Search Console mit Sitemap, Kündigung des alten
+Hoststar-Baukastens, Kontrolle des automatischen Vercel-Builds beim nächsten Push.

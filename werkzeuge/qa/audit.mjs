@@ -4,6 +4,8 @@
 // Aufruf: node werkzeuge/qa/audit.mjs  (Vorschau-Server: npm run vorschau:pages)  ·  SEITEN=/,/kontakt/  BREITEN=360,1440  SCREENSHOTS=1
 import { mkdirSync, writeFileSync } from "node:fs";
 import { BASE, alleSeiten, browserStarten, externeAnfragen, warten } from "./chrome.mjs";
+// INDEXIERUNG=1: Prüfung gegen die Live-Website (index, follow erwartet; die Fehlerseite bleibt noindex); sonst Vorschau (noindex erwartet).
+const ERWARTE_INDEX = process.env.INDEXIERUNG === "1";
 const seiten = process.env.SEITEN ? process.env.SEITEN.split(",") : [...alleSeiten(), "/diese-seite-gibt-es-nicht/"];
 const breiten = (process.env.BREITEN ?? "360,390,768,1440").split(",").map(Number);
 const screenshots = process.env.SCREENSHOTS === "1";
@@ -68,7 +70,7 @@ for (const breite of breiten) {
       z.bilderOhneMasse ? `Bild ohne width/height ${z.bilderOhneMasse}` : "", z.h1 !== 1 ? `h1=${z.h1}` : "", z.spruenge ? `Überschriften-Sprünge ${z.spruenge}` : "",
       z.extern.length ? `EXTERN ${z.extern.join(",")}` : "", z.fehlgeschlagen.length ? `ANFRAGE FEHLGESCHLAGEN ${z.fehlgeschlagen.join(",")}` : "", z.konsole.length ? `KONSOLE ${z.konsole[0]}` : "",
       z.storage.length ? `storage ${z.storage}` : "", z.cookies ? "COOKIES" : "", !z.skip || !z.main ? "SKIP/MAIN fehlt" : "", z.kopfVerdeckt ? "Kopfzeile verdeckt Sprungziele" : "", z.leisteVerdeckt ? "MOBILE LEISTE verdeckt Inhalt" : "",
-      z.textKlein ? `${z.textKlein} Texte kleiner als 13px` : "", !z.robots?.includes("noindex") ? "noindex fehlt" : "", z.lang !== "de-CH" ? `lang=${z.lang}` : "",
+      z.textKlein ? `${z.textKlein} Texte kleiner als 13px` : "", (ERWARTE_INDEX && z.status !== 404 ? z.robots?.includes("noindex") : !z.robots?.includes("noindex")) ? (ERWARTE_INDEX ? "noindex gesetzt (Live-Modus erwartet index)" : "noindex fehlt") : "", z.lang !== "de-CH" ? `lang=${z.lang}` : "",
     ].filter(Boolean);
     z.probleme = probleme;
     console.log(`${z.status} ${breite} ${seite} ${probleme.length ? "→ " + probleme.join(" · ") : "ok"}`);
