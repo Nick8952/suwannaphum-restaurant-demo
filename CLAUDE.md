@@ -36,7 +36,7 @@ werkzeuge/qa/        Browser-Prüfungen mit puppeteer-core: audit.mjs, funktione
 werkzeuge/zeit.test.mts  Prüfungen der Zeitlogik mit dem Node-Testläufer (Schnitt im Zeitfenster, Zeitzone, Rangfolge der Hinweise)
 assets/originale/    Originale der alten Website + HERKUNFT.md (Quellen, Rechte); speisekarte/ = die elf Kartenbilder (nur Abschrift)
 public/bilder/       erzeugte AVIF/WebP-Varianten (nie hochskaliert)
-docs/                INHALTSMATRIX, BILDER, DESIGN, ENTSCHEIDUNGEN, SANITY-VERCEL-EINRICHTUNG, INHALTE-PFLEGEN, UEBERGABE, PRUEFBERICHT
+docs/                INHALTSMATRIX, BILDER, DESIGN, ENTSCHEIDUNGEN, SANITY-VERCEL-EINRICHTUNG, INHALTE-PFLEGEN, UEBERGABE, PRUEFBERICHT, UEBERWACHUNG
 ```
 
 Technischer Ausgangspunkt war `../casatex-zuerich-demo` (Unterpfad-Logik, Export-Prüfung, Vorschau-Server, QA-Gerüst,
@@ -49,6 +49,7 @@ Einwilligungslogik, Modell «statisch + Rebuild bei Publish»). Design, Komponen
 | Entwicklung (Unterpfad wie auf GitHub Pages) | `npm run dev` → <http://localhost:3000/suwannaphum-restaurant-demo/> |
 | Inhalte prüfen (Schema, Schreibweise, Karte, Zeiten, Links, Bilder) | `npm run inhalt:pruefen` · vor dem Go-Live `npm run inhalt:pruefen -- --live` |
 | Zeitlogik (Schnitt im Zeitfenster, Zeitzone, Rangfolge der Hinweise) | `npm run zeit:pruefen` |
+| Live-Website überwachen (26 Prüfungen, läuft alle 30 Min in Actions, Alarm als Issue) | `node werkzeuge/ueberwachung.mjs` · Anleitung `docs/UEBERWACHUNG.md` |
 | Inhalte + Zeitlogik + Lint + Typen | `npm run pruefen` |
 | Statischer Export für GitHub Pages | `npm run build` (schreibt `out/` mit `404.html`, `.nojekyll`; ohne Sitemap) |
 | Export prüfen (Seiten, noindex, Unterpfad, keine fremden Hosts, Karte vollständig, Budgets) | `npm run export:pruefen` |

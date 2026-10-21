@@ -1,0 +1,52 @@
+# Überwachung der Live-Website www.suwannaphum.ch: alle 30 Minuten (GitHub führt geplante Läufe mit Verzögerung aus) und von Hand.
+# Schlägt eine Prüfung fehl, legt der Lauf ein Issue «Website-Alarm» an (oder kommentiert das offene) und GitHub schickt die
+# E-Mail dazu. Nach 60 Tagen ohne Commit im Repository schaltet GitHub geplante Läufe ab: dann unter «Actions» wieder einschalten.
+name: Überwachung
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: ueberwachung
+  cancel-in-progress: false
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - id: lauf
+        run: node werkzeuge/ueberwachung.mjs
+        env:
+          SITE: https://www.suwannaphum.ch
+      - name: Alarm als Issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFUNDE: ${{ steps.lauf.outputs.befunde }}
+          LAUF: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT="Prüfung vom $(TZ=Europe/Zurich date '+%d.%m.%Y %H:%M') Uhr gegen https://www.suwannaphum.ch ist fehlgeschlagen.
+
+          Befunde:
+          ${BEFUNDE:-siehe Protokoll}
+
+          Protokoll: $LAUF
+
+          Erste Schritte: Website im Browser öffnen · https://www.vercel-status.com · \`npx vercel ls\` · bei kaputtem Deployment \`npx vercel deploy --prod --yes\` aus dem Projektordner · Domain/DNS bei webland.ch prüfen."
+          OFFEN=$(gh issue list --label ueberwachung --state open --json number --jq '.[0].number')
+          if [ -n "$OFFEN" ]; then
+            gh issue comment "$OFFEN" --body "$TEXT"
+          else
+            gh label create ueberwachung --color B60205 --description "Automatischer Website-Alarm" 2>/dev/null || true
+            gh issue create --title "Website-Alarm: www.suwannaphum.ch" --label ueberwachung --body "$TEXT"
+          fi
