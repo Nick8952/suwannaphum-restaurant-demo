@@ -13,8 +13,8 @@ Produktivbetrieb. Solange die Punkte offen sind, bleibt die Website ein Entwurf 
 - Inhalte: lokal in `data/`, alle Freigaben auf «live» (Nick, 21.10.2026: das Restaurant hat Öffnungszeiten, Preise, Speisekarte,
   Thai-Specials-Übersetzung, Lunch-Check und alle Fotos einschliesslich Teamfoto bestätigt). Impressum und Datenschutzerklärung
   nennen das Restaurant (Inhaberin Saythong Schmied) als Betreiberin. Sanity ist vorbereitet, nicht eingerichtet.
-- Die Fragen unten sind damit pauschal beantwortet; sie bleiben als Nachweis stehen. Noch offen: UID des Restaurants (im Impressum
-  weggelassen), eine E-Mail-Adresse des Restaurants, Google Search Console mit Sitemap, Kündigung des alten Hoststar-Baukastens.
+- Die Fragen unten sind damit pauschal beantwortet; sie bleiben als Nachweis stehen. UID und Firma stammen aus dem Handelsregister (Auszug von Nick, 21.10.2026). Noch offen: eine E-Mail-Adresse des Restaurants,
+  Google Search Console mit Sitemap, Kündigung des alten Hoststar-Baukastens.
 
 ## Für Nick, vor dem Versand der Demo
 
