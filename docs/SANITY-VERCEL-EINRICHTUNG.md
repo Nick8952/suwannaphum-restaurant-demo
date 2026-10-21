@@ -140,7 +140,7 @@ mit angemeldetem Konto oder über die Git-Verbindung veröffentlichen.
    täglichen Aufruf des Deploy-Hooks einrichten (zum Beispiel über **Settings → Cron Jobs** mit einem kleinen Aufruf oder über
    einen externen Zeitplaner). Ohne das wirkt der clientseitige Datumsabgleich nur für bereits erfasste Hinweise.
 
-## 7. Go-Live auf der Kundendomain
+## 7. Go-Live auf der Kundendomain (erledigt am 21. Oktober 2026, Schritte 1, 2, 3 und 4 ohne Sanity)
 
 Erst wenn das Restaurant die Inhalte freigegeben hat:
 

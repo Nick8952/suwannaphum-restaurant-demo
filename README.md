@@ -3,8 +3,8 @@
 Verkaufs-Demo einer neuen Website für das Thai Restaurant Suwannaphum, Zürcherstrasse 31, 8952 Schlieren. Dies ist **nicht** die
 offizielle Website des Restaurants; Betreiber der Demo ist Nick Holzbecher.
 
-- Live-Demo für den Kunden: <https://suwannaphum-restaurant-demo.vercel.app> (Vercel, Entwurf, noindex)
-- Zweite Veröffentlichung: <https://nick8952.github.io/suwannaphum-restaurant-demo/> (GitHub Pages, Entwurf, noindex)
+- **Live seit 21. Oktober 2026:** <https://www.suwannaphum.ch> (Vercel, Projekt `suwannaphum-restaurant-demo`, baut bei jedem Push auf `main`)
+- Vorschau-Alias: <https://suwannaphum-restaurant-demo.vercel.app> (gleicher Stand, Canonical zeigt auf die Domain). Die frühere GitHub-Pages-Demo ist abgeschaltet.
 - Technik: Next.js 16, TypeScript, Tailwind CSS v4, statischer Export auf GitHub Pages; Sanity und Vercel vorbereitet
 - Anleitung für Entwicklung und Regeln: `CLAUDE.md` · Inhalte pflegen: `docs/INHALTE-PFLEGEN.md` · Sanity/Vercel: `docs/SANITY-VERCEL-EINRICHTUNG.md`
 

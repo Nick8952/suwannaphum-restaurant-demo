@@ -80,7 +80,7 @@
       "art": "speisekarte"
     }
   ],
-  "freigabe": "demo",
+  "freigabe": "live",
   "seoTitel": "Speisekarte",
   "seoBeschreibung": "Vorspeisen, Salate, Suppen, Currys, Reis- und Nudelgerichte, vegetarische Gerichte und Thai Specials mit Preisen. Schärfegrad frei wählbar.",
   "kategorien": [
@@ -816,8 +816,8 @@
       "titel": "Thai Specials",
       "titelThai": "เมนูอาหารพิเศษ",
       "untertitel": "Gerichte, wie sie in Thailand auf den Tisch kommen",
-      "einleitung": "Diese Karte liegt im Restaurant in thailändischer Schrift auf. Umschrift und Erklärung sind eine Arbeitsübersetzung, die das Restaurant vor der Veröffentlichung bestätigt.",
-      "uebersetzungVorlaeufig": true,
+      "einleitung": "Diese Karte liegt im Restaurant in thailändischer Schrift auf; Umschrift und Erklärung sind vom Restaurant bestätigt.",
+      "uebersetzungVorlaeufig": false,
       "reihenfolge": 90,
       "preistabellen": [],
       "zusaetze": [],

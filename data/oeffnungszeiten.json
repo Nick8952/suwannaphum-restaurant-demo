@@ -11,7 +11,7 @@
   ],
   "kuechenHinweis": "Die Küche schliesst am Abend jeweils eine halbe Stunde früher als das Restaurant.",
   "herkunft": [
-    { "quelle": "Startseite des Restaurants (Öffnungszeiten und Küchenhinweis, Stand der Website; aktuelle Bestätigung durch das Restaurant steht aus)", "url": "https://www.suwannaphum.ch/", "abgerufen": "2026-10-16", "art": "eigene-website" }
+    { "quelle": "Startseite des Restaurants (Öffnungszeiten und Küchenhinweis, Stand der Website; vom Restaurant im Oktober 2026 bestätigt)", "url": "https://www.suwannaphum.ch/", "abgerufen": "2026-10-16", "art": "eigene-website" }
   ],
-  "freigabe": "demo"
+  "freigabe": "live"
 }

@@ -3,14 +3,18 @@
 Stand: 16. Oktober 2026. Dieses Dokument ist das Arbeitspapier für das Gespräch mit dem Thai Restaurant Suwannaphum und für den
 Produktivbetrieb. Solange die Punkte offen sind, bleibt die Website ein Entwurf (noindex) mit Freigabestand «demo».
 
-## Stand der Demo
+## Stand: verkauft und live (21. Oktober 2026)
 
-- Repository: <https://github.com/Nick8952/suwannaphum-restaurant-demo> (öffentlich)
-- **Link für den Kunden:** <https://suwannaphum-restaurant-demo.vercel.app> (Vercel, baut bei jedem Push auf `main`; noindex, als
-  Entwurf gekennzeichnet)
-- Zweite Veröffentlichung desselben Stands: <https://nick8952.github.io/suwannaphum-restaurant-demo/> (GitHub Pages, noindex)
-- Inhalte: lokal in `data/`. Vercel ist eingerichtet (Projekt im Konto nick8952, keine Umgebungsvariablen); Sanity ist vorbereitet,
-  aber nicht eingerichtet (`docs/SANITY-VERCEL-EINRICHTUNG.md`).
+- **Website:** <https://www.suwannaphum.ch> (Vercel, Projekt `suwannaphum-restaurant-demo` im Konto nick8952; `SITE_URL` und
+  `INDEXIERUNG=1` sind dort als Produktionsvariablen gesetzt; `suwannaphum.ch` leitet auf `www`). Indexierbar, Sitemap,
+  strukturierte Daten, kein Entwurfshinweis.
+- Repository: <https://github.com/Nick8952/suwannaphum-restaurant-demo> (öffentlich). Die GitHub-Pages-Demo ist abgeschaltet; die CI
+  prüft nur noch.
+- Inhalte: lokal in `data/`, alle Freigaben auf «live» (Nick, 21.10.2026: das Restaurant hat Öffnungszeiten, Preise, Speisekarte,
+  Thai-Specials-Übersetzung, Lunch-Check und alle Fotos einschliesslich Teamfoto bestätigt). Impressum und Datenschutzerklärung
+  nennen das Restaurant (Inhaberin Saythong Schmied) als Betreiberin. Sanity ist vorbereitet, nicht eingerichtet.
+- Die Fragen unten sind damit pauschal beantwortet; sie bleiben als Nachweis stehen. Noch offen: UID des Restaurants (im Impressum
+  weggelassen), eine E-Mail-Adresse des Restaurants, Google Search Console mit Sitemap, Kündigung des alten Hoststar-Baukastens.
 
 ## Für Nick, vor dem Versand der Demo
 

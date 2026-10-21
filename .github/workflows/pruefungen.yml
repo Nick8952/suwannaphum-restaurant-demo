@@ -1,22 +1,19 @@
-# Prüft die Website, baut den statischen Export und veröffentlicht ihn auf GitHub Pages.
-# Läuft bei jedem Push auf main und zusätzlich jede Woche (Montag, 03:00 UTC): So verschwinden abgelaufene Hinweise und das
-# heutige Datum der Anzeige «Heute» bleibt im statischen Stand frisch, auch wenn niemand etwas ändert. (GitHub schaltet
-# geplante Läufe nach 60 Tagen ohne Repository-Aktivität ab; dann im Reiter «Actions» wieder aktivieren.)
-# Keine Geheimnisse nötig: die Demo baut ohne Env-Variablen.
-name: GitHub Pages
+# Prüft die Website bei jedem Push auf main: Inhalte, Zeitlogik, Lint, Typen, Import-Trockenlauf, statischer Export,
+# Exportprüfung, Browser-Prüfungen und das Studio. Veröffentlicht wird nicht hier: Die Website läuft seit dem 21.10.2026 auf
+# Vercel (www.suwannaphum.ch), das bei jedem Push selbst baut (SITE_URL und INDEXIERUNG sind dort als Variablen gesetzt).
+# Der Export hier entsteht ohne diese Variablen (Vorschau-Modus mit noindex) und braucht keine Geheimnisse.
+name: Prüfungen
 
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "0 3 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pages
+  group: pruefungen
   cancel-in-progress: true
 
 jobs:
@@ -47,9 +44,6 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}
           BASE: http://localhost:4321/${{ github.event.repository.name }}
           CHROME_PATH: /usr/bin/google-chrome
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
 
   # Das vorbereitete Sanity Studio muss kompilieren und ein gültiges Schema haben (ohne Sanity-Projekt prüfbar).
   studio:
@@ -69,16 +63,3 @@ jobs:
       - run: npm run schema:pruefen
         env:
           SANITY_STUDIO_PROJECT_ID: probe0000
-
-  deploy:
-    needs: [build, studio]
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

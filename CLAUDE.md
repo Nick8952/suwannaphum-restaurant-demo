@@ -6,13 +6,15 @@ Verkaufs-Demo für das **Thai Restaurant Suwannaphum** (Zürcherstrasse 31, 8952
 
 ## Architektur in einem Absatz
 
-Next.js 16 (App Router, TypeScript, Tailwind CSS v4), **immer statischer Export** (`output: "export"`). Heute liegt er unter dem
-Repository-Unterpfad `/suwannaphum-restaurant-demo` auf GitHub Pages **und** ohne Unterpfad auf Vercel
-(<https://suwannaphum-restaurant-demo.vercel.app>, Projekt im Konto nick8952, Build bei jedem Push auf `main`, keine
-Umgebungsvariablen); die Inhalte kommen aus `data/*.json`. Später: Sanity als CMS auf demselben Vercel-Projekt. Sanity ist
-vorbereitet (Studio-Schemas, Sanity-Adapter, Import-Skript), aber **nicht eingerichtet**: kein Projekt, keine Tokens. Auch mit
-Sanity bleibt die Website statisch: Veröffentlichen löst über einen Webhook einen Build aus. Keine Serverfunktionen, keine
-API-Routen, kein eingebettetes Studio, keine Anfragen an Dritte im Browser.
+Next.js 16 (App Router, TypeScript, Tailwind CSS v4), **immer statischer Export** (`output: "export"`). **Live seit 21.10.2026 auf
+<https://www.suwannaphum.ch>** über Vercel (Projekt `suwannaphum-restaurant-demo` im Konto nick8952, Build bei jedem Push auf
+`main`; Produktionsvariablen `SITE_URL=https://www.suwannaphum.ch` und `INDEXIERUNG=1`). Die Inhalte kommen aus `data/*.json` und
+sind vom Restaurant bestätigt (alle Freigaben «live»); Impressum und Datenschutzerklärung nennen das Restaurant als Betreiberin.
+Ohne die beiden Variablen (lokal, CI) entsteht derselbe Export als Vorschau: `noindex`, Entwurfshinweis, keine Sitemap, kein JSON-LD.
+Die frühere GitHub-Pages-Demo ist abgeschaltet. Später: Sanity als CMS auf demselben Vercel-Projekt; vorbereitet (Studio-Schemas,
+Sanity-Adapter, Import-Skript), aber **nicht eingerichtet**: kein Projekt, keine Tokens. Auch mit Sanity bleibt die Website
+statisch: Veröffentlichen löst über einen Webhook einen Build aus. Keine Serverfunktionen, keine API-Routen, kein eingebettetes
+Studio, keine Anfragen an Dritte im Browser.
 
 ```text
 app/                 layout.tsx (Kopf, Fuss, mobile Leiste, Einwilligung ruhend, Schriften via next/font/local, JSON-LD nur bei Freigabe),
@@ -119,11 +121,14 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
 - Keine Zugangsdaten oder Tokens im Repository. `.env.example` enthält nur leere Beispielwerte.
 - Externe Links immer über `SmartLink` (`rel="noopener noreferrer"`); Linkziele aus Inhalten laufen über `istErlaubtesLinkziel`
   (interne Pfade ohne Backslash, `#anker`, `https://` mit Host, `mailto:`, `tel:`); das zod-Modell lehnt andere Ziele ab.
-- Demo bleibt `noindex, nofollow`. Keine Sperre in robots.txt, keine Sitemap, kein JSON-LD. Erst `INDEXIERUNG=1` (Go-Live auf der
-  Kundendomain) erlaubt Indexierung, erzeugt die Sitemap und das JSON-LD (Typ `Restaurant`, Öffnungszeiten nur mit Freigabe «live»).
+- Ohne `INDEXIERUNG=1` bleibt der Export `noindex, nofollow` (Vorschau): keine Sperre in robots.txt, keine Sitemap, kein JSON-LD.
+  Auf Vercel ist `INDEXIERUNG=1` mit `SITE_URL=https://www.suwannaphum.ch` gesetzt: Indexierung, Sitemap und JSON-LD (Typ
+  `Restaurant`, Öffnungszeiten nur mit Freigabe «live»). Der Build bricht ab, sobald eine Freigabe fehlt oder ein Rechtstext wieder
+  «Demo» oder «GitHub Pages» enthält.
 - Leitplanken in `lib/deploy-ziel.ts` nicht lockern: `INDEXIERUNG=1` verlangt eine ausdrückliche `SITE_URL` und bricht für
   Vorschau-Adressen ab; für jede echte Domain bricht der Build ab, solange eine Freigabe fehlt (`lib/content/freigabe.ts`).
-- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand der Demo (Betreiber Nick, Hosting GitHub Pages und Vercel, keine Cookies).
+- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand (Betreiberin das Restaurant, Hosting Vercel, keine Cookies,
+  technische Betreuung Nick). Jede neue Funktion (Formular, Karte, Analyse) verlangt eine Anpassung der Datenschutzerklärung.
   Bei jeder technischen Änderung beide Texte anpassen.
 
 ### Gestaltung «Tischläufer»
@@ -137,12 +142,13 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
 - Client-Komponenten importieren aus `lib/content/modell.ts` nur Typen (`import type`). Werte (`WOCHENTAGE`, `pfade`) kommen aus
   `lib/content/konstanten.ts` bzw. `pfade.ts`, sonst landet zod im Browser-Bundle (das JS-Budget in `export:pruefen` schlägt an).
 
-### GitHub Pages
+### Vorschau-Export (CI, ehemals GitHub Pages)
 
 - `basePath`/`assetUrl()` überall; nie absolute Pfade ohne Präfix. `trailingSlash: true`. Sprungmarken-Links laufen über `SmartLink`.
-- `scripts/export-pruefen.mjs` muss grün sein. `.github/workflows/pages.yml` veröffentlicht bei Push auf `main`; Pages-Quelle ist «GitHub Actions».
+- `scripts/export-pruefen.mjs` muss grün sein. `.github/workflows/pruefungen.yml` prüft bei Push auf `main` (ohne Veröffentlichung);
+  der Unterpfad-Export ist nur noch Vorschau und Prüfumgebung.
 
-### Vercel (eingerichtet am 17.10.2026)
+### Vercel (eingerichtet am 17.10.2026, Produktion seit 21.10.2026)
 
 - Vercel liefert **nicht `out/`** aus, sondern die Build-Ausgabe von Next. Alles, was auf beiden Zielen gleich sein muss, entsteht
   vor `next build` in `public/` (Sitemap: `scripts/sitemap-schreiben.mts`, nur mit `INDEXIERUNG=1`). `out/404.html` und `.nojekyll`
@@ -150,6 +156,8 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
 - Build-Umgebung setzt `VERCEL=1`: `lib/deploy-ziel.ts` nimmt dann «vercel» als Ziel, Canonical aus `VERCEL_PROJECT_PRODUCTION_URL`.
   `vercel.json` setzt `npm run build:vercel` und `npm ci`. Prüfen: `BASE=https://suwannaphum-restaurant-demo.vercel.app npm run qa`.
 - Veröffentlichen heisst pushen auf `main`; das CLI (`npx vercel deploy --prod`) braucht ein angemeldetes Konto (`npx vercel login`).
+- Domain `suwannaphum.ch`/`www` liegt im Projekt (DNS beim bisherigen Registrar auf Vercel umgestellt, 21.10.2026). Variablen nur
+  über `npx vercel env` oder das Dashboard ändern; nie `INDEXIERUNG` auf einer Vorschau-Adresse setzen.
 
 ### Sanity (nur vorbereitet)
 

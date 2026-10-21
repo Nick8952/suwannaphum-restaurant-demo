@@ -1,23 +1,22 @@
 {
   "slug": "datenschutz",
   "titel": "Datenschutzerklärung",
-  "einleitung": "Diese Erklärung beschreibt, was beim Besuch dieser Demo-Website tatsächlich geschieht. Kurz: Die Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein.",
-  "stand": "17. Oktober 2026",
-  "seoBeschreibung": "Datenschutzerklärung der Demo-Website für das Thai Restaurant Suwannaphum: Hosting auf GitHub Pages und Vercel, keine Cookies, externe Links, Ihre Rechte.",
+  "einleitung": "Diese Erklärung beschreibt, was beim Besuch dieser Website tatsächlich geschieht. Kurz: Die Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein.",
+  "stand": "21. Oktober 2026",
+  "seoBeschreibung": "Datenschutzerklärung des Thai Restaurants Suwannaphum in Schlieren: Hosting auf Vercel, keine Cookies, keine Analyse, externe Links, Ihre Rechte.",
   "bloecke": [
     {
       "titel": "Verantwortlich",
       "anker": "verantwortlich"
     },
-    "Verantwortlich für die Datenbearbeitung auf dieser Demo-Website ist Nick Holzbecher, E-Mail [holzbechernick@gmail.com](mailto:holzbechernick@gmail.com). Das dargestellte Restaurant betreibt diese Demo nicht.",
+    "Verantwortlich für die Datenbearbeitung auf dieser Website ist das Thai Restaurant Suwannaphum, Inhaberin Saythong Schmied, Zürcherstrasse 31, 8952 Schlieren, Telefon [044 555 82 99](tel:+41445558299). Mit der technischen Betreuung ist Nick Holzbecher beauftragt ([holzbechernick@gmail.com](mailto:holzbechernick@gmail.com)); er bearbeitet dabei keine Personendaten der Besucherinnen und Besucher.",
     "Grundlage ist das Schweizer Bundesgesetz über den Datenschutz ([DSG, SR 235.1](https://www.fedlex.admin.ch/eli/cc/2022/491/de)). Diese Erklärung erfüllt die Informationspflicht nach Artikel 19 DSG. Ergänzend gilt für den Zugriff auf Ihr Gerät Artikel 45c des Fernmeldegesetzes ([FMG, SR 784.10](https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de)).",
     {
-      "titel": "Hosting: GitHub Pages und Vercel",
+      "titel": "Hosting: Vercel",
       "anker": "hosting"
     },
-    "Die Demo wird als statische Website über GitHub Pages ausgeliefert, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Verbindungsdaten: IP-Adresse, Zeitpunkt des Zugriffs, aufgerufene Adresse, Browser und Betriebssystem. Diese Daten dienen der Auslieferung der Seiten und der Sicherheit des Dienstes. Einzelheiten und Aufbewahrungsdauer stehen in der [Datenschutzerklärung von GitHub](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement). Der Betreiber dieser Demo hat keinen Zugriff auf diese Verbindungsdaten.",
-    "Dieselbe Demo wird zusätzlich über Vercel ausgeliefert, einen Dienst der Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA, unter der Adresse suwannaphum-restaurant-demo.vercel.app. Auch Vercel verarbeitet beim Aufruf technisch notwendige Verbindungsdaten (IP-Adresse, Zeitpunkt, aufgerufene Adresse, Browser und Betriebssystem) zur Auslieferung der Seiten und zur Sicherheit des Dienstes; Einzelheiten stehen in der [Datenschutzerklärung von Vercel](https://vercel.com/legal/privacy-policy). Der Betreiber dieser Demo hat auch auf diese Verbindungsdaten keinen Zugriff; Analysefunktionen von Vercel sind nicht eingeschaltet.",
-    "Mit der Auslieferung über GitHub Pages und Vercel werden Verbindungsdaten in die USA übermittelt. GitHub und Vercel geben an, unter dem Swiss-U.S. Data Privacy Framework zertifiziert zu sein; der Bundesrat hat die USA für Unternehmen mit dieser Zertifizierung als Staat mit angemessenem Datenschutz anerkannt.",
+    "Die Website wird als statische Website über Vercel ausgeliefert, einen Dienst der Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA. Beim Aufruf einer Seite verarbeitet Vercel technisch notwendige Verbindungsdaten: IP-Adresse, Zeitpunkt des Zugriffs, aufgerufene Adresse, Browser und Betriebssystem. Diese Daten dienen der Auslieferung der Seiten und der Sicherheit des Dienstes. Einzelheiten und Aufbewahrungsdauer stehen in der [Datenschutzerklärung von Vercel](https://vercel.com/legal/privacy-policy). Die Betreiberin hat keinen Zugriff auf diese Verbindungsdaten; Analysefunktionen von Vercel sind nicht eingeschaltet.",
+    "Mit der Auslieferung über Vercel werden Verbindungsdaten in die USA übermittelt. Vercel gibt an, unter dem Swiss-U.S. Data Privacy Framework zertifiziert zu sein; der Bundesrat hat die USA für Unternehmen mit dieser Zertifizierung als Staat mit angemessenem Datenschutz anerkannt.",
     {
       "titel": "Keine Cookies, keine Analyse, keine Dienste Dritter",
       "anker": "cookies"
@@ -34,16 +33,16 @@
       "titel": "Kontaktaufnahme mit dem Restaurant",
       "anker": "kontakt"
     },
-    "Reservationen und Bestellungen laufen telefonisch direkt beim Restaurant. Diese Website verarbeitet dabei keine Daten; was Sie dem Restaurant am Telefon mitteilen, bearbeitet das Restaurant selbst. Ein Kontaktformular gibt es nicht.",
+    "Reservationen und Bestellungen laufen telefonisch. Diese Website verarbeitet dabei keine Daten; was Sie am Telefon mitteilen, bearbeitet das Restaurant für die Reservation oder Bestellung. Ein Kontaktformular gibt es nicht.",
     {
       "titel": "Ihre Rechte",
       "anker": "rechte"
     },
-    "Sie haben das Recht auf Auskunft über die Bearbeitung Ihrer Personendaten, auf Berichtigung, Löschung und Herausgabe sowie das Recht, einer Bearbeitung zu widersprechen (Artikel 25 bis 32 DSG). Da diese Demo keine Personendaten speichert, beschränkt sich dieser Anspruch praktisch auf die Verbindungsdaten bei GitHub und Vercel. Für Fragen wenden Sie sich an den oben genannten Verantwortlichen. Aufsichtsbehörde ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte ([EDÖB](https://www.edoeb.admin.ch/)).",
+    "Sie haben das Recht auf Auskunft über die Bearbeitung Ihrer Personendaten, auf Berichtigung, Löschung und Herausgabe sowie das Recht, einer Bearbeitung zu widersprechen (Artikel 25 bis 32 DSG). Da diese Website keine Personendaten speichert, beschränkt sich dieser Anspruch praktisch auf die Verbindungsdaten bei Vercel. Für Fragen wenden Sie sich an die oben genannte Verantwortliche. Aufsichtsbehörde ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte ([EDÖB](https://www.edoeb.admin.ch/)).",
     {
       "titel": "Änderungen",
       "anker": "aenderungen"
     },
-    "Diese Erklärung beschreibt den Stand der Demo. Wird die Website später vom Restaurant produktiv betrieben, zum Beispiel mit einem Redaktionssystem (Sanity) und unter eigener Domain, wird sie neu verfasst. Sanity ist in dieser Demo nicht im Einsatz; alle Inhalte liegen in der Website selbst."
+    "Diese Erklärung wird angepasst, wenn die Website neue Funktionen erhält, zum Beispiel ein Redaktionssystem (Sanity). Sanity ist derzeit nicht im Einsatz; alle Inhalte liegen in der Website selbst."
   ]
 }

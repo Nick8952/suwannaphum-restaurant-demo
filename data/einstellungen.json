@@ -36,7 +36,7 @@
           "art": "plattformprofil"
         }
       ],
-      "freigabe": "demo"
+      "freigabe": "live"
     },
     {
       "_key": "justeat",
@@ -56,7 +56,7 @@
           "art": "plattformprofil"
         }
       ],
-      "freigabe": "demo"
+      "freigabe": "live"
     }
   ],
   "zahlungsmethoden": [
@@ -77,7 +77,6 @@
       "name": "Lunch-Check"
     }
   ],
-  "zahlungsmethodenHinweis": "Lunch-Check ist auf der bisherigen Website nur als Logo abgebildet und noch zu bestätigen.",
   "logo": "logo-wortmarke",
   "seoBild": "og-suwannaphum",
   "herkunft": [
@@ -94,6 +93,6 @@
       "art": "eigene-website"
     }
   ],
-  "freigabe": "demo",
+  "freigabe": "live",
   "logoSchriftzug": "logo-schriftzug"
 }
