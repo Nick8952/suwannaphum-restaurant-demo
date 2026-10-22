@@ -19,7 +19,7 @@ Studio, keine Anfragen an Dritte im Browser.
 ```text
 app/                 layout.tsx (Kopf, Fuss, mobile Leiste, Einwilligung ruhend, Schriften via next/font/local, JSON-LD nur bei Freigabe),
                      page.tsx (Start), speisekarte/, restaurant/, kontakt/, impressum/, datenschutz/, not-found.tsx, robots.ts,
-                     icon.svg, globals.css (Tokens, Klassen, Thai-@font-face mit unicode-range)
+                     icon.png + apple-icon.png + favicon.ico (das «S» der Wortmarke, Logo-Gelb), globals.css (Tokens, Klassen, Thai-@font-face mit unicode-range)
 components/          Kopfzeile + Menue (Dialog) + NavLink + MobilLeiste, Fusszeile, Heute (Client, Uhr), Hinweise (Client, Datum),
                      Zeitenliste (Client, heutiger Tag), Register (Client, aktive Kategorie), Kategorie, GerichtZeile, Chilis, Preis,
                      Buffetblock, Galerie, Aufruf, Seitenkopf, Lieferdienste, Zahlungsmethoden, Bild, SmartLink, RichText, Einwilligung

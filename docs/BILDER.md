@@ -65,3 +65,10 @@ guter Kamera genügt, Querformat, ohne Filter):
    Hintergrund wie bei den vorhandenen Fotos.
 6. **Thai Specials**: drei bis vier Gerichte dieser Karte, da sie bisher ohne Bild sind.
 7. **Wortmarke als Vektordatei** (SVG oder PDF), damit der Schriftzug in jeder Grösse scharf bleibt.
+
+## Tab-Icon (Favicon)
+
+`app/icon.png` (512 px), `app/apple-icon.png` (180 px) und `app/favicon.ico` (16 + 32 px als PNG im ICO-Container) zeigen das
+geschwungene «S» der Wortmarke auf dem Gelb des Logos, ausgeschnitten aus `assets/originale/logo-wortmarke-gelb.jpg`
+(x 237 bis 472, y 284 bis 582, unverändert in Farbe und Form, nur freigestellt und zentriert). Der ganze Schriftzug wäre in
+Tab-Grösse unlesbar. Erzeugt am 22.10.2026 mit sharp; neu erzeugen nur, wenn das Restaurant ein eigenes Signet liefert.
