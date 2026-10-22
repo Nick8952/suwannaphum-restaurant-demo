@@ -2,14 +2,14 @@
   "slug": "datenschutz",
   "titel": "Datenschutzerklärung",
   "einleitung": "Diese Erklärung beschreibt, was beim Besuch dieser Website tatsächlich geschieht. Kurz: Die Website setzt keine Cookies, speichert nichts in Ihrem Browser und bindet keine Dienste Dritter ein.",
-  "stand": "21. Oktober 2026",
+  "stand": "22. Oktober 2026",
   "seoBeschreibung": "Datenschutzerklärung des Thai Restaurants Suwannaphum in Schlieren: Hosting auf Vercel, keine Cookies, keine Analyse, externe Links, Ihre Rechte.",
   "bloecke": [
     {
       "titel": "Verantwortlich",
       "anker": "verantwortlich"
     },
-    "Verantwortlich für die Datenbearbeitung auf dieser Website ist das Thairestaurant Suwannaphum, Saythong Schmied (Einzelunternehmen, UID CHE-498.447.349), Zürcherstrasse 31, 8952 Schlieren, Telefon [044 555 82 99](tel:+41445558299). Mit der technischen Betreuung ist Nick Holzbecher beauftragt ([holzbechernick@gmail.com](mailto:holzbechernick@gmail.com)); er bearbeitet dabei keine Personendaten der Besucherinnen und Besucher.",
+    "Verantwortlich für die Datenbearbeitung auf dieser Website ist das Thairestaurant Suwannaphum, Saythong Schmied (Einzelunternehmen, UID CHE-498.447.349), Zürcherstrasse 31, 8952 Schlieren, Telefon [044 555 82 99](tel:+41445558299).",
     "Grundlage ist das Schweizer Bundesgesetz über den Datenschutz ([DSG, SR 235.1](https://www.fedlex.admin.ch/eli/cc/2022/491/de)). Diese Erklärung erfüllt die Informationspflicht nach Artikel 19 DSG. Ergänzend gilt für den Zugriff auf Ihr Gerät Artikel 45c des Fernmeldegesetzes ([FMG, SR 784.10](https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de)).",
     {
       "titel": "Hosting: Vercel",

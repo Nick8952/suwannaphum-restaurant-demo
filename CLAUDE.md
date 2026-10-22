@@ -128,8 +128,9 @@ zusätzlich jede Woche (Montag 03:00 UTC), damit abgelaufene Hinweise auch im st
   «Demo» oder «GitHub Pages» enthält.
 - Leitplanken in `lib/deploy-ziel.ts` nicht lockern: `INDEXIERUNG=1` verlangt eine ausdrückliche `SITE_URL` und bricht für
   Vorschau-Adressen ab; für jede echte Domain bricht der Build ab, solange eine Freigabe fehlt (`lib/content/freigabe.ts`).
-- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand (Betreiberin das Restaurant, Hosting Vercel, keine Cookies,
-  technische Betreuung Nick). Jede neue Funktion (Formular, Karte, Analyse) verlangt eine Anpassung der Datenschutzerklärung.
+- Impressum und Datenschutzerklärung beschreiben den tatsächlichen Stand (Betreiberin das Restaurant, Hosting Vercel, keine Cookies).
+  **Nick wird auf der Website nicht genannt** (Inhaber-Entscheid 22.10.2026), es gibt keine E-Mail-Adresse und kein Cookie-Banner;
+  jede neue Funktion (Formular, Karte, Analyse) verlangt eine Anpassung der Datenschutzerklärung und schaltet ggf. das Banner scharf.
   Bei jeder technischen Änderung beide Texte anpassen.
 
 ### Gestaltung «Tischläufer»

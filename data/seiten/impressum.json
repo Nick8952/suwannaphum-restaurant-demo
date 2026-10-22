@@ -2,7 +2,7 @@
   "slug": "impressum",
   "titel": "Impressum",
   "einleitung": "Angaben zur Betreiberin dieser Website.",
-  "stand": "21. Oktober 2026",
+  "stand": "22. Oktober 2026",
   "seoBeschreibung": "Impressum des Thai Restaurants Suwannaphum in Schlieren: Betreiberin, Kontakt, Haftung, Urheberrecht und Bildnachweis.",
   "bloecke": [
     {
@@ -27,7 +27,6 @@
       "anker": "urheberrecht"
     },
     "Texte, Speisekarte, Fotos und Logo: Thai Restaurant Suwannaphum. Eine Verwendung ausserhalb dieser Website bedarf der Zustimmung der Betreiberin.",
-    "Gestaltung und technische Umsetzung: [Nick Holzbecher](mailto:holzbechernick@gmail.com), technische Betreuung im Auftrag der Betreiberin.",
     {
       "titel": "Bildnachweis",
       "anker": "bildnachweis"
